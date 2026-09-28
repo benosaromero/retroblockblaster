@@ -1,0 +1,37 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-11.2",
+  "reaction_name": "Dialkylation-Br",
+  "pair_id": "e333de10-ab43-45b5-8775-ac0527250552",
+  "reagent_count": "3",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "227",
+      "reference_smiles": "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "match_count": 6,
+      "matches_file": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552/bb1_synthon_227_matches.tsv",
+      "message": "6 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "321",
+      "reference_smiles": "O=C(CBr)NCc1c(Cl)cccc1Cl",
+      "match_count": 3,
+      "matches_file": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552/bb2_synthon_321_matches.tsv",
+      "message": "3 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb3",
+      "synthon_id": "322",
+      "reference_smiles": "CBr",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552/bb3_synthon_322_matches.tsv",
+      "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+    }
+  ]
+}

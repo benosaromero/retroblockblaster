@@ -1,0 +1,75 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[15:05:05] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[15:05:05] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[15:05:05] product atom-mapping number 4 not found in reactants.
+[15:05:05] product atom-mapping number 1 found multiple times.
+[15:05:05] product atom-mapping number 2 found multiple times.
+[15:05:05] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[15:05:05] Explicit valence for atom # 3 C, 5, is greater than permitted
+[15:05:05] Explicit valence for atom # 3 C, 5, is greater than permitted
+[15:05:05] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 podirthj
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol1\nSaving matches podirthj CC-29.1 4a921999-8d0e-4065-ab16-3492ee8f9e9b
+Saving matches podirthj CC-10.11 a54ac168-89e3-4126-a0d9-e7719040c301
+Saving matches podirthj CC-11.2 e333de10-ab43-45b5-8775-ac0527250552
+Saving matches podirthj CC-11.1 fc83825f-2349-47d5-9f17-73d6979ec090
+Saving matches podirthj CC-4.3 cdb1a707-095c-4182-8fed-157a039f0b21
+Saving matches podirthj CC-4.4 5efaa77e-b435-47ec-ab69-a5b93be54d21
+Saving matches podirthj CC-1.12 4178e7fc-841e-424c-916b-6dc0c544a8d0
+Saving matches podirthj CC-1.11 27a70e8a-8e04-48c1-8df6-7ee832badccb
+Saving matches podirthj CC-4.1 3bc7a7bf-4f0f-45eb-ac72-821a34c53a65
+Saving matches podirthj CC-1.22 a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf
+Saving matches podirthj CC-1.21 0d9d6abc-8544-41df-aaa4-3d36304877cc
+Saving matches podirthj CC-4.2 2f284363-266a-43de-8f3c-1575e8d66691
+Saving matches podirthj CC-10.21 67014a7d-cf77-499e-b950-4dea5db1278f
+Saving matches podirthj CC-10.31 485b2ddb-e00b-47bc-b055-af6998cae81c
+Saving matches podirthj CC-2.22 a5e00e8a-f79b-4022-b476-e86e2923b191
+Saving matches podirthj CC-2.21 e2d21767-525b-457a-b42e-e7221827e055
+Saving matches podirthj CC-2.11 591a4777-8569-40e4-b50a-1519c9d81ccd
+Saving matches podirthj CC-2.31 17f73e65-3388-4c4d-b97c-28585b8122f9
+Saving matches podirthj CC-2.12 65ad6077-e0c4-4b7d-88f7-fc4f00b76825
+Saving matches podirthj CC-2.32 6cca426f-2318-43c8-909f-a7c6930ab023
+Saving matches podirthj CC-2.33 d47684b0-e6a7-4dde-b0b5-e4af0d3c60c5
+Saving matches podirthj CC-2.23 0f2c66da-89ce-4a21-8df6-c84be3ab9b84
+Saving matches podirthj CC-2.13 1e40a81a-84ce-454e-83e8-c64b1c8066b8
+Done. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 23
+Enumerating 1 podirthj_CC-1.11_27a70e8a-8e04-48c1-8df6-7ee832badccb CC-1.11 synthon lists: 2
+Enumerating 2 podirthj_CC-1.12_4178e7fc-841e-424c-916b-6dc0c544a8d0 CC-1.12 synthon lists: 2
+Enumerating 3 podirthj_CC-1.21_0d9d6abc-8544-41df-aaa4-3d36304877cc CC-1.21 synthon lists: 2
+Enumerating 4 podirthj_CC-1.22_a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf CC-1.22 synthon lists: 2
+Enumerating 5 podirthj_CC-10.11_a54ac168-89e3-4126-a0d9-e7719040c301 CC-10.11 synthon lists: 2
+Enumerating 6 podirthj_CC-10.21_67014a7d-cf77-499e-b950-4dea5db1278f CC-10.21 synthon lists: 2
+Enumerating 7 podirthj_CC-10.31_485b2ddb-e00b-47bc-b055-af6998cae81c CC-10.31 synthon lists: 2
+Enumerating 8 podirthj_CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090 CC-11.1 synthon lists: 3
+Enumerating 9 podirthj_CC-11.2_e333de10-ab43-45b5-8775-ac0527250552 CC-11.2 synthon lists: 3
+Enumerating 10 podirthj_CC-2.11_591a4777-8569-40e4-b50a-1519c9d81ccd CC-2.11 synthon lists: 2
+Enumerating 11 podirthj_CC-2.12_65ad6077-e0c4-4b7d-88f7-fc4f00b76825 CC-2.12 synthon lists: 2
+Enumerating 12 podirthj_CC-2.13_1e40a81a-84ce-454e-83e8-c64b1c8066b8 CC-2.13 synthon lists: 2
+Enumerating 13 podirthj_CC-2.21_e2d21767-525b-457a-b42e-e7221827e055 CC-2.21 synthon lists: 2
+Enumerating 14 podirthj_CC-2.22_a5e00e8a-f79b-4022-b476-e86e2923b191 CC-2.22 synthon lists: 2
+Enumerating 15 podirthj_CC-2.23_0f2c66da-89ce-4a21-8df6-c84be3ab9b84 CC-2.23 synthon lists: 2
+Enumerating 16 podirthj_CC-2.31_17f73e65-3388-4c4d-b97c-28585b8122f9 CC-2.31 synthon lists: 2
+Enumerating 17 podirthj_CC-2.32_6cca426f-2318-43c8-909f-a7c6930ab023 CC-2.32 synthon lists: 2
+Enumerating 18 podirthj_CC-2.33_d47684b0-e6a7-4dde-b0b5-e4af0d3c60c5 CC-2.33 synthon lists: 2
+Enumerating 19 podirthj_CC-29.1_4a921999-8d0e-4065-ab16-3492ee8f9e9b CC-29.1 synthon lists: 3
+Enumerating 20 podirthj_CC-4.1_3bc7a7bf-4f0f-45eb-ac72-821a34c53a65 CC-4.1 synthon lists: 2
+Enumerating 21 podirthj_CC-4.2_2f284363-266a-43de-8f3c-1575e8d66691 CC-4.2 synthon lists: 2
+Enumerating 22 podirthj_CC-4.3_cdb1a707-095c-4182-8fed-157a039f0b21 CC-4.3 synthon lists: 2
+Enumerating 23 podirthj_CC-4.4_5efaa77e-b435-47ec-ab69-a5b93be54d21 CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_rank.tsv
+Wrote mol1_rank_tc06_all.tsv rows: 46
+Wrote mol1_rank_tc04_connected.tsv rows: 15
+Wrote per-query files in mol1_ranked
+Wrote mol1_all.tsv from 23 route files
+Wrote mol1_rank.tsv
+Wrote mol1_ranked

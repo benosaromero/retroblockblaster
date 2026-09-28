@@ -1,0 +1,75 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[14:22:59] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[14:22:59] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[14:22:59] product atom-mapping number 4 not found in reactants.
+[14:22:59] product atom-mapping number 1 found multiple times.
+[14:22:59] product atom-mapping number 2 found multiple times.
+[14:22:59] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[14:22:59] Explicit valence for atom # 3 C, 5, is greater than permitted
+[14:23:00] Explicit valence for atom # 3 C, 5, is greater than permitted
+[14:23:00] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 avpiure
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol1\nSaving matches avpiure CC-29.1 eb4c0ebd-7629-47cf-98ce-4dba15e5e98d
+Saving matches avpiure CC-10.11 677bbb77-2f3e-4ba7-9960-88c6dcc422d6
+Saving matches avpiure CC-11.2 1723c824-0dbd-4ea7-9412-327f36496b19
+Saving matches avpiure CC-11.1 e1fb86b3-ddac-4085-91a9-2c9b6d0d125e
+Saving matches avpiure CC-4.3 504a76c0-32ad-4545-ac01-979de8f67b24
+Saving matches avpiure CC-4.4 adca4e19-7049-4e67-bf95-fccce9647afc
+Saving matches avpiure CC-1.12 47e139dc-89b9-4cea-92a4-dbdd066326c0
+Saving matches avpiure CC-1.11 4e3d5603-79c9-4a28-b638-286e86d8d05e
+Saving matches avpiure CC-4.1 0960c449-2aa9-4053-8687-844ea54388be
+Saving matches avpiure CC-1.22 62fec93c-3302-40f3-b78d-5d3977ec8a04
+Saving matches avpiure CC-1.21 03f338e5-97ed-496b-8ab8-e5a3b1820919
+Saving matches avpiure CC-4.2 efb384e5-6799-4024-9dec-003c245ecb8f
+Saving matches avpiure CC-10.21 bed9ac94-7daf-46f3-abcf-58ac42838232
+Saving matches avpiure CC-10.31 c1c5ac41-1085-496f-9fd3-f930a4aaa277
+Saving matches avpiure CC-2.22 776fa4b6-93c1-469c-b36e-d07af6b5513e
+Saving matches avpiure CC-2.21 43237b40-487e-4bf1-855e-24c3e7b782b1
+Saving matches avpiure CC-2.11 6bc92fee-aac4-49cb-9bb9-3ee147c4392c
+Saving matches avpiure CC-2.31 702f354f-c61f-4a59-bb66-27b806d52e61
+Saving matches avpiure CC-2.12 dada2878-805e-490a-a1c4-3e94b0152f81
+Saving matches avpiure CC-2.32 a438ad66-bc6a-446d-9361-4a0ed60d597f
+Saving matches avpiure CC-2.33 409f3c86-1ada-4ace-ad2b-3c1132194ca7
+Saving matches avpiure CC-2.23 3ee954d4-dfd4-4fa3-9791-ab494beebb72
+Saving matches avpiure CC-2.13 7db99514-9209-4e05-b891-69845c5c1772
+Done. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 23
+Enumerating 1 avpiure_CC-1.11_4e3d5603-79c9-4a28-b638-286e86d8d05e CC-1.11 synthon lists: 2
+Enumerating 2 avpiure_CC-1.12_47e139dc-89b9-4cea-92a4-dbdd066326c0 CC-1.12 synthon lists: 2
+Enumerating 3 avpiure_CC-1.21_03f338e5-97ed-496b-8ab8-e5a3b1820919 CC-1.21 synthon lists: 2
+Enumerating 4 avpiure_CC-1.22_62fec93c-3302-40f3-b78d-5d3977ec8a04 CC-1.22 synthon lists: 2
+Enumerating 5 avpiure_CC-10.11_677bbb77-2f3e-4ba7-9960-88c6dcc422d6 CC-10.11 synthon lists: 2
+Enumerating 6 avpiure_CC-10.21_bed9ac94-7daf-46f3-abcf-58ac42838232 CC-10.21 synthon lists: 2
+Enumerating 7 avpiure_CC-10.31_c1c5ac41-1085-496f-9fd3-f930a4aaa277 CC-10.31 synthon lists: 2
+Enumerating 8 avpiure_CC-11.1_e1fb86b3-ddac-4085-91a9-2c9b6d0d125e CC-11.1 synthon lists: 3
+Enumerating 9 avpiure_CC-11.2_1723c824-0dbd-4ea7-9412-327f36496b19 CC-11.2 synthon lists: 3
+Enumerating 10 avpiure_CC-2.11_6bc92fee-aac4-49cb-9bb9-3ee147c4392c CC-2.11 synthon lists: 2
+Enumerating 11 avpiure_CC-2.12_dada2878-805e-490a-a1c4-3e94b0152f81 CC-2.12 synthon lists: 2
+Enumerating 12 avpiure_CC-2.13_7db99514-9209-4e05-b891-69845c5c1772 CC-2.13 synthon lists: 2
+Enumerating 13 avpiure_CC-2.21_43237b40-487e-4bf1-855e-24c3e7b782b1 CC-2.21 synthon lists: 2
+Enumerating 14 avpiure_CC-2.22_776fa4b6-93c1-469c-b36e-d07af6b5513e CC-2.22 synthon lists: 2
+Enumerating 15 avpiure_CC-2.23_3ee954d4-dfd4-4fa3-9791-ab494beebb72 CC-2.23 synthon lists: 2
+Enumerating 16 avpiure_CC-2.31_702f354f-c61f-4a59-bb66-27b806d52e61 CC-2.31 synthon lists: 2
+Enumerating 17 avpiure_CC-2.32_a438ad66-bc6a-446d-9361-4a0ed60d597f CC-2.32 synthon lists: 2
+Enumerating 18 avpiure_CC-2.33_409f3c86-1ada-4ace-ad2b-3c1132194ca7 CC-2.33 synthon lists: 2
+Enumerating 19 avpiure_CC-29.1_eb4c0ebd-7629-47cf-98ce-4dba15e5e98d CC-29.1 synthon lists: 3
+Enumerating 20 avpiure_CC-4.1_0960c449-2aa9-4053-8687-844ea54388be CC-4.1 synthon lists: 2
+Enumerating 21 avpiure_CC-4.2_efb384e5-6799-4024-9dec-003c245ecb8f CC-4.2 synthon lists: 2
+Enumerating 22 avpiure_CC-4.3_504a76c0-32ad-4545-ac01-979de8f67b24 CC-4.3 synthon lists: 2
+Enumerating 23 avpiure_CC-4.4_adca4e19-7049-4e67-bf95-fccce9647afc CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_rank.tsv
+Wrote mol1_rank_tc06_all.tsv rows: 46
+Wrote mol1_rank_tc04_connected.tsv rows: 15
+Wrote per-query files in mol1_ranked
+Wrote mol1_all.tsv from 23 route files
+Wrote mol1_rank.tsv
+Wrote mol1_ranked

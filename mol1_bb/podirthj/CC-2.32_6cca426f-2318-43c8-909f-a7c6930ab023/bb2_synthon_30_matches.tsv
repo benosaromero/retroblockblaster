@@ -1,0 +1,15 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	Ic1ccccc1	30	ArylHalide-Aryl iodides	retrosynthesis
+1	1.0	CSSB00000210278	Ic1ccccc1	30	ArylHalide-Aryliodides	dball
+2	0.412	CSSB00000035832	Ic1ccncc1	30	ArylHalide-Aryliodides	dball
+3	0.412	CSSB00000186775	Cc1ccc(I)cc1	30	ArylHalide-Aryliodides	dball
+4	0.412	CSSB00000755918	Clc1ccc(I)cc1	30	ArylHalide-Aryliodides	dball
+5	0.412	CSSB00000212066	Oc1ccc(I)cc1	30	ArylHalide-Aryliodides	dball
+6	0.412	CSSB00000185761	Nc1ccc(I)cc1	30	ArylHalide-Aryliodides	dball
+7	0.412	CSSB00000744870	Fc1ccc(I)cc1	30	ArylHalide-Aryliodides	dball
+8	0.4	CSSB00000211634	Oc1cccc(I)c1	30	ArylHalide-Aryliodides	dball
+9	0.4	CSSB00011215228	Cc1cccc(I)c1	30	ArylHalide-Aryliodides	dball
+10	0.4	CSSB00000685547	Fc1cccc(I)c1	30	ArylHalide-Aryliodides	dball
+11	0.4	CSSB00000699651	Clc1cccc(I)c1	30	ArylHalide-Aryliodides	dball
+12	0.4	CSSB00000752921	Ic1cccnc1	30	ArylHalide-Aryliodides	dball
+13	0.4	CSSB00000211102	Nc1cccc(I)c1	30	ArylHalide-Aryliodides	dball

@@ -1,0 +1,74 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-1.22",
+  "pair_id": "a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf_selected",
+  "total_combos": 4,
+  "products": [
+    {
+      "product_code": "CC-1.22_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-1.22_web_DISCONNECTED_BB1_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-1.22_web_CSSB00000261570_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)O)C(=O)CNC(=O)c1ccccc1",
+      "tranche": "H18P000",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-1.22_web_CSSB00000261570_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)O)C(=O)CNC(=O)c1ccccc1",
+      "tranche": "H21P140",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "CC(C)(Br)Br"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-1.22",
+    "reaction_name": "Alkylation-Br-S",
+    "pair_id": "a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "219",
+        "reference_smiles": "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-1.22_a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf/bb1_synthon_219_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "220",
+        "reference_smiles": "CBr",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-1.22_a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf/bb2_synthon_220_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-1.22_a0ccdd58-f94d-4cc0-9ae9-213e1b13cabf"
+}

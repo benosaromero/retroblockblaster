@@ -1,0 +1,29 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-1.11",
+  "reaction_name": "Alkylation-Cl-P",
+  "pair_id": "27a70e8a-8e04-48c1-8df6-7ee832badccb",
+  "reagent_count": "2",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "227",
+      "reference_smiles": "NCc1c(Cl)cccc1Cl",
+      "match_count": 6,
+      "matches_file": "mol1_bb/podirthj/CC-1.11_27a70e8a-8e04-48c1-8df6-7ee832badccb/bb1_synthon_227_matches.tsv",
+      "message": "6 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "228",
+      "reference_smiles": "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-1.11_27a70e8a-8e04-48c1-8df6-7ee832badccb/bb2_synthon_228_matches.tsv",
+      "message": "1 building blocks passed Tc cutoff 0.4."
+    }
+  ]
+}

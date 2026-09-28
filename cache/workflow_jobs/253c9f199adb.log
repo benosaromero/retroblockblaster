@@ -1,0 +1,75 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[14:09:17] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[14:09:17] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[14:09:17] product atom-mapping number 4 not found in reactants.
+[14:09:17] product atom-mapping number 1 found multiple times.
+[14:09:17] product atom-mapping number 2 found multiple times.
+[14:09:17] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[14:09:18] Explicit valence for atom # 3 C, 5, is greater than permitted
+[14:09:18] Explicit valence for atom # 3 C, 5, is greater than permitted
+[14:09:18] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 qfp8reh4
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol1\nSaving matches qfp8reh4 CC-29.1 bb215ec5-67d8-46e1-b628-4917ddb4c09a
+Saving matches qfp8reh4 CC-10.11 4ac0238d-0675-4e7f-a2fb-6658ddcce9b1
+Saving matches qfp8reh4 CC-11.2 8e485276-fd5c-43e3-933e-c7329fe5e072
+Saving matches qfp8reh4 CC-11.1 b8b9f17b-b9dd-4f4d-80ab-89aeb9da3a65
+Saving matches qfp8reh4 CC-4.3 703886e7-1d3b-48c5-a648-688271d09c67
+Saving matches qfp8reh4 CC-4.4 100c1193-5501-4404-83e7-540ab8de8884
+Saving matches qfp8reh4 CC-1.12 cc0abb71-32a3-4afa-8241-afc393eaf5ee
+Saving matches qfp8reh4 CC-1.11 30f825f6-d175-4714-933e-381928065bfc
+Saving matches qfp8reh4 CC-4.1 31df84d1-645b-4928-ad51-0641c8018ceb
+Saving matches qfp8reh4 CC-1.22 bf6991c5-0e6b-4232-b6ea-4d0850c28efb
+Saving matches qfp8reh4 CC-1.21 68679f4c-99e4-4688-8ac7-c51e483c2f0f
+Saving matches qfp8reh4 CC-4.2 de57d1e6-b73d-4eb9-9de4-225cbfe2648c
+Saving matches qfp8reh4 CC-10.21 a89e35a7-9447-4d8c-bf7e-9fafb144405b
+Saving matches qfp8reh4 CC-10.31 7b774a38-5df7-46cd-8a00-8dc7145db259
+Saving matches qfp8reh4 CC-2.22 1f9d448f-d192-43b6-aea8-44e050e70cc0
+Saving matches qfp8reh4 CC-2.21 27a13933-ea68-4a0b-828c-8b401bcda1d5
+Saving matches qfp8reh4 CC-2.11 3d3fdf0e-6970-43bc-b3b9-bfd0e198dbe4
+Saving matches qfp8reh4 CC-2.31 253207a7-cee4-4e73-aff1-f58cad9bca84
+Saving matches qfp8reh4 CC-2.12 b8caabea-b716-4dec-b4ae-0704a8592d98
+Saving matches qfp8reh4 CC-2.32 a846da8a-9d8a-497b-9fd2-1dcd000f8fe5
+Saving matches qfp8reh4 CC-2.33 27c28441-296b-4009-9c39-2c75a0521b16
+Saving matches qfp8reh4 CC-2.23 de60e9f6-912a-44c0-bbfb-f5317b587747
+Saving matches qfp8reh4 CC-2.13 8946ddff-e919-4d33-893e-82249af756fd
+Done. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 23
+Enumerating 1 qfp8reh4_CC-1.11_30f825f6-d175-4714-933e-381928065bfc CC-1.11 synthon lists: 2
+Enumerating 2 qfp8reh4_CC-1.12_cc0abb71-32a3-4afa-8241-afc393eaf5ee CC-1.12 synthon lists: 2
+Enumerating 3 qfp8reh4_CC-1.21_68679f4c-99e4-4688-8ac7-c51e483c2f0f CC-1.21 synthon lists: 2
+Enumerating 4 qfp8reh4_CC-1.22_bf6991c5-0e6b-4232-b6ea-4d0850c28efb CC-1.22 synthon lists: 2
+Enumerating 5 qfp8reh4_CC-10.11_4ac0238d-0675-4e7f-a2fb-6658ddcce9b1 CC-10.11 synthon lists: 2
+Enumerating 6 qfp8reh4_CC-10.21_a89e35a7-9447-4d8c-bf7e-9fafb144405b CC-10.21 synthon lists: 2
+Enumerating 7 qfp8reh4_CC-10.31_7b774a38-5df7-46cd-8a00-8dc7145db259 CC-10.31 synthon lists: 2
+Enumerating 8 qfp8reh4_CC-11.1_b8b9f17b-b9dd-4f4d-80ab-89aeb9da3a65 CC-11.1 synthon lists: 3
+Enumerating 9 qfp8reh4_CC-11.2_8e485276-fd5c-43e3-933e-c7329fe5e072 CC-11.2 synthon lists: 3
+Enumerating 10 qfp8reh4_CC-2.11_3d3fdf0e-6970-43bc-b3b9-bfd0e198dbe4 CC-2.11 synthon lists: 2
+Enumerating 11 qfp8reh4_CC-2.12_b8caabea-b716-4dec-b4ae-0704a8592d98 CC-2.12 synthon lists: 2
+Enumerating 12 qfp8reh4_CC-2.13_8946ddff-e919-4d33-893e-82249af756fd CC-2.13 synthon lists: 2
+Enumerating 13 qfp8reh4_CC-2.21_27a13933-ea68-4a0b-828c-8b401bcda1d5 CC-2.21 synthon lists: 2
+Enumerating 14 qfp8reh4_CC-2.22_1f9d448f-d192-43b6-aea8-44e050e70cc0 CC-2.22 synthon lists: 2
+Enumerating 15 qfp8reh4_CC-2.23_de60e9f6-912a-44c0-bbfb-f5317b587747 CC-2.23 synthon lists: 2
+Enumerating 16 qfp8reh4_CC-2.31_253207a7-cee4-4e73-aff1-f58cad9bca84 CC-2.31 synthon lists: 2
+Enumerating 17 qfp8reh4_CC-2.32_a846da8a-9d8a-497b-9fd2-1dcd000f8fe5 CC-2.32 synthon lists: 2
+Enumerating 18 qfp8reh4_CC-2.33_27c28441-296b-4009-9c39-2c75a0521b16 CC-2.33 synthon lists: 2
+Enumerating 19 qfp8reh4_CC-29.1_bb215ec5-67d8-46e1-b628-4917ddb4c09a CC-29.1 synthon lists: 3
+Enumerating 20 qfp8reh4_CC-4.1_31df84d1-645b-4928-ad51-0641c8018ceb CC-4.1 synthon lists: 2
+Enumerating 21 qfp8reh4_CC-4.2_de57d1e6-b73d-4eb9-9de4-225cbfe2648c CC-4.2 synthon lists: 2
+Enumerating 22 qfp8reh4_CC-4.3_703886e7-1d3b-48c5-a648-688271d09c67 CC-4.3 synthon lists: 2
+Enumerating 23 qfp8reh4_CC-4.4_100c1193-5501-4404-83e7-540ab8de8884 CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_rank.tsv
+Wrote mol1_rank_tc06_all.tsv rows: 46
+Wrote mol1_rank_tc04_connected.tsv rows: 15
+Wrote per-query files in mol1_ranked
+Wrote mol1_all.tsv from 23 route files
+Wrote mol1_rank.tsv
+Wrote mol1_ranked

@@ -1,0 +1,63 @@
+\n\n$ /usr/bin/python3 retro.py cmpd11\n[11:49:10] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[11:49:10] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[11:49:10] product atom-mapping number 4 not found in reactants.
+[11:49:10] product atom-mapping number 1 found multiple times.
+[11:49:10] product atom-mapping number 2 found multiple times.
+[11:49:10] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[11:49:11] Explicit valence for atom # 1 C, 5, is greater than permitted
+[11:49:16] Explicit valence for atom # 1 C, 5, is greater than permitted
+[11:49:16] Explicit valence for atom # 6 B, 4, is greater than permitted
+Running 1 of 1 cmpd11
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote cmpd11_syn.tsv
+Done.
+Wrote cmpd11_syn.tsv
+Wrote cmpd11_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball cmpd11\nSaving matches cmpd11 CC-10.11 8f02488c-071a-4b6a-a598-edfa25635eb9
+Saving matches cmpd11 CC-4.3 efb894c8-ec75-493d-8ec4-5d58c052b455
+Saving matches cmpd11 CC-4.4 52f7b5d5-f22b-4b45-b095-b72e461ec2ed
+Saving matches cmpd11 CC-1.12 22139410-9f24-4481-9e0b-ccceaed6e962
+Saving matches cmpd11 CC-1.11 23e4f6a7-f4c4-4dff-8604-8ab17f69d448
+Saving matches cmpd11 CC-4.1 3e58913c-f151-46b1-8ab1-0f2456df98bd
+Saving matches cmpd11 CC-10.21 0586438d-7b32-443f-918e-58a7773587e0
+Saving matches cmpd11 CC-2.22 d32257fb-2a5b-440e-988c-a97f4e612fe6
+Saving matches cmpd11 CC-2.21 43f81670-e843-46df-91dc-6d3a1124044e
+Saving matches cmpd11 CC-2.11 c8471f49-1677-4b19-90f9-975d9a571682
+Saving matches cmpd11 CC-2.31 3d8a3ca1-3e9f-4d35-adfc-b2598de67834
+Saving matches cmpd11 CC-2.12 1d0ca375-7d7f-49d0-8f77-2f28556759ec
+Saving matches cmpd11 CC-2.32 8288bd17-abec-4f26-85af-3e23c710d239
+Saving matches cmpd11 CC-2.33 d05ecca9-8474-43b8-b662-63d0b25ed3df
+Saving matches cmpd11 CC-2.23 818da551-c1a0-462a-8886-c943806e590e
+Saving matches cmpd11 CC-2.13 d4f21666-a8fc-48ed-a3f7-ae0b2f1560aa
+Saving matches cmpd11 CC-3.2 577961d2-26d8-49de-b607-fecdbacfa3ce
+Saving matches cmpd11 CC-3.3 5cc7f9c4-7282-4b96-984b-3dc5c25a3ea1
+Done. Intermediate files saved in cmpd11_bb
+Wrote cmpd11_bb
+\n\n$ /usr/bin/python3 make.py cmpd11\nFound route folders: 18
+Enumerating 1 cmpd11_CC-1.11_23e4f6a7-f4c4-4dff-8604-8ab17f69d448 CC-1.11 synthon lists: 2
+Enumerating 2 cmpd11_CC-1.12_22139410-9f24-4481-9e0b-ccceaed6e962 CC-1.12 synthon lists: 2
+Enumerating 3 cmpd11_CC-10.11_8f02488c-071a-4b6a-a598-edfa25635eb9 CC-10.11 synthon lists: 2
+Enumerating 4 cmpd11_CC-10.21_0586438d-7b32-443f-918e-58a7773587e0 CC-10.21 synthon lists: 2
+Enumerating 5 cmpd11_CC-2.11_c8471f49-1677-4b19-90f9-975d9a571682 CC-2.11 synthon lists: 2
+Enumerating 6 cmpd11_CC-2.12_1d0ca375-7d7f-49d0-8f77-2f28556759ec CC-2.12 synthon lists: 2
+Enumerating 7 cmpd11_CC-2.13_d4f21666-a8fc-48ed-a3f7-ae0b2f1560aa CC-2.13 synthon lists: 2
+Enumerating 8 cmpd11_CC-2.21_43f81670-e843-46df-91dc-6d3a1124044e CC-2.21 synthon lists: 2
+Enumerating 9 cmpd11_CC-2.22_d32257fb-2a5b-440e-988c-a97f4e612fe6 CC-2.22 synthon lists: 2
+Enumerating 10 cmpd11_CC-2.23_818da551-c1a0-462a-8886-c943806e590e CC-2.23 synthon lists: 2
+Enumerating 11 cmpd11_CC-2.31_3d8a3ca1-3e9f-4d35-adfc-b2598de67834 CC-2.31 synthon lists: 2
+Enumerating 12 cmpd11_CC-2.32_8288bd17-abec-4f26-85af-3e23c710d239 CC-2.32 synthon lists: 2
+Enumerating 13 cmpd11_CC-2.33_d05ecca9-8474-43b8-b662-63d0b25ed3df CC-2.33 synthon lists: 2
+Enumerating 14 cmpd11_CC-3.2_577961d2-26d8-49de-b607-fecdbacfa3ce CC-3.2 synthon lists: 2
+Enumerating 15 cmpd11_CC-3.3_5cc7f9c4-7282-4b96-984b-3dc5c25a3ea1 CC-3.3 synthon lists: 2
+Enumerating 16 cmpd11_CC-4.1_3e58913c-f151-46b1-8ab1-0f2456df98bd CC-4.1 synthon lists: 2
+Enumerating 17 cmpd11_CC-4.3_efb894c8-ec75-493d-8ec4-5d58c052b455 CC-4.3 synthon lists: 2
+Enumerating 18 cmpd11_CC-4.4_52f7b5d5-f22b-4b45-b095-b72e461ec2ed CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in cmpd11_enum
+Wrote cmpd11_enum
+\n\n$ /usr/bin/python3 rank.py cmpd11\nWrote cmpd11_rank.tsv
+Wrote per-query files in cmpd11_ranked
+Wrote cmpd11_all.tsv from 18 route files
+Wrote cmpd11_rank.tsv
+Wrote cmpd11_ranked

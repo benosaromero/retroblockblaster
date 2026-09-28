@@ -1,0 +1,8 @@
+{
+  "job_id": "0ec63147fc3d",
+  "run": "mol1",
+  "status": "error",
+  "message": "name 'shutil' is not defined",
+  "progress": 0,
+  "summary": "Workflow crashed before finishing."
+}

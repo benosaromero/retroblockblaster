@@ -1,0 +1,40 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[18:34:23] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[18:34:23] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[18:34:23] product atom-mapping number 4 not found in reactants.
+[18:34:23] product atom-mapping number 1 found multiple times.
+[18:34:23] product atom-mapping number 2 found multiple times.
+[18:34:23] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+Running 1 of 1 fpq94
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db db050 mol1\nSaving matches fpq94 CC-29.1 9dd00675-ad0e-4ba3-9237-dde4738457ec
+Saving matches fpq94 CC-11.2 477a242b-fbf9-4c68-a8c8-ec2a042c8f00
+Saving matches fpq94 CC-11.1 237576e8-9461-4ded-a804-d098be636476
+Saving matches fpq94 CC-1.22 78903982-07ce-4b0e-a10e-e02fb8c1fd96
+Saving matches fpq94 CC-1.21 bb5211db-7fb6-4b1d-8d19-f99a3090ada4
+Saving matches fpq94 CC-5.1 734c6c5d-2c0c-4d19-aa1b-717092889191
+Saving matches fpq94 CC-5.2 6b7fafe2-361e-44a0-9783-b235ac139b77
+Saving matches fpq94 CC-5.3 22937156-87ab-4c7b-9840-9b403b5f6c08
+Done. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 8
+Enumerating 1 fpq94_CC-1.21_bb5211db-7fb6-4b1d-8d19-f99a3090ada4 CC-1.21 synthon lists: 2
+Enumerating 2 fpq94_CC-1.22_78903982-07ce-4b0e-a10e-e02fb8c1fd96 CC-1.22 synthon lists: 2
+Enumerating 3 fpq94_CC-11.1_237576e8-9461-4ded-a804-d098be636476 CC-11.1 synthon lists: 3
+Enumerating 4 fpq94_CC-11.2_477a242b-fbf9-4c68-a8c8-ec2a042c8f00 CC-11.2 synthon lists: 3
+Enumerating 5 fpq94_CC-29.1_9dd00675-ad0e-4ba3-9237-dde4738457ec CC-29.1 synthon lists: 3
+Enumerating 6 fpq94_CC-5.1_734c6c5d-2c0c-4d19-aa1b-717092889191 CC-5.1 synthon lists: 2
+Enumerating 7 fpq94_CC-5.2_6b7fafe2-361e-44a0-9783-b235ac139b77 CC-5.2 synthon lists: 2
+Enumerating 8 fpq94_CC-5.3_22937156-87ab-4c7b-9840-9b403b5f6c08 CC-5.3 synthon lists: 2
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_rank.tsv
+Wrote per-query files in mol1_ranked
+Wrote mol1_all.tsv from 8 route files
+Wrote mol1_rank.tsv
+Wrote mol1_ranked

@@ -1,0 +1,16 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	Clc1ccccc1	150	ArylHalide-Aryl Chlorides	retrosynthesis
+1	0.421	Molport-028-748-437	O=c1cccccc1Cl	150	ArylHalide-ArylChlorides	dball
+2	0.417	Molport-001-789-048	O=C(NNC(=O)c1ccc(Cl)cc1)c1ccccc1	150	ArylHalide-ArylChlorides	dball
+3	0.412	CSSB00011218632	Fc1ccc(Cl)cc1	150	ArylHalide-ArylChlorides	dball
+4	0.412	CSSB00000184102	Cc1ccc(Cl)cc1	150	ArylHalide-ArylChlorides	dball
+5	0.412	CSSB00000210216	Oc1ccc(Cl)cc1	150	ArylHalide-ArylChlorides	dball
+6	0.412	CSSB00000728582	Clc1ccncc1	150	ArylHalide-ArylChlorides	dball
+7	0.412	CSSB00000755918	Clc1ccc(I)cc1	150	ArylHalide-ArylChlorides	dball
+8	0.412	CSSB00000210052	Nc1ccc(Cl)cc1	150	ArylHalide-ArylChlorides	dball
+9	0.4	CSSB00011215879	Clc1cccnc1	150	ArylHalide-ArylChlorides	dball
+10	0.4	CSSB00000185859	Nc1cccc(Cl)c1	150	ArylHalide-ArylChlorides	dball
+11	0.4	CSSB00000210295	Oc1cccc(Cl)c1	150	ArylHalide-ArylChlorides	dball
+12	0.4	CSSB00000211683	Cc1cccc(Cl)c1	150	ArylHalide-ArylChlorides	dball
+13	0.4	CSSB00000212037	Fc1cccc(Cl)c1	150	ArylHalide-ArylChlorides	dball
+14	0.4	CSSB00000699651	Clc1cccc(I)c1	150	ArylHalide-ArylChlorides	dball

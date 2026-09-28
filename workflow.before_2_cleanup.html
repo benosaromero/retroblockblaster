@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retro-Blockblaster Workflow</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <h1>Retro-Blockblaster Workflow</h1>
+        <p>Guided retrosynthesis, building-block matching, analog generation, and similarity ranking.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Input Molecules</h2>
+
+        <label for="workflow-run">Run Name</label>
+        <input id="workflow-run" value="mol1">
+
+        <label for="workflow-db">Building-Block Database</label>
+        <select id="workflow-db">
+          <option value="dball" selected>dball</option>
+          <option value="db050">db050</option>
+          <option value="db100">db100</option>
+          <option value="db250">db250</option>
+          <option value="db500">db500</option>
+          <option value="db999">db999</option>
+          <option value="bbAFAS">bbAFAS</option>
+          <option value="incrMADE">incrMADE</option>
+        </select>
+
+        <label for="workflow-input">Input TSV</label>
+        <textarea id="workflow-input">id	smiles
+99448	CN(CC1=NC=CS1)C=2N=C3C=CC=CC3=NC2N4CCOCC4</textarea>
+
+        <button type="button" onclick="saveWorkflowInput()">Save Input File</button>
+      </section>
+
+      <section class="panel workflow-steps">
+        <h2>Workflow Steps</h2>
+
+        <div class="workflow-step">
+          <div>
+            <strong>Retrosynthetic Route Search</strong>
+            <p>Find possible retrosynthetic routes and disconnected synthons.</p>
+          </div>
+          <button type="button" onclick="runWorkflowStep('retro')">Run Retrosynthesis</button>
+        </div>
+
+        <div class="workflow-step">
+          <div>
+            <strong>Building-Block Matching</strong>
+            <p>Find purchasable building blocks similar to each disconnected synthon.</p>
+          </div>
+          <button type="button" onclick="runWorkflowStep('bbs')">Find Similar Building Blocks</button>
+        </div>
+
+        <div class="workflow-step">
+          <div>
+            <strong>Analog Generation</strong>
+            <p>Enumerate analogs from matched building blocks and reaction routes.</p>
+          </div>
+          <button type="button" onclick="runWorkflowStep('make')">Generate Analogs</button>
+        </div>
+
+        <div class="workflow-step">
+          <div>
+            <strong>Similarity Ranking</strong>
+            <p>Rank generated analogs by similarity to the original molecule.</p>
+          </div>
+          <button type="button" onclick="runWorkflowStep('rank')">Rank Analogs</button>
+        </div>
+
+        <button type="button" onclick="runWorkflowStep('full')">Run Complete Workflow</button>
+
+        <pre id="workflow-status">Ready.</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Downloads</h2>
+        <div id="workflow-downloads"></div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function workflowRun() {
+      return document.getElementById("workflow-run").value.trim();
+    }
+
+    function workflowDb() {
+      return document.getElementById("workflow-db").value;
+    }
+
+    function setWorkflowStatus(text) {
+      document.getElementById("workflow-status").textContent = text;
+    }
+
+    function renderWorkflowDownloads() {
+      const run = workflowRun();
+
+      document.getElementById("workflow-downloads").innerHTML = `
+        <a class="button-link" href="/workflow-file/${run}.tsv">Input TSV</a>
+        <a class="button-link" href="/workflow-file/${run}_syn.tsv">Synthons TSV</a>
+        <a class="button-link" href="/workflow-file/${run}_jobs.tsv">Job IDs</a>
+        <a class="button-link" href="/workflow-file/${run}_summary.tsv">Retro Summary</a>
+        <a class="button-link" href="/workflow-folder/${run}_ret">Retro Outputs</a>
+        <a class="button-link" href="/workflow-folder/${run}_bb">Building-Block Matches</a>
+        <a class="button-link" href="/workflow-folder/${run}_enum">Enumerated Products</a>
+        <a class="button-link" href="/workflow-file/${run}_all.tsv">Combined Products</a>
+        <a class="button-link" href="/workflow-file/${run}_rank.tsv">Ranked Analogs</a>
+        <a class="button-link" href="/workflow-folder/${run}_ranked">Per-Molecule Results</a>
+      `;
+    }
+
+    async function workflowPost(path, payload) {
+      const response = await fetch(path, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || data.detail || data.error) {
+        throw new Error(data.detail || data.error || "Request failed");
+      }
+
+      return data;
+    }
+
+    async function saveWorkflowInput() {
+      const run = workflowRun();
+      const inputTsv = document.getElementById("workflow-input").value;
+
+      setWorkflowStatus("Saving input file...");
+
+      try {
+        const data = await workflowPost("/api/workflow/input", {
+          run: run,
+          db: workflowDb(),
+          input_tsv: inputTsv,
+        });
+
+        setWorkflowStatus(data.message || "Saved input.");
+        renderWorkflowDownloads();
+      } catch (error) {
+        setWorkflowStatus(error.message);
+      }
+    }
+
+    async function runWorkflowStep(step) {
+      const run = workflowRun();
+
+      setWorkflowStatus("Running " + step + "...");
+
+      try {
+        const data = await workflowPost("/api/workflow/" + step, {
+          run: run,
+          db: workflowDb(),
+        });
+
+        setWorkflowStatus(data.message || "Finished.");
+        renderWorkflowDownloads();
+      } catch (error) {
+        setWorkflowStatus(error.message);
+      }
+    }
+
+    renderWorkflowDownloads();
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB3	CCl	324	AlkylChloride-Dialkylation2	retrosynthesis
+1	1.0	Molport-001-759-971	CCl	324	AlkylChloride-Dialkylation2	dball
+2	0.5	CSSB00011206107	CC(C)(C)Cl	324	AlkylChloride-Dialkylation2	dball
+3	0.5	CSSB00000037974	CC(C)(Cl)Cl	324	AlkylChloride-Dialkylation2	dball
+4	0.4	CSSB02125607993	ClC(Cl)(Cl)Cl	324	AlkylChloride-Dialkylation2	dball

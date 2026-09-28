@@ -1,0 +1,2 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	CNCC(=O)NCc1c(Cl)cccc1Cl	155	PrimaryBocAmine-secAliphatic	retrosynthesis

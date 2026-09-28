@@ -1,0 +1,8 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB1	NCc1c(Cl)cccc1Cl	227	PrimaryAmines-Alkylation	retrosynthesis
+1	0.478	CSSB00000688400	NCc1c(F)cccc1F	227	PrimaryAmines-Alkylation	dball
+2	0.478	CSSB00059238657	Cc1cccc(C)c1CN	227	PrimaryAmines-Alkylation	dball
+3	0.423	Molport-000-146-860	COc1cccc(OC)c1CN	227	PrimaryAmines-Alkylation	dball
+4	0.409	CSSB00000174873	NCc1ccccc1	227	PrimaryAmines-Alkylation	dball
+5	0.407	Molport-000-146-851	NCc1c(N)cccc1F	227	PrimaryAmines-Alkylation	dball
+6	0.4	CSSB00000212028	NCc1ccc(CN)cc1	227	PrimaryAmines-Alkylation	dball

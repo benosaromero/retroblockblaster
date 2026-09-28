@@ -1,0 +1,14 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	Brc1ccccc1	149	ArylHalide-Aryl Bromides	retrosynthesis
+1	1.0	CSSB00000210277	Brc1ccccc1	149	ArylHalide-ArylBromides	dball
+2	0.412	CSSB00000185759	Oc1ccc(Br)cc1	149	ArylHalide-ArylBromides	dball
+3	0.412	CSSB00000210287	Cc1ccc(Br)cc1	149	ArylHalide-ArylBromides	dball
+4	0.412	CSSB00000210018	Nc1ccc(Br)cc1	149	ArylHalide-ArylBromides	dball
+5	0.412	CSSB00000211213	Fc1ccc(Br)cc1	149	ArylHalide-ArylBromides	dball
+6	0.412	CSSB00020647109	Brc1ccncc1	149	ArylHalide-ArylBromides	dball
+7	0.409	Molport-009-197-656	Brc1cnc(-c2ccccc2)nc1	149	ArylHalide-ArylBromides	dball
+8	0.4	CSSB00011215060	Fc1cccc(Br)c1	149	ArylHalide-ArylBromides	dball
+9	0.4	CSSB00000210342	Oc1cccc(Br)c1	149	ArylHalide-ArylBromides	dball
+10	0.4	CSSB00000210019	Nc1cccc(Br)c1	149	ArylHalide-ArylBromides	dball
+11	0.4	CSSB00000210063	Brc1cccnc1	149	ArylHalide-ArylBromides	dball
+12	0.4	CSSB00000211977	Cc1cccc(Br)c1	149	ArylHalide-ArylBromides	dball

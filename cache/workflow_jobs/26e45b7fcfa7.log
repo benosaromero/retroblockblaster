@@ -1,0 +1,14 @@
+\n\n$ /usr/bin/python3 retro.py testold\n[12:05:06] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[12:05:06] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[12:05:06] product atom-mapping number 4 not found in reactants.
+[12:05:06] product atom-mapping number 1 found multiple times.
+[12:05:06] product atom-mapping number 2 found multiple times.
+[12:05:06] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+Running 1 of 1 molA
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote testold_syn.tsv
+Done.
+Wrote testold_syn.tsv
+Wrote testold_ret

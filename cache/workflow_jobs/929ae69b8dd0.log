@@ -1,0 +1,34 @@
+\n\n$ /usr/bin/python3 retro.py cmpd30\n[15:35:41] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[15:35:41] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[15:35:41] product atom-mapping number 4 not found in reactants.
+[15:35:41] product atom-mapping number 1 found multiple times.
+[15:35:41] product atom-mapping number 2 found multiple times.
+[15:35:41] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+Running 1 of 1 cmpd30
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote cmpd30_syn.tsv
+Done.
+Wrote cmpd30_syn.tsv
+Wrote cmpd30_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball cmpd30\nSaving matches cmpd30 CC-10.11 79b0e802-1729-414f-b151-026b90c342e6
+Saving matches cmpd30 CC-1.12 f1a10a07-ac4d-4dab-9f01-eeca3b993d1c
+Saving matches cmpd30 CC-1.11 7fc07571-6f23-4123-a015-e916f0c82762
+Saving matches cmpd30 CC-3.2 ec247b0e-4be3-41f1-b986-8cdc03be2ffc
+Saving matches cmpd30 CC-3.3 6e68a57b-5a89-4394-8fb8-6d81dfbd24ce
+Done. Intermediate files saved in cmpd30_bb
+Wrote cmpd30_bb
+\n\n$ /usr/bin/python3 make.py cmpd30\nFound route folders: 5
+Enumerating 1 cmpd30_CC-1.11_7fc07571-6f23-4123-a015-e916f0c82762 CC-1.11 synthon lists: 2
+Enumerating 2 cmpd30_CC-1.12_f1a10a07-ac4d-4dab-9f01-eeca3b993d1c CC-1.12 synthon lists: 2
+Enumerating 3 cmpd30_CC-10.11_79b0e802-1729-414f-b151-026b90c342e6 CC-10.11 synthon lists: 2
+Enumerating 4 cmpd30_CC-3.2_ec247b0e-4be3-41f1-b986-8cdc03be2ffc CC-3.2 synthon lists: 2
+Enumerating 5 cmpd30_CC-3.3_6e68a57b-5a89-4394-8fb8-6d81dfbd24ce CC-3.3 synthon lists: 2
+Done. Selected enumerations saved in cmpd30_enum
+Wrote cmpd30_enum
+\n\n$ /usr/bin/python3 rank.py cmpd30\nWrote cmpd30_rank.tsv
+Wrote per-query files in cmpd30_ranked
+Wrote cmpd30_all.tsv from 5 route files
+Wrote cmpd30_rank.tsv
+Wrote cmpd30_ranked

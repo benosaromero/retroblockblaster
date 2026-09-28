@@ -1,0 +1,73 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[16:38:45] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[16:38:45] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[16:38:45] product atom-mapping number 4 not found in reactants.
+[16:38:45] product atom-mapping number 1 found multiple times.
+[16:38:45] product atom-mapping number 2 found multiple times.
+[16:38:45] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[16:38:45] Explicit valence for atom # 3 C, 5, is greater than permitted
+[16:38:47] Explicit valence for atom # 3 C, 5, is greater than permitted
+[16:38:47] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 phill
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db db050 mol1\nSaving matches phill CC-29.1 b3f85cdd-fa9d-4b40-b1ff-37ddad2f2eab
+Saving matches phill CC-10.11 3eeb0752-dd9e-490a-8763-33d823a27511
+Saving matches phill CC-11.2 7acdb935-d4c0-422c-b239-ac2fd8f5206e
+Saving matches phill CC-11.1 f9ba19b4-d660-4cbb-8c90-29e9a4063356
+Saving matches phill CC-4.3 34981f81-f823-48db-9807-dbb1a92ac952
+Saving matches phill CC-4.4 8472c197-bc93-4c7c-ba19-9eb19d72aa43
+Saving matches phill CC-1.12 b54e84f3-faae-402f-a7f8-f5328c02abef
+Saving matches phill CC-1.11 6707b7db-8c43-41e5-b8c5-f5cd6d50124a
+Saving matches phill CC-4.1 3bebc82b-ad4b-4c56-94be-b8503989c016
+Saving matches phill CC-1.22 f9347db4-2c6e-447d-8f43-501b54c793a4
+Saving matches phill CC-1.21 62cd6398-fdf4-41a4-bc14-3c5865afefa3
+Saving matches phill CC-4.2 65b1c6ea-662f-45e5-af55-a9ad2573154d
+Saving matches phill CC-10.21 df2b3f97-2309-47c1-bfe7-d1b5ea326e7b
+Saving matches phill CC-10.31 db9ccc7d-cb29-4c75-b7f3-4141f4726be7
+Saving matches phill CC-2.22 6df69ab8-f075-4102-971f-e1520c5390ce
+Saving matches phill CC-2.21 f3466654-838c-418a-a13c-d1efc71be0fe
+Saving matches phill CC-2.11 bfeb553b-5c62-41ec-8c31-d9294ba670a9
+Saving matches phill CC-2.31 01009d62-52c9-4683-8a04-e446a5ba5139
+Saving matches phill CC-2.12 8d4a679d-c249-4c91-8679-036f3cd7e8cc
+Saving matches phill CC-2.32 5368aca0-1fec-4b51-ae37-3dcb9f8af509
+Saving matches phill CC-2.33 9556d5f2-4ec8-46fd-ae46-862f9ff9b093
+Saving matches phill CC-2.23 bb85ce1b-75a1-4386-a9c8-6d1a2a343b1d
+Saving matches phill CC-2.13 42cb96d0-9996-4958-8126-9882ebd5ca73
+Done. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 23
+Enumerating 1 phill_CC-1.11_6707b7db-8c43-41e5-b8c5-f5cd6d50124a CC-1.11 synthon lists: 2
+Enumerating 2 phill_CC-1.12_b54e84f3-faae-402f-a7f8-f5328c02abef CC-1.12 synthon lists: 2
+Enumerating 3 phill_CC-1.21_62cd6398-fdf4-41a4-bc14-3c5865afefa3 CC-1.21 synthon lists: 2
+Enumerating 4 phill_CC-1.22_f9347db4-2c6e-447d-8f43-501b54c793a4 CC-1.22 synthon lists: 2
+Enumerating 5 phill_CC-10.11_3eeb0752-dd9e-490a-8763-33d823a27511 CC-10.11 synthon lists: 2
+Enumerating 6 phill_CC-10.21_df2b3f97-2309-47c1-bfe7-d1b5ea326e7b CC-10.21 synthon lists: 2
+Enumerating 7 phill_CC-10.31_db9ccc7d-cb29-4c75-b7f3-4141f4726be7 CC-10.31 synthon lists: 2
+Enumerating 8 phill_CC-11.1_f9ba19b4-d660-4cbb-8c90-29e9a4063356 CC-11.1 synthon lists: 3
+Enumerating 9 phill_CC-11.2_7acdb935-d4c0-422c-b239-ac2fd8f5206e CC-11.2 synthon lists: 3
+Enumerating 10 phill_CC-2.11_bfeb553b-5c62-41ec-8c31-d9294ba670a9 CC-2.11 synthon lists: 2
+Enumerating 11 phill_CC-2.12_8d4a679d-c249-4c91-8679-036f3cd7e8cc CC-2.12 synthon lists: 2
+Enumerating 12 phill_CC-2.13_42cb96d0-9996-4958-8126-9882ebd5ca73 CC-2.13 synthon lists: 2
+Enumerating 13 phill_CC-2.21_f3466654-838c-418a-a13c-d1efc71be0fe CC-2.21 synthon lists: 2
+Enumerating 14 phill_CC-2.22_6df69ab8-f075-4102-971f-e1520c5390ce CC-2.22 synthon lists: 2
+Enumerating 15 phill_CC-2.23_bb85ce1b-75a1-4386-a9c8-6d1a2a343b1d CC-2.23 synthon lists: 2
+Enumerating 16 phill_CC-2.31_01009d62-52c9-4683-8a04-e446a5ba5139 CC-2.31 synthon lists: 2
+Enumerating 17 phill_CC-2.32_5368aca0-1fec-4b51-ae37-3dcb9f8af509 CC-2.32 synthon lists: 2
+Enumerating 18 phill_CC-2.33_9556d5f2-4ec8-46fd-ae46-862f9ff9b093 CC-2.33 synthon lists: 2
+Enumerating 19 phill_CC-29.1_b3f85cdd-fa9d-4b40-b1ff-37ddad2f2eab CC-29.1 synthon lists: 3
+Enumerating 20 phill_CC-4.1_3bebc82b-ad4b-4c56-94be-b8503989c016 CC-4.1 synthon lists: 2
+Enumerating 21 phill_CC-4.2_65b1c6ea-662f-45e5-af55-a9ad2573154d CC-4.2 synthon lists: 2
+Enumerating 22 phill_CC-4.3_34981f81-f823-48db-9807-dbb1a92ac952 CC-4.3 synthon lists: 2
+Enumerating 23 phill_CC-4.4_8472c197-bc93-4c7c-ba19-9eb19d72aa43 CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_rank.tsv
+Wrote per-query files in mol1_ranked
+Wrote mol1_all.tsv from 23 route files
+Wrote mol1_rank.tsv
+Wrote mol1_ranked

@@ -1,0 +1,272 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-2.23",
+  "pair_id": "0f2c66da-89ce-4a21-8df6-c84be3ab9b84_selected",
+  "total_combos": 26,
+  "products": [
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Brc1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000210277",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Brc1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000185759",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccc(O)cc2)nn1-c1ccccc1",
+      "tranche": "H35P490",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Oc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000210287",
+      "product_smiles": "Cc1ccc(-c2cc(C(=O)N(C)CC(=O)NCc3c(Cl)cccc3Cl)n(-c3ccccc3)n2)cc1",
+      "tranche": "H35P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Cc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000210018",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccc(N)cc2)nn1-c1ccccc1",
+      "tranche": "H35P480",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Nc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000211213",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccc(F)cc2)nn1-c1ccccc1",
+      "tranche": "H35P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Fc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00020647109",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccncc2)nn1-c1ccccc1",
+      "tranche": "H34P460",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Brc1ccncc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_Molport-009-197-656",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2cnc(-c3ccccc3)nc2)nn1-c1ccccc1",
+      "tranche": "H40P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Brc1cnc(-c2ccccc2)nc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00011215060",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2cccc(F)c2)nn1-c1ccccc1",
+      "tranche": "H35P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Fc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000210342",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2cccc(O)c2)nn1-c1ccccc1",
+      "tranche": "H35P490",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Oc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000210019",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2cccc(N)c2)nn1-c1ccccc1",
+      "tranche": "H35P480",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Nc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000210063",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2cccnc2)nn1-c1ccccc1",
+      "tranche": "H34P460",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Brc1cccnc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_DISCONNECTED_BB1_web_CSSB00000211977",
+      "product_smiles": "Cc1cccc(-c2cc(C(=O)N(C)CC(=O)NCc3c(Cl)cccc3Cl)n(-c3ccccc3)n2)c1",
+      "tranche": "H35P500",
+      "building_blocks": [
+        "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "Cc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_DISCONNECTED_BB2",
+      "product_smiles": "Clc1cccnc1-c1ccccc1",
+      "tranche": "H13P340",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Brc1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000210277",
+      "product_smiles": "Clc1cccnc1-c1ccccc1",
+      "tranche": "H13P340",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Brc1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000185759",
+      "product_smiles": "Oc1ccc(-c2ncccc2Cl)cc1",
+      "tranche": "H14P310",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Oc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000210287",
+      "product_smiles": "Cc1ccc(-c2ncccc2Cl)cc1",
+      "tranche": "H14P370",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Cc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000210018",
+      "product_smiles": "Nc1ccc(-c2ncccc2Cl)cc1",
+      "tranche": "H14P290",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Nc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000211213",
+      "product_smiles": "Fc1ccc(-c2ncccc2Cl)cc1",
+      "tranche": "H14P350",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Fc1ccc(Br)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00020647109",
+      "product_smiles": "Clc1cccnc1-c1ccncc1",
+      "tranche": "H13P270",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Brc1ccncc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_Molport-009-197-656",
+      "product_smiles": "Clc1cccnc1-c1cnc(-c2ccccc2)nc1",
+      "tranche": "H19P380",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Brc1cnc(-c2ccccc2)nc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00011215060",
+      "product_smiles": "Fc1cccc(-c2ncccc2Cl)c1",
+      "tranche": "H14P350",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Fc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000210342",
+      "product_smiles": "Oc1cccc(-c2ncccc2Cl)c1",
+      "tranche": "H14P310",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Oc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000210019",
+      "product_smiles": "Nc1cccc(-c2ncccc2Cl)c1",
+      "tranche": "H14P290",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Nc1cccc(Br)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000210063",
+      "product_smiles": "Clc1cccnc1-c1cccnc1",
+      "tranche": "H13P270",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Brc1cccnc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.23_web_CSSB00000725586_web_CSSB00000211977",
+      "product_smiles": "Cc1cccc(-c2ncccc2Cl)c1",
+      "tranche": "H14P370",
+      "building_blocks": [
+        "O[B-](O)(O)c1ncccc1Cl",
+        "Cc1cccc(Br)c1"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-2.23",
+    "reaction_name": "Suzuki-Br-3",
+    "pair_id": "0f2c66da-89ce-4a21-8df6-c84be3ab9b84",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "62.3",
+        "reference_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-2.23_0f2c66da-89ce-4a21-8df6-c84be3ab9b84/bb1_synthon_62.3_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "149",
+        "reference_smiles": "Brc1ccccc1",
+        "match_count": 12,
+        "matches_file": "mol1_bb/podirthj/CC-2.23_0f2c66da-89ce-4a21-8df6-c84be3ab9b84/bb2_synthon_149_matches.tsv",
+        "message": "12 building blocks passed Tc cutoff 0.4."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-2.23_0f2c66da-89ce-4a21-8df6-c84be3ab9b84"
+}

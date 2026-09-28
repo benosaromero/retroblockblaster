@@ -1,0 +1,29 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-2.33",
+  "reaction_name": "Suzuki-I-3",
+  "pair_id": "d47684b0-e6a7-4dde-b0b5-e4af0d3c60c5",
+  "reagent_count": "2",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "62.3",
+      "reference_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc([B-](O)(O)O)nn1-c1ccccc1",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-2.33_d47684b0-e6a7-4dde-b0b5-e4af0d3c60c5/bb1_synthon_62.3_matches.tsv",
+      "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "30",
+      "reference_smiles": "Ic1ccccc1",
+      "match_count": 13,
+      "matches_file": "mol1_bb/podirthj/CC-2.33_d47684b0-e6a7-4dde-b0b5-e4af0d3c60c5/bb2_synthon_30_matches.tsv",
+      "message": "13 building blocks passed Tc cutoff 0.4."
+    }
+  ]
+}

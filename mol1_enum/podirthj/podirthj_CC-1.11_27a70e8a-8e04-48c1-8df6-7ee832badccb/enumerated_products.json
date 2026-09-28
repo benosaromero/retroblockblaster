@@ -1,0 +1,164 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-1.11",
+  "pair_id": "27a70e8a-8e04-48c1-8df6-7ee832badccb_selected",
+  "total_combos": 14,
+  "products": [
+    {
+      "product_code": "CC-1.11_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "NCc1c(Cl)cccc1Cl",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_DISCONNECTED_BB1_web_CSSB00000068577",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1C(=O)NCc1c(Cl)cccc1Cl",
+      "tranche": "H24P430",
+      "building_blocks": [
+        "NCc1c(Cl)cccc1Cl",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00000688400_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(F)cccc1F)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P420",
+      "building_blocks": [
+        "NCc1c(F)cccc1F",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00000688400_web_CSSB00000068577",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1C(=O)NCc1c(F)cccc1F",
+      "tranche": "H24P320",
+      "building_blocks": [
+        "NCc1c(F)cccc1F",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00059238657_web_DISCONNECTED_BB2",
+      "product_smiles": "Cc1cccc(C)c1CNC(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P450",
+      "building_blocks": [
+        "Cc1cccc(C)c1CN",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00059238657_web_CSSB00000068577",
+      "product_smiles": "Cc1cccc(C)c1CNC(=O)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H24P360",
+      "building_blocks": [
+        "Cc1cccc(C)c1CN",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_Molport-000-146-860_web_DISCONNECTED_BB2",
+      "product_smiles": "COc1cccc(OC)c1CNC(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H36P390",
+      "building_blocks": [
+        "COc1cccc(OC)c1CN",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_Molport-000-146-860_web_CSSB00000068577",
+      "product_smiles": "COc1cccc(OC)c1CNC(=O)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H26P300",
+      "building_blocks": [
+        "COc1cccc(OC)c1CN",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00000174873_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1ccccc1)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H32P390",
+      "building_blocks": [
+        "NCc1ccccc1",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00000174873_web_CSSB00000068577",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1C(=O)NCc1ccccc1",
+      "tranche": "H22P300",
+      "building_blocks": [
+        "NCc1ccccc1",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_Molport-000-146-851_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(N)cccc1F)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P360",
+      "building_blocks": [
+        "NCc1c(N)cccc1F",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_Molport-000-146-851_web_CSSB00000068577",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1C(=O)NCc1c(N)cccc1F",
+      "tranche": "H24P270",
+      "building_blocks": [
+        "NCc1c(N)cccc1F",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00000212028_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1ccc(CN)cc1)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P330",
+      "building_blocks": [
+        "NCc1ccc(CN)cc1",
+        "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-1.11_web_CSSB00000212028_web_CSSB00000068577",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1C(=O)NCc1ccc(CN)cc1",
+      "tranche": "H24P240",
+      "building_blocks": [
+        "NCc1ccc(CN)cc1",
+        "Cn1nc(-c2ccccc2)cc1C(=O)Cl"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-1.11",
+    "reaction_name": "Alkylation-Cl-P",
+    "pair_id": "27a70e8a-8e04-48c1-8df6-7ee832badccb",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "227",
+        "reference_smiles": "NCc1c(Cl)cccc1Cl",
+        "match_count": 6,
+        "matches_file": "mol1_bb/podirthj/CC-1.11_27a70e8a-8e04-48c1-8df6-7ee832badccb/bb1_synthon_227_matches.tsv",
+        "message": "6 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "228",
+        "reference_smiles": "CN(CC(=O)Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-1.11_27a70e8a-8e04-48c1-8df6-7ee832badccb/bb2_synthon_228_matches.tsv",
+        "message": "1 building blocks passed Tc cutoff 0.4."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-1.11_27a70e8a-8e04-48c1-8df6-7ee832badccb"
+}

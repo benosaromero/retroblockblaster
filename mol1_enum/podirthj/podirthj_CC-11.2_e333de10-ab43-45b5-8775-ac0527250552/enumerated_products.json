@@ -1,0 +1,606 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-11.2",
+  "pair_id": "e333de10-ab43-45b5-8775-ac0527250552_selected",
+  "total_combos": 56,
+  "products": [
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)c1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)Cc1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H33P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_DISCONNECTED_BB1_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(C)(C)Br",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P310",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H32P460",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H26P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)c1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P450",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P290",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)Cc1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P440",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-225-264_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)Br",
+      "tranche": "H31P450",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H29P250",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H32P400",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H26P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)c1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H29P390",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H27P230",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)Cc1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P380",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H28P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-001-817-928_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(C)(C)Br",
+      "tranche": "H31P390",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H27P360",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H24P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)c1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H27P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H25P340",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)Cc1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P490",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H26P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00020629231_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(C)(C)Br",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H27P410",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)NCc1c(Cl)cccc1Cl)C(C)(C)Br",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H24P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)c1ccccc1Cl)C(C)(C)Br",
+      "tranche": "H27P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H25P390",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1ccccc1Cl)C(C)(C)Br",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H26P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-000-144-535_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(c1cc(-c2ccccc2)nn1C)C(C)(C)Br",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H29P360",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H26P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)c1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H27P340",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)Cc1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P490",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H28P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_CSSB00011356483_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(C)(C)Br",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P260",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H33P410",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_CSSB00000211432_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_CSSB00000211432_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)c1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P400",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)c1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_CSSB00012361363_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P240",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_CSSB00012361363_web_CSSB00009813324",
+      "product_smiles": "CC(C)(Br)N(CC(=O)Cc1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P390",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CBr)Cc1ccccc1Cl",
+        "CC(C)(Br)Br"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_Molport-044-557-402_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(C)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CBr"
+      ]
+    },
+    {
+      "product_code": "CC-11.2_web_Molport-002-344-202_web_Molport-044-557-402_web_CSSB00009813324",
+      "product_smiles": "COc1cccc(Cl)c1C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)Br",
+      "tranche": "H32P400",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1cccc(Cl)c1C(=O)CBr",
+        "CC(C)(Br)Br"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-11.2",
+    "reaction_name": "Dialkylation-Br",
+    "pair_id": "e333de10-ab43-45b5-8775-ac0527250552",
+    "reagent_count": "3",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "227",
+        "reference_smiles": "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "match_count": 6,
+        "matches_file": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552/bb1_synthon_227_matches.tsv",
+        "message": "6 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "321",
+        "reference_smiles": "O=C(CBr)NCc1c(Cl)cccc1Cl",
+        "match_count": 3,
+        "matches_file": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552/bb2_synthon_321_matches.tsv",
+        "message": "3 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb3",
+        "synthon_id": "322",
+        "reference_smiles": "CBr",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552/bb3_synthon_322_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-11.2_e333de10-ab43-45b5-8775-ac0527250552"
+}

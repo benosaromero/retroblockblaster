@@ -1,0 +1,70 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[11:38:26] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[11:38:26] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[11:38:26] product atom-mapping number 4 not found in reactants.
+[11:38:26] product atom-mapping number 1 found multiple times.
+[11:38:26] product atom-mapping number 2 found multiple times.
+[11:38:26] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[11:38:27] Explicit valence for atom # 3 C, 5, is greater than permitted
+[11:38:32] Explicit valence for atom # 3 C, 5, is greater than permitted
+[11:38:32] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 99448
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol1\nSaving matches 99448 CC-29.1 cf4a5d70-7af9-4b5b-8248-23c1e7341758
+Saving matches 99448 CC-10.11 3ef4f564-1029-4a81-ba62-72c06fffc444
+Saving matches 99448 CC-11.2 61de1096-f077-41ad-94ba-f8ace11666b3
+Saving matches 99448 CC-11.1 5e59567e-e1a9-4d7c-9920-4ad609faa071
+Saving matches 99448 CC-4.3 b1e1871e-5d47-4e7f-a502-07953b1edbca
+Saving matches 99448 CC-4.4 5066db68-fcd8-4315-bcef-3da674448487
+Saving matches 99448 CC-1.12 9c3804b2-13d0-4fa1-af99-a03e0d197d04
+Saving matches 99448 CC-1.11 0c1bf710-5cd4-41fa-8e59-a8681b64eb31
+Saving matches 99448 CC-4.1 66b28ad4-b30b-4154-93af-e3c0ea920976
+Saving matches 99448 CC-1.22 50327c99-64bc-40f5-9b85-d2cbea375377
+Saving matches 99448 CC-1.21 21b80860-873d-41bc-948f-eccc5d998cd5
+Saving matches 99448 CC-4.2 ae34e90b-9cf8-4605-8c32-a605875375c5
+Saving matches 99448 CC-10.21 61f2520c-3a70-4203-86fb-080e9cb970b1
+Saving matches 99448 CC-10.31 05f33e5e-c351-45f5-a6b9-b25e5c284885
+Saving matches 99448 CC-2.22 8ff0e709-9ee0-4128-b514-3be4cfe39f27
+Saving matches 99448 CC-2.21 8dbebe9e-8d2e-4570-ba43-e30fce55c5b2
+Saving matches 99448 CC-2.11 f57c1f12-72ea-417e-ac8f-6eb315076566
+Saving matches 99448 CC-2.31 d76e116a-6c16-4dea-abdf-b70b38c51f3e
+Saving matches 99448 CC-2.12 ded9f039-8417-419d-8523-ec43bd4e661a
+Saving matches 99448 CC-2.32 6502407c-13dc-4eb3-bd76-26e1a8951979
+Saving matches 99448 CC-2.33 c47d7a8d-67c2-4629-9dc5-53d2f5a89eca
+Saving matches 99448 CC-2.23 26dcf49f-d398-40f8-b9a5-a67dc2a2a894
+Saving matches 99448 CC-2.13 017fcd65-d5a2-4bf6-b536-1d34b25ddbd0
+Done. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 23
+Enumerating 1 99448_CC-1.11_0c1bf710-5cd4-41fa-8e59-a8681b64eb31 CC-1.11 synthon lists: 2
+Enumerating 2 99448_CC-1.12_9c3804b2-13d0-4fa1-af99-a03e0d197d04 CC-1.12 synthon lists: 2
+Enumerating 3 99448_CC-1.21_21b80860-873d-41bc-948f-eccc5d998cd5 CC-1.21 synthon lists: 2
+Enumerating 4 99448_CC-1.22_50327c99-64bc-40f5-9b85-d2cbea375377 CC-1.22 synthon lists: 2
+Enumerating 5 99448_CC-10.11_3ef4f564-1029-4a81-ba62-72c06fffc444 CC-10.11 synthon lists: 2
+Enumerating 6 99448_CC-10.21_61f2520c-3a70-4203-86fb-080e9cb970b1 CC-10.21 synthon lists: 2
+Enumerating 7 99448_CC-10.31_05f33e5e-c351-45f5-a6b9-b25e5c284885 CC-10.31 synthon lists: 2
+Enumerating 8 99448_CC-11.1_5e59567e-e1a9-4d7c-9920-4ad609faa071 CC-11.1 synthon lists: 3
+Enumerating 9 99448_CC-11.2_61de1096-f077-41ad-94ba-f8ace11666b3 CC-11.2 synthon lists: 3
+Enumerating 10 99448_CC-2.11_f57c1f12-72ea-417e-ac8f-6eb315076566 CC-2.11 synthon lists: 2
+Enumerating 11 99448_CC-2.12_ded9f039-8417-419d-8523-ec43bd4e661a CC-2.12 synthon lists: 2
+Enumerating 12 99448_CC-2.13_017fcd65-d5a2-4bf6-b536-1d34b25ddbd0 CC-2.13 synthon lists: 2
+Enumerating 13 99448_CC-2.21_8dbebe9e-8d2e-4570-ba43-e30fce55c5b2 CC-2.21 synthon lists: 2
+Enumerating 14 99448_CC-2.22_8ff0e709-9ee0-4128-b514-3be4cfe39f27 CC-2.22 synthon lists: 2
+Enumerating 15 99448_CC-2.23_26dcf49f-d398-40f8-b9a5-a67dc2a2a894 CC-2.23 synthon lists: 2
+Enumerating 16 99448_CC-2.31_d76e116a-6c16-4dea-abdf-b70b38c51f3e CC-2.31 synthon lists: 2
+Enumerating 17 99448_CC-2.32_6502407c-13dc-4eb3-bd76-26e1a8951979 CC-2.32 synthon lists: 2
+Enumerating 18 99448_CC-2.33_c47d7a8d-67c2-4629-9dc5-53d2f5a89eca CC-2.33 synthon lists: 2
+Enumerating 19 99448_CC-29.1_cf4a5d70-7af9-4b5b-8248-23c1e7341758 CC-29.1 synthon lists: 3
+Enumerating 20 99448_CC-4.1_66b28ad4-b30b-4154-93af-e3c0ea920976 CC-4.1 synthon lists: 2
+Enumerating 21 99448_CC-4.2_ae34e90b-9cf8-4605-8c32-a605875375c5 CC-4.2 synthon lists: 2
+Enumerating 22 99448_CC-4.3_b1e1871e-5d47-4e7f-a502-07953b1edbca CC-4.3 synthon lists: 2
+Enumerating 23 99448_CC-4.4_5066db68-fcd8-4315-bcef-3da674448487 CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_all.tsv from 23 route files
+Missing input file: mol1.tsv

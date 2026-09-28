@@ -1,0 +1,44 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[12:19:58] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[12:19:58] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[12:19:58] product atom-mapping number 4 not found in reactants.
+[12:19:58] product atom-mapping number 1 found multiple times.
+[12:19:58] product atom-mapping number 2 found multiple times.
+[12:19:58] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+Running 1 of 1 phil
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol1\nDone. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 18
+Skipping existing 1 phil_CC-1.11_dfd915b4-ab78-4922-8c9c-ff876c33be2b
+Skipping existing 2 phil_CC-1.12_d4fb7a73-ca33-4626-ae7b-4c0bc0500e87
+Skipping existing 3 phil_CC-1.21_4fb11e12-e76a-4c73-9087-3eef16035405
+Skipping existing 4 phil_CC-1.22_060c729f-0e3c-4ff0-8c75-2d99dd7d2404
+Skipping existing 5 phil_CC-10.21_e8dbb1d3-795b-460b-8c3d-c5832224ef4e
+Skipping existing 6 phil_CC-10.31_b8d11318-5198-4d9e-80d4-327748874b04
+Skipping existing 7 phil_CC-2.11_9a260f07-47c7-4482-962e-464b2089e41b
+Skipping existing 8 phil_CC-2.12_c817adca-cb26-4ad9-a23c-5d719094c361
+Skipping existing 9 phil_CC-2.13_cf1a81d3-c580-4764-88c4-7c863dceaa1a
+Skipping existing 10 phil_CC-2.21_5cd2a073-77f7-44fd-902a-7e2129ae6414
+Skipping existing 11 phil_CC-2.22_5d0261a9-3946-48da-b20b-06d9d086c896
+Skipping existing 12 phil_CC-2.23_efb30104-7cd0-4865-8ff5-3bad047286e1
+Skipping existing 13 phil_CC-2.31_dc5466d8-c03c-48f2-b3e1-a8562e92fa1d
+Skipping existing 14 phil_CC-2.32_481cf2bf-e522-40d8-8282-7968b5316efb
+Skipping existing 15 phil_CC-2.33_b27db4fa-7398-40ef-9613-085dab250465
+Skipping existing 16 phil_CC-4.1_c77bc9a7-cc5d-43d6-9e18-fae562441fe9
+Skipping existing 17 phil_CC-4.2_b5071a1b-8954-4b2e-a0b2-f3ff2be60463
+Skipping existing 18 phil_CC-4.4_521eab00-eb5a-46fc-a4f1-7ef7137f42eb
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nWrote mol1_rank.tsv
+Wrote mol1_rank_tc06_all.tsv rows: 1
+Wrote mol1_rank_tc04_connected.tsv rows: 1
+Wrote per-query files in mol1_ranked
+Wrote mol1_all.tsv from 18 route files
+Wrote mol1_rank.tsv
+Wrote mol1_ranked

@@ -1,0 +1,8 @@
+{
+  "job_id": "edc2b8446718",
+  "run": "mol1",
+  "status": "error",
+  "message": "Failed: Running retrosynthesis...",
+  "progress": 25,
+  "summary": "See workflow log: cache/workflow_jobs/edc2b8446718.log"
+}

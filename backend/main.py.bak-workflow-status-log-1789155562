@@ -1,0 +1,1999 @@
+# Created by Benjamin "Ben" Romero (Undergrad Northwestern University '29), Summer 2026.
+# Developed in the Irwin Lab at UCSF.
+# Released as part of an open-source UCSF research tool; please credit the creator and lab when using or adapting this work.
+
+from urllib.parse import urlencode, quote
+from urllib.request import Request, urlopen
+from pathlib import Path
+import subprocess
+import sys
+import uuid
+import zipfile
+import os
+import smtplib
+from email.message import EmailMessage
+import json
+from html import escape as html_escape
+import fnmatch
+
+from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, HTMLResponse
+from pydantic import BaseModel
+from backend.analog_pipeline import run_coverage_pipeline
+from backend.made_api import router as made_router
+
+load_dotenv(override=True)
+
+app = FastAPI()
+
+app.include_router(made_router)
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+COUNT_ROWS = [
+    {
+        "label": "$50",
+        "new_source": "incr050",
+        "total_source": "db050",
+    },
+    {
+        "label": "$100",
+        "new_source": "incr100",
+        "total_source": "db100",
+    },
+    {
+        "label": "$250",
+        "new_source": "incr250",
+        "total_source": "db250",
+    },
+    {
+        "label": "$500",
+        "new_source": "incr500",
+        "total_source": "db500",
+    },
+    {
+        "label": "$999",
+        "new_source": "incr999",
+        "total_source": "db999",
+    },
+    {
+        "label": "FAST",
+        "new_source": "bbAFAS",
+        "total_source": "bbAFAS",
+    },
+    {
+        "label": "MADE",
+        "new_source": "dball",
+        "total_source": "dball",
+    },
+]
+
+
+def send_finished_email(to_email: str, job_id: str):
+    download_url = f"http://127.0.0.1:8000/download/{job_id}"
+
+    message = EmailMessage()
+    message["Subject"] = "Your BenZinc26 job is finished"
+    message["From"] = os.environ["FROM_EMAIL"]
+    message["To"] = to_email
+
+    message.set_content(
+        f"""Your BenZinc26 job is finished.
+
+Job ID: {job_id}
+
+Download your output.zip here:
+{download_url}
+"""
+    )
+
+    with smtplib.SMTP(os.environ["SMTP_HOST"], int(os.environ["SMTP_PORT"])) as smtp:
+        smtp.starttls()
+        smtp.login(os.environ["SMTP_USER"], os.environ["SMTP_PASSWORD"])
+        smtp.send_message(message)
+
+
+class HelloJobRequest(BaseModel):
+    user_input: str
+    email: str
+    source: str = "db050"
+    tc_cutoff: float = 0.6
+    sort_mode: str = "balanced"
+
+class WorkflowRequest(BaseModel):
+    run: str
+    db: str = "dball"
+    input_tsv: str = ""
+
+class CoveragePipelineRequest(BaseModel):
+    parent_smiles: str
+    modifications: dict
+    buyable_analogs: list = []
+    makeable_analogs: list = []
+
+def lookup_synthon_building_blocks(synthon_id, limit=50, reference_smiles=""):
+    import arthor
+
+    synthons_path = "/nfs/exj/Fe/scripts/common_db/export/Synthons.json"
+    db_path = "/mnt/nfs/exj/arthor_db_backup/public_arthor/bb_instock.smi"
+
+    with open(synthons_path, "r") as f:
+        synthons = json.load(f)
+
+    synthon = None
+
+    if isinstance(synthons, dict):
+        synthon = synthons.get(str(synthon_id))
+        if synthon is None and str(synthon_id).isdigit():
+            synthon = synthons.get(int(synthon_id))
+    elif isinstance(synthons, list):
+        for item in synthons:
+            if isinstance(item, dict) and str(item.get("id")) == str(synthon_id):
+                synthon = item
+                break
+
+    if synthon is None:
+        return {"error": "synthon not found", "synthon_id": str(synthon_id), "results": []}
+
+    smarts_list = synthon.get("inSMARTS") or synthon.get("smarts") or synthon.get("SMARTS") or synthon.get("query")
+    smarts = smarts_list[0] if isinstance(smarts_list, list) else smarts_list
+
+    if not smarts:
+        return {
+            "error": "synthon has no SMARTS query",
+            "synthon_id": str(synthon_id),
+            "synthon_name": synthon.get("Name", ""),
+            "in_smarts": smarts_list,
+            "results": [],
+        }
+
+    db = arthor.SubDb("{}.atdb".format(db_path), smifile=db_path)
+    qry = arthor.Query(smarts, "Sma:QI")
+
+    ref_fp = None
+    if reference_smiles:
+        try:
+            from rdkit import Chem, DataStructs
+            from rdkit.Chem import AllChem
+
+            ref_mol = Chem.MolFromSmiles(reference_smiles)
+            if ref_mol is not None:
+                ref_fp = AllChem.GetMorganFingerprintAsBitVect(ref_mol, 2, nBits=2048)
+        except Exception:
+            ref_fp = None
+
+    results = []
+    for hit in db.search(qry):
+        line = hit.decode("utf-8") if hasattr(hit, "decode") else str(hit)
+        parts = line.strip().split()
+
+        smiles = parts[0] if len(parts) > 0 else ""
+        bb_id = parts[1] if len(parts) > 1 else ""
+        tc_score = ""
+
+        if ref_fp is not None and smiles:
+            try:
+                hit_mol = Chem.MolFromSmiles(smiles)
+                if hit_mol is not None:
+                    hit_fp = AllChem.GetMorganFingerprintAsBitVect(hit_mol, 2, nBits=2048)
+                    tc_score = round(DataStructs.TanimotoSimilarity(ref_fp, hit_fp), 3)
+            except Exception:
+                tc_score = ""
+
+        if ref_fp is not None and (tc_score == "" or tc_score < 0.2):
+            continue
+
+        results.append({
+            "smiles": smiles,
+            "bb_id": bb_id,
+            "synthon_id": str(synthon_id),
+            "synthon_name": synthon.get("Name", ""),
+            "db": "bb-stock",
+            "tc_score": tc_score,
+        })
+
+        if len(results) >= limit:
+            break
+
+    if ref_fp is not None:
+        results.sort(key=lambda item: item.get("tc_score", 0), reverse=True)
+
+    return {
+        "synthon_id": str(synthon_id),
+        "synthon_name": synthon.get("Name", ""),
+        "in_smarts": smarts_list,
+        "db": "bb-stock",
+        "results": results,
+    }
+
+def run_enumeration(data, mode="manual"):
+    reaction_id = data.get("reaction_id", "")
+    pair_id = data.get("pair_id", uuid.uuid4().hex[:12])
+
+    if not reaction_id:
+        return {"error": "missing reaction_id"}
+
+    if mode == "all":
+        block_lists = data.get("block_lists", {})
+        if not block_lists:
+            return {"error": "missing block_lists"}
+
+        enum_dir = Path("jobs") / pair_id / "enumerate_all"
+        enum_dir.mkdir(parents=True, exist_ok=True)
+
+        input_files = []
+        total_combos = 1
+
+        for slot in sorted(block_lists.keys()):
+            blocks = block_lists.get(slot, [])
+            if not blocks:
+                return {"error": "missing building blocks for {}".format(slot)}
+
+            total_combos *= len(blocks)
+
+            first_block = blocks[0]
+            synthon_id = str(first_block.get("synthon_id", "")).strip()
+            synthon_name = str(first_block.get("synthon_name", "Selected")).replace(" ", "-")
+
+            if not synthon_id:
+                return {"error": "missing synthon_id for {}".format(slot)}
+
+            path = enum_dir / "web_synthon_{}_{}".format(synthon_id, synthon_name)
+
+            with path.open("w") as f:
+                for block in blocks:
+                    smiles = str(block.get("smiles", "")).strip()
+                    bb_id = str(block.get("bb_id", "BB")).strip()
+                    if smiles:
+                        f.write("{} {}\n".format(smiles, bb_id))
+
+            input_files.append(str(path))
+
+    else:
+        reagents = data.get("reagents", {})
+        if not reagents:
+            return {"error": "missing reagents"}
+
+        enum_dir = Path("jobs") / pair_id / "enumeration"
+        enum_dir.mkdir(parents=True, exist_ok=True)
+
+        input_files = []
+
+        for slot in sorted(reagents.keys()):
+            reagent = reagents[slot]
+            synthon_id = str(reagent.get("synthon_id", "")).strip()
+            synthon_name = str(reagent.get("synthon_name", "Selected")).replace(" ", "-")
+            smiles = str(reagent.get("smiles", "")).strip()
+            bb_id = str(reagent.get("bb_id", "BB")).strip()
+
+            if not synthon_id or not smiles:
+                continue
+
+            path = enum_dir / "web_synthon_{}_{}".format(synthon_id, synthon_name)
+
+            with path.open("w") as f:
+                f.write("{} {}\n".format(smiles, bb_id))
+
+            input_files.append(str(path))
+
+        total_combos = len(input_files)
+
+    if len(input_files) < 2:
+        return {"error": "need at least two selected building blocks"}
+
+    output_prefix = str(enum_dir / "enum_output")
+
+    cmd = [
+        "/nfs/exj/Fe/scripts/common_db/arthor-env/bin/python",
+        "backend/enumerator_web.py",
+        "-i",
+    ] + input_files + [
+        "-r", reaction_id,
+        "-o", output_prefix,
+        "-j", "/nfs/exj/Fe/scripts/common_db/export/Synthons.json",
+        "-e", "/nfs/exj/Fe/scripts/testreactions2/EXAMPLE_Library_Enumeration_File_hg2_noProtected_logP350_HAC35_RotB7_V3_A-AK1.json",
+        "-a", "/nfs/exj/Fe/scripts/common_db/export/Reactions.json",
+        "-p", "1",
+    ]
+
+    env = os.environ.copy()
+    env["PYTHONPATH"] = "/nfs/exj/Fe/scripts"
+
+    subprocess.check_call(cmd, env=env)
+
+    output_path = "{}_{}.out".format(output_prefix, reaction_id)
+    products = []
+
+    if os.path.exists(output_path):
+        with open(output_path, "r") as f:
+            for line in f:
+                parts = line.strip().split("\t")
+                if len(parts) >= 2:
+                    products.append({
+                        "product_code": parts[0],
+                        "product_smiles": parts[1],
+                        "tranche": parts[2] if len(parts) > 2 else "",
+                        "building_blocks": parts[3:] if len(parts) > 3 else [],
+                    })
+
+    return {
+        "message": "Enumeration finished" if mode != "all" else "Enumerate all finished",
+        "reaction_id": reaction_id,
+        "pair_id": pair_id,
+        "total_combos": total_combos,
+        "products": products,
+    }
+
+def read_job_rows(job_id):
+    import csv
+
+    output_path = Path("jobs") / job_id / "output.txt"
+
+    if not output_path.exists():
+        return []
+
+    with output_path.open(newline="") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
+
+def synthon_ids_for_job(job_id):
+    rows = read_job_rows(job_id)
+    synthon_ids = set()
+
+    for row in rows:
+        for key in ["bb1_synthon_id", "bb2_synthon_id", "bb3_synthon_id", "bb4_synthon_id"]:
+            value = str(row.get(key, "")).strip()
+            if value:
+                synthon_ids.add(value)
+
+    return sorted(synthon_ids)
+
+COUNT_SOURCES = [
+    "db050",
+    "db100",
+    "db250",
+    "db500",
+    "db999",
+    "bbAFAS",
+    "dball",
+    "incrMADE",
+]
+
+def count_file_lines(path):
+    if path is None or not path.exists():
+        return 0
+
+    output = subprocess.check_output(["wc", "-l", str(path)])
+    return int(output.decode("utf-8").strip().split()[0])
+
+def synthon_source_counts(synthon_id):
+    source_counts = {}
+
+    for row in COUNT_ROWS:
+        for source_key in ["new_source", "total_source"]:
+            source = row.get(source_key)
+
+            if not source:
+                continue
+
+            if source in source_counts:
+                continue
+
+            path = find_synthon_file(synthon_id, source)
+            source_counts[source] = count_file_lines(path) if path else 0
+
+    rows = []
+
+    for row in COUNT_ROWS:
+        new_source = row.get("new_source")
+        total_source = row.get("total_source")
+
+        rows.append({
+            "label": row["label"],
+            "new_source": new_source,
+            "new_count": source_counts.get(new_source, 0),
+            "total_source": total_source,
+            "total_count": source_counts.get(total_source, 0),
+        })
+
+    return rows
+
+SYNTHON_ROOT = Path("/mnt/nfs/exj/Fe/synthons")
+
+
+def normalize_synthon_id_for_file(synthon_id):
+    return str(synthon_id).strip().replace(".", "-")
+
+
+def synthon_source_dir(source):
+    allowed = {
+        "db050": SYNTHON_ROOT / "db050",
+        "db100": SYNTHON_ROOT / "db100",
+        "db250": SYNTHON_ROOT / "db250",
+        "db500": SYNTHON_ROOT / "db500",
+        "db999": SYNTHON_ROOT / "db999",
+        "incr050": SYNTHON_ROOT / "incr050",
+        "incr100": SYNTHON_ROOT / "incr100",
+        "incr250": SYNTHON_ROOT / "incr250",
+        "incr500": SYNTHON_ROOT / "incr500",
+        "incr999": SYNTHON_ROOT / "incr999",
+        "bbA050": SYNTHON_ROOT / "all" / "bbA050",
+        "bbA100": SYNTHON_ROOT / "all" / "bbA100",
+        "bbA250": SYNTHON_ROOT / "all" / "bbA250",
+        "bbA500": SYNTHON_ROOT / "all" / "bbA500",
+        "bbA999": SYNTHON_ROOT / "all" / "bbA999",
+        "bbAFAS": SYNTHON_ROOT / "incrFAST",
+        "bbAall": SYNTHON_ROOT / "dball",
+        "dball": SYNTHON_ROOT / "dball",
+        "incrFAST": SYNTHON_ROOT / "incrFAST",
+        "incrMADE": SYNTHON_ROOT / "incrMADE",
+    }
+
+    return allowed.get(source, allowed["db050"])
+
+
+def find_synthon_file(synthon_id, source):
+    directory = synthon_source_dir(source)
+
+    if not directory.exists():
+        return None
+
+    file_synthon_id = normalize_synthon_id_for_file(synthon_id)
+    file_source = "incrFAST" if source == "bbAFAS" else source
+
+    prefixes = [
+        "{}_{}_".format(file_source, file_synthon_id),
+        "{}_synthon_{}_".format(file_source, file_synthon_id),
+    ]
+
+    for path in directory.iterdir():
+        if not path.is_file():
+            continue
+
+        name = path.name
+
+        if name.endswith((".smi", ".smi_log", ".atdb", ".atfp", ".fp")):
+            continue
+
+        if any(name.startswith(prefix) for prefix in prefixes):
+            return path
+
+    return None
+
+
+def clean_synthon_name_from_file(path_name, synthon_id):
+    name = path_name
+
+    for suffix in [".smi", ".smi_log", ".atdb", ".atfp", ".fp"]:
+        if name.endswith(suffix):
+            name = name[:-len(suffix)]
+
+    file_synthon_id = normalize_synthon_id_for_file(synthon_id)
+
+    markers = [
+        "_{}_".format(file_synthon_id),
+        "_synthon_{}_".format(file_synthon_id),
+    ]
+
+    for marker in markers:
+        if marker in name:
+            return name.split(marker, 1)[1]
+
+    return name
+
+
+def read_synthon_file(synthon_id, source="db050", limit=50):
+    path = find_synthon_file(synthon_id, source)
+
+    if path is None:
+        return {
+            "error": "synthon file not found",
+            "synthon_id": str(synthon_id),
+            "source": source,
+            "results": [],
+        }
+
+    results = []
+    clean_synthon_name = clean_synthon_name_from_file(path.name, synthon_id)
+
+    with path.open("r", errors="replace") as handle:
+        for line in handle:
+            parts = line.strip().split()
+
+            if len(parts) < 1:
+                continue
+
+            smiles = parts[0]
+            bb_id = parts[1] if len(parts) > 1 else ""
+
+            results.append({
+                "smiles": smiles,
+                "bb_id": bb_id,
+                "synthon_id": str(synthon_id),
+                "synthon_name": clean_synthon_name,
+                "db": source,
+                "tc_score": "",
+            })
+
+            if len(results) >= limit:
+                break
+
+    return {
+        "synthon_id": str(synthon_id),
+        "synthon_name": clean_synthon_name,
+        "source": source,
+        "file": str(path),
+        "results": results,
+    }
+
+
+
+def clear_workflow_cache_on_reload():
+    for pattern in [
+        "*.tsv",
+        "*_ret",
+        "*_bb",
+        "*_enum",
+        "*_ranked",
+    ]:
+        for path in Path(".").glob(pattern):
+            if path.name.startswith("."):
+                continue
+            subprocess.call(["rm", "-rf", str(path)])
+
+
+@app.get("/", response_class=HTMLResponse)
+def home():
+    clear_workflow_cache_on_reload()
+    return Path("workflow.html").read_text()
+
+@app.post("/hello-job")
+def submit_hello_job(data: HelloJobRequest):
+    job_id = uuid.uuid4().hex[:12]
+    job_dir = Path("jobs") / job_id
+    job_dir.mkdir(parents=True, exist_ok=True)
+
+    settings_path = job_dir / "settings.json"
+    settings_path.write_text(json.dumps({
+        "source": data.source,
+        "tc_cutoff": data.tc_cutoff,
+        "sort_mode": data.sort_mode,
+    }, indent=2))
+
+    input_path = job_dir / "input.smi"
+    output_path = job_dir / "output.txt"
+    zip_path = job_dir / "output.zip"
+
+    input_path.write_text(data.user_input)
+
+    subprocess.run(
+        [
+            "/nfs/exj/Fe/scripts/common_db/arthor-env/bin/python",
+            "run_job.py",
+            str(input_path),
+            str(output_path),
+        ],
+        check=True,
+    )
+
+    with zipfile.ZipFile(zip_path, "w") as zip_file:
+        zip_file.write(output_path, arcname="output.txt")
+
+    email_status = "sent"
+
+    try:
+        send_finished_email(data.email, job_id)
+    except Exception as error:
+        email_status = f"failed: {error}"
+
+    return {
+        "job_id": job_id,
+        "message": "Job finished",
+        "output": output_path.read_text(),
+        "email_status": email_status,
+    }
+
+
+@app.post("/reaction")
+def reaction_job(data: HelloJobRequest):
+    return submit_hello_job(data)
+
+
+@app.post("/retro")
+def retro_job(data: HelloJobRequest):
+    return submit_hello_job(data)
+
+@app.get("/health")
+def health():
+    return {
+        "status": "running",
+        "service": "Retro-Blockblaster 2.0",
+        "port": 8003,
+        "main_page": "/workflow",
+        "workflow_api": "/api/workflow/full",
+    }
+
+def job_file_path(job_id, *parts):
+    local_path = Path("jobs") / job_id
+    legacy_path = LEGACY_JOB_ROOT / job_id
+
+    local_file = local_path.joinpath(*parts)
+    if local_file.exists():
+        return local_file
+
+    legacy_file = legacy_path.joinpath(*parts)
+    if legacy_file.exists():
+        return legacy_file
+
+    return local_file
+
+
+@app.get("/api/past-job/{job_or_run}")
+def lookup_past_job(job_or_run: str):
+    value = safe_workflow_name(job_or_run)
+
+    workflow_exists = any(
+        Path(item["path"]).exists()
+        for item in workflow_output_paths(value)
+    )
+
+    if workflow_exists:
+        return {
+            "kind": "workflow",
+            "id": value,
+            "url": "/workflow/{}".format(value),
+        }
+
+    workflow_status_path = WORKFLOW_JOB_DIR / (value + ".json")
+    if workflow_status_path.exists():
+        try:
+            workflow_status = json.loads(workflow_status_path.read_text())
+            workflow_run = workflow_status.get("run", "")
+        except Exception:
+            workflow_run = ""
+
+        if workflow_run:
+            return {
+                "kind": "workflow_run_job_id",
+                "id": value,
+                "run": workflow_run,
+                "url": "/workflow/{}".format(workflow_run),
+            }
+
+    run_for_job = workflow_run_for_job_id(value)
+
+    if run_for_job:
+        return {
+            "kind": "workflow_job_id",
+            "id": value,
+            "run": run_for_job,
+            "url": "/workflow/{}".format(run_for_job),
+        }
+
+    return {
+        "error": "No workflow job found for '{}'.".format(value),
+        "id": value,
+    }
+
+
+@app.get("/synthons/{job_id}", response_class=HTMLResponse)
+def synthons(job_id: str):
+    output_path = job_file_path(job_id, "output.txt")
+
+    if not output_path.exists():
+        return Path("index.html").read_text()
+
+    return f"""
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retro-Blockblaster Synthons</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-job-id="{job_id}">
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <h1>Retro-Blockblaster 1.0</h1>
+        <p>Synthons and retrosynthetic route results | Job ID: {job_id}</p>
+      </header>
+
+      <section class="panel">
+        <h2>Synthon Results</h2>
+        <p id="result">Loading job results...</p>
+      </section>
+
+      <footer class="footer">
+        <p>
+          <a class="button-link" href="/">Submit another job</a>
+          <a class="button-link" href="/download/{job_id}">Download output.zip</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
+"""
+
+@app.get("/api/synthons/{job_id}")
+def synthons_api(job_id: str):
+    output_path = job_file_path(job_id, "output.txt")
+
+    if not output_path.exists():
+        return {"error": "Job output not found", "job_id": job_id}
+
+    return {
+        "job_id": job_id,
+        "output": output_path.read_text(),
+        "download": f"/download/{job_id}",
+    }
+
+
+@app.get("/image/{job_id}/{filename}")
+def image(job_id: str, filename: str):
+    image_path = job_file_path(job_id, "images", filename)
+
+    if not image_path.exists():
+        return {"error": "image not found"}
+
+    return FileResponse(image_path, media_type="image/svg+xml")
+
+BETA_BACKEND = "http://127.0.0.1:8001"
+
+
+def proxy_beta_get(path):
+    with urlopen(BETA_BACKEND + path, timeout=120) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def proxy_beta_post(path, payload):
+    from urllib.error import HTTPError, URLError
+
+    url = "http://127.0.0.1:8001{}".format(path)
+    body = json.dumps(payload).encode("utf-8")
+
+    request = Request(
+        url,
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    try:
+        with urlopen(request, timeout=300) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except HTTPError as error:
+        error_body = error.read().decode("utf-8", errors="replace")
+        return {
+            "error": "beta endpoint returned HTTP {}".format(error.code),
+            "beta_path": path,
+            "beta_body": error_body,
+        }
+    except URLError as error:
+        return {
+            "error": "could not connect to beta endpoint",
+            "beta_path": path,
+            "details": str(error),
+        }
+
+def add_tc_scores(reference_smiles, results):
+    if not reference_smiles or not results:
+        return results
+
+    payload = json.dumps({
+        "reference_smiles": reference_smiles,
+        "candidates": results,
+    }).encode("utf-8")
+
+    process = subprocess.Popen(
+        ["/nfs/exj/Fe/scripts/common_db/arthor-env/bin/python", "backend/tc_score_cli.py"],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+    stdout, stderr = process.communicate(payload)
+
+    if process.returncode != 0:
+        return results
+
+    try:
+        return json.loads(stdout.decode("utf-8"))
+    except Exception:
+        return results
+
+
+def safe_workflow_name(value):
+    run = str(value).strip()
+
+    if not run:
+        raise HTTPException(status_code=400, detail="missing run name")
+
+    if run.endswith(".tsv"):
+        run = run[:-4]
+
+    allowed = []
+    for char in run:
+        if char.isalnum() or char in "-_":
+            allowed.append(char)
+
+    cleaned = "".join(allowed)
+
+    if cleaned != run:
+        raise HTTPException(
+            status_code=400,
+            detail="Run name can only contain letters, numbers, dash, and underscore",
+        )
+
+    return cleaned
+
+
+def run_workflow_command(command):
+    completed = subprocess.run(
+        command,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        universal_newlines=True,
+    )
+
+    if completed.returncode != 0:
+        raise HTTPException(
+            status_code=500,
+            detail=completed.stderr or completed.stdout or "Workflow command failed",
+        )
+
+    return completed.stdout.strip()
+
+
+
+@app.post("/api/workflow/upload-input")
+async def upload_workflow_input(file: UploadFile = File(...)):
+    name = file.filename or ""
+    suffix = Path(name).suffix.lower()
+    content = await file.read()
+
+    rows = []
+
+    if suffix in [".tsv", ".txt", ".csv"]:
+        text = content.decode("utf-8", errors="replace")
+        delimiter = "," if suffix == ".csv" else "\t"
+
+        import csv
+        from io import StringIO
+
+        reader = csv.DictReader(StringIO(text), delimiter=delimiter)
+        for row in reader:
+            cid = str(row.get("id", "")).strip()
+            smiles = str(row.get("smiles", "")).strip()
+            if cid and smiles:
+                rows.append({"id": cid, "smiles": smiles})
+
+    elif suffix in [".xlsx", ".xls"]:
+        from io import BytesIO
+        from openpyxl import load_workbook
+
+        workbook = load_workbook(BytesIO(content), read_only=True, data_only=True)
+        sheet = workbook.active
+        values = list(sheet.iter_rows(values_only=True))
+
+        if not values:
+            return {"error": "spreadsheet is empty", "rows": []}
+
+        headers = [str(value).strip().lower() if value is not None else "" for value in values[0]]
+
+        if "id" not in headers or "smiles" not in headers:
+            return {"error": "spreadsheet must have columns named id and smiles", "rows": []}
+
+        id_index = headers.index("id")
+        smiles_index = headers.index("smiles")
+
+        for values_row in values[1:]:
+            cid = str(values_row[id_index]).strip() if values_row[id_index] is not None else ""
+            smiles = str(values_row[smiles_index]).strip() if values_row[smiles_index] is not None else ""
+            if cid and smiles:
+                rows.append({"id": cid, "smiles": smiles})
+
+    else:
+        return {"error": "upload .xlsx, .xls, .tsv, .csv, or .txt only", "rows": []}
+
+    return {
+        "filename": name,
+        "count": len(rows),
+        "rows": rows,
+    }
+
+
+
+def clean_workflow_outputs(run):
+    protected_input = run + ".tsv"
+
+    for path in Path(".").glob(run + "_*"):
+        if path.name == protected_input:
+            continue
+
+        subprocess.call(["rm", "-rf", str(path)])
+
+
+@app.post("/api/workflow/input")
+def workflow_input(data: WorkflowRequest):
+    run = safe_workflow_name(data.run)
+    clean_workflow_outputs(run)
+
+    if not data.input_tsv.strip():
+        raise HTTPException(status_code=400, detail="missing input TSV")
+
+    Path(run + ".tsv").write_text(data.input_tsv)
+
+    return {
+        "run": run,
+        "step": "input",
+        "message": "Saved {}.tsv".format(run),
+    }
+
+
+@app.post("/api/workflow/retro")
+def workflow_retro(data: WorkflowRequest):
+    run = safe_workflow_name(data.run)
+    output = run_workflow_command(["python3", "retro.py", run])
+    return {"run": run, "step": "retro", "message": output}
+
+
+@app.post("/api/workflow/bbs")
+def workflow_bbs(data: WorkflowRequest):
+    run = safe_workflow_name(data.run)
+    output = run_workflow_command(["python3", "bbs.py", "-db", data.db, run])
+    return {"run": run, "step": "bbs", "message": output}
+
+
+@app.post("/api/workflow/make")
+def workflow_make(data: WorkflowRequest):
+    run = safe_workflow_name(data.run)
+    output = run_workflow_command(["python3", "make.py", run])
+    return {"run": run, "step": "make", "message": output}
+
+
+@app.post("/api/workflow/rank")
+def workflow_rank(data: WorkflowRequest):
+    run = safe_workflow_name(data.run)
+    output = run_workflow_command(["python3", "rank.py", run])
+    return {"run": run, "step": "rank", "message": output}
+
+
+@app.post("/api/workflow/full")
+def workflow_full(data: WorkflowRequest):
+    run = safe_workflow_name(data.run)
+    output = run_workflow_command(["python3", "workflow.py", "-db", data.db, run])
+    return {"run": run, "step": "full", "message": output}
+
+@app.get("/synthon/{synthon_id}")
+def synthon_lookup(synthon_id: str, source: str = "db050", limit: int = 50, reference_smiles: str = "", tc_cutoff: float = 0.6, fallback_top_match: bool = True):
+    result = read_synthon_file(
+        synthon_id=synthon_id,
+        source=source,
+        limit=limit,
+    )
+
+    scored_results = add_tc_scores(
+        reference_smiles=reference_smiles,
+        results=result.get("results", []),
+    )
+
+    if reference_smiles:
+        scored_results.sort(
+            key=lambda item: item.get("tc_score") if item.get("tc_score") != "" else -1,
+            reverse=True,
+        )
+
+        passing_results = [
+            item for item in scored_results
+            if item.get("tc_score") != "" and item.get("tc_score", 0) >= tc_cutoff
+        ]
+
+        if passing_results:
+            result["results"] = passing_results
+            result["message"] = "{} building blocks passed Tc cutoff {}.".format(
+                len(passing_results),
+                tc_cutoff,
+            )
+        else:
+            if fallback_top_match:
+                result["results"] = scored_results[:1]
+                result["message"] = "No building blocks were over Tc cutoff {}. Showing highest Tc match.".format(
+                    tc_cutoff,
+                )
+            else:
+                result["results"] = []
+                result["message"] = "No building blocks were over Tc cutoff {}. Lower Tc cutoff or allow top-match fallback.".format(
+                    tc_cutoff,
+                )
+
+    else:
+        result["results"] = scored_results
+        result["message"] = "No reference SMILES provided; Tc cutoff was not applied."
+
+    result["tc_cutoff"] = tc_cutoff
+    result["shown_count"] = len(result["results"])
+
+    return result
+
+@app.post("/enumerate")
+def enumerate_selected(data: dict):
+    return proxy_beta_post("/enumerate", data)
+
+
+@app.post("/enumerate-all")
+def enumerate_all(data: dict):
+    return proxy_beta_post("/enumerate-all", data)
+
+@app.post("/api/preload-synthons/{job_id}")
+def preload_synthons(job_id: str):
+    synthon_ids = synthon_ids_for_job(job_id)
+    loaded = []
+    failed = []
+
+    for synthon_id in synthon_ids:
+        try:
+            result = proxy_beta_get("/synthon/{}?reference_smiles=".format(synthon_id))
+
+            loaded.append({
+                "synthon_id": synthon_id,
+                "count": len(result.get("results", [])),
+            })
+        except Exception as error:
+            failed.append({
+                "synthon_id": synthon_id,
+                "error": str(error),
+            })
+
+    return {
+        "job_id": job_id,
+        "synthon_count": len(synthon_ids),
+        "loaded": loaded,
+        "failed": failed,
+    }
+
+@app.get("/api/reaction/{job_id}/{reaction_id}")
+def reaction_detail_api(job_id: str, reaction_id: str):
+    rows = [
+        row for row in read_job_rows(job_id)
+        if row.get("reaction_id") == reaction_id
+    ]
+
+    if not rows:
+        return {
+            "error": "Reaction not found",
+            "job_id": job_id,
+            "reaction_id": reaction_id,
+        }
+
+    return {
+        "job_id": job_id,
+        "reaction_id": reaction_id,
+        "rows": rows,
+    }
+
+
+@app.get("/reaction/{job_id}/{reaction_id}", response_class=HTMLResponse)
+def reaction_detail_page(job_id: str, reaction_id: str):
+    return f"""
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retro-Blockblaster {reaction_id}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-job-id="{job_id}" data-reaction-id="{reaction_id}">
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <h1>{reaction_id}</h1>
+        <p>Reaction detail | Job ID: {job_id}</p>
+      </header>
+
+      <section class="panel">
+        <h2>Reaction Detail</h2>
+        <p id="result">Loading reaction detail...</p>
+      </section>
+
+      <footer class="footer">
+        <p>
+          <a class="button-link" href="/synthons/{job_id}">Back to synthons</a>
+          <a class="button-link" href="/download/{job_id}">Download output.zip</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
+"""
+
+@app.get("/draw")
+def draw_molecule(smiles: str = ""):
+    if not smiles:
+        return {"error": "missing smiles"}
+
+    result = subprocess.run(
+        [
+            "/nfs/exj/Fe/scripts/common_db/arthor-env/bin/python",
+            "backend/draw_molecule_cli.py",
+            smiles,
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        universal_newlines=True,
+    )
+
+    if result.returncode != 0:
+        raise HTTPException(status_code=500, detail=result.stderr)
+
+    return HTMLResponse(result.stdout, media_type="image/svg+xml")
+
+def load_synthon_count_cache():
+    path = Path("cache/synthon_counts.json")
+
+    if not path.exists():
+        return {}
+
+    return json.loads(path.read_text())
+
+
+def synthon_ids_for_job(job_id):
+    ids = set()
+
+    for row in read_job_rows(job_id):
+        for key in ["bb1_synthon_id", "bb2_synthon_id", "bb3_synthon_id", "bb4_synthon_id"]:
+            synthon_id = str(row.get(key, "")).strip()
+
+            if synthon_id:
+                ids.add(synthon_id)
+
+    return sorted(ids)
+
+@app.get("/coverage", response_class=HTMLResponse)
+def coverage_page():
+    return """
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retro-Blockblaster 1.0 | Analog Coverage</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <h1>Retro-Blockblaster 1.0</h1>
+        <p>Analog coverage across buyable, makeable, overlapping, and inaccessible chemical space.</p>
+      </header>
+
+      <section class="panel coverage-panel">
+        <h2>Analog Coverage</h2>
+
+        <div class="coverage-instructions">
+          <p>
+            Enter a parent SMILES and define atom-level modifications. The tool generates close analogs, then compares them against optional buyable and makeable analog lists.
+          </p>
+          <p>
+            Use the submitted Retro-Blockblaster job to find makeable analogs, then paste product SMILES into the makeable list if needed.
+          </p>
+        </div>
+
+        <form id="coverage-form">
+          <label for="coverage-parent-smiles">Parent SMILES</label>
+          <textarea id="coverage-parent-smiles" class="coverage-textarea is-compact" required>CCOC(=O)C1=CN=CN1[C@H](C)C2=CC=CC=C2</textarea>
+
+          <div class="coverage-action-row">
+            <button type="button" class="coverage-secondary-button" onclick="openRetroForCoverage()">
+              Open Submitted Retro-Blockblaster Job
+            </button>
+          </div>
+
+          <label for="coverage-modifications">Modifications JSON</label>
+          <textarea id="coverage-modifications" class="coverage-textarea" required>{
+  "0": ["O", "F", "C"],
+  "6": ["C"],
+  "14": ["C"],
+  "15": ["N", "O"],
+  "16": ["O"]
+}</textarea>
+
+          <div class="coverage-optional-controls">
+            <button type="button" class="coverage-secondary-button" onclick="toggleCoverageOptional('coverage-buyable-wrap', this)">
+              Add buyable analog SMILES
+            </button>
+
+            <button type="button" class="coverage-secondary-button" onclick="toggleCoverageOptional('coverage-makeable-wrap', this)">
+              Add makeable analog SMILES
+            </button>
+          </div>
+
+          <div id="coverage-buyable-wrap" class="coverage-optional-section">
+            <label for="coverage-buyable">Buyable analog SMILES</label>
+            <textarea id="coverage-buyable" class="coverage-textarea" placeholder="One SMILES per line"></textarea>
+          </div>
+
+          <div id="coverage-makeable-wrap" class="coverage-optional-section">
+            <label for="coverage-makeable">Makeable analog SMILES</label>
+            <textarea id="coverage-makeable" class="coverage-textarea" placeholder="One SMILES per line"></textarea>
+          </div>
+
+          <button type="submit">Run Coverage</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Coverage Result</h2>
+        <div id="coverage-result">No coverage job submitted yet.</div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Irwin Lab, UCSF | Retro-Blockblaster 1.0
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/static/coverage.js"></script>
+</body>
+</html>
+"""
+
+@app.get("/api/synthon-counts/{job_id}")
+def synthon_counts_api(job_id: str):
+    cache = load_synthon_count_cache()
+    counts = {}
+
+    for synthon_id in synthon_ids_for_job(job_id):
+        source_counts = cache.get(str(synthon_id), {})
+        rows = []
+
+        for row in COUNT_ROWS:
+            new_source = row.get("new_source")
+            total_source = row.get("total_source")
+
+            rows.append({
+                "label": row["label"],
+                "new_source": new_source,
+                "new_count": source_counts.get(new_source) if new_source else 0,
+                "total_source": total_source,
+                "total_count": source_counts.get(total_source) if total_source else 0,
+            })
+
+        counts[str(synthon_id)] = rows
+
+    return {
+        "job_id": job_id,
+        "counts": counts,
+        "rows": COUNT_ROWS,
+    }
+
+@app.get("/api/job-settings/{job_id}")
+def job_settings(job_id: str):
+    settings_path = Path("jobs") / job_id / "settings.json"
+
+    if not settings_path.exists():
+        return {
+            "source": "db050",
+            "tc_cutoff": 0.6,
+            "sort_mode": "balanced",
+        }
+
+    return json.loads(settings_path.read_text())
+
+@app.post("/api/coverage-pipeline")
+def coverage_pipeline(data: CoveragePipelineRequest):
+    return run_coverage_pipeline(
+        parent_smiles=data.parent_smiles,
+        modifications_dict=data.modifications,
+        buyable_analogs=data.buyable_analogs,
+        makeable_analogs=data.makeable_analogs,
+    )
+
+@app.get("/coverage-file/{job_id}/{filename}")
+def coverage_file(job_id: str, filename: str):
+    allowed = {
+        "coverage.csv",
+        "close_analogs.csv",
+        "close_analogs.png",
+        "close_analogs_parent_numbered.png",
+    }
+
+    if filename not in allowed:
+        return {"error": "file not allowed"}
+
+    path = Path("jobs") / job_id / "coverage" / filename
+
+    if not path.exists():
+        return {"error": "file not found"}
+
+    if filename.endswith(".png"):
+        return FileResponse(path, media_type="image/png", filename=filename)
+
+    return FileResponse(path, media_type="text/csv", filename=filename)
+
+@app.get("/workflow", response_class=HTMLResponse)
+def workflow_dashboard():
+    clear_workflow_cache_on_reload()
+    return Path("workflow.html").read_text()
+
+
+
+@app.get("/workflow/{run}", response_class=HTMLResponse)
+def workflow_dashboard_for_run(run: str):
+    import html as html_module
+
+    page = Path("workflow.html").read_text()
+    safe_run = html_module.escape(run, quote=True)
+
+    return page.replace(
+        'id="workflow-run" value="mol1"',
+        'id="workflow-run" value="{}"'.format(safe_run),
+        1,
+    )
+
+@app.get("/download/{job_id}")
+def download_output(job_id: str):
+    zip_path = job_file_path(job_id, "output.zip")
+
+    if not zip_path.exists():
+        return {"error": "output.zip not found"}
+
+    return FileResponse(
+        zip_path,
+        media_type="application/zip",
+        filename="output.zip",
+    )
+
+@app.get("/workflow-file/{filename}")
+def workflow_file(filename: str):
+    path = Path(filename)
+
+    if not path.exists() or not path.is_file():
+        raise HTTPException(status_code=404, detail="file not found")
+
+    return FileResponse(path, filename=path.name)
+
+
+@app.get("/workflow-folder/{folder}")
+def workflow_folder(folder: str):
+    import shutil
+
+    path = Path(folder)
+
+    if not path.exists() or not path.is_dir():
+        raise HTTPException(status_code=404, detail="folder not found")
+
+    zip_path = Path("cache") / "{}.zip".format(folder)
+    zip_path.parent.mkdir(exist_ok=True)
+
+    if zip_path.exists():
+        zip_path.unlink()
+
+    shutil.make_archive(str(zip_path.with_suffix("")), "zip", str(path))
+
+    return FileResponse(zip_path, media_type="application/zip", filename=zip_path.name)
+
+WORKFLOW_JOB_INDEX = Path("workflow_job_index.tsv")
+
+
+def append_workflow_job_index(run):
+    run = safe_workflow_name(run)
+
+    rows = []
+    seen = set()
+
+    for source_path in [
+        Path(run + "_syn.tsv"),
+        Path(run + "_jobs.tsv"),
+    ]:
+        if not source_path.exists():
+            continue
+
+        lines = source_path.read_text(errors="replace").splitlines()
+
+        if not lines:
+            continue
+
+        header = lines[0].split("\t")
+
+        if "job_id" not in header:
+            continue
+
+        job_index = header.index("job_id")
+        input_index = header.index("input_id") if "input_id" in header else -1
+
+        for line in lines[1:]:
+            parts = line.split("\t")
+
+            if len(parts) <= job_index:
+                continue
+
+            job_id = parts[job_index].strip()
+            input_id = parts[input_index].strip() if input_index >= 0 and len(parts) > input_index else ""
+
+            if not job_id:
+                continue
+
+            key = (job_id, run, input_id)
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            rows.append(key)
+
+    if not rows:
+        return 0
+
+    existing = set()
+
+    if WORKFLOW_JOB_INDEX.exists():
+        for line in WORKFLOW_JOB_INDEX.read_text(errors="replace").splitlines()[1:]:
+            parts = line.split("\t")
+            if len(parts) >= 3:
+                existing.add((parts[0], parts[1], parts[2]))
+
+    needs_header = not WORKFLOW_JOB_INDEX.exists() or WORKFLOW_JOB_INDEX.stat().st_size == 0
+
+    with WORKFLOW_JOB_INDEX.open("a") as output:
+        if needs_header:
+            output.write("job_id\trun\tinput_id\n")
+
+        wrote = 0
+
+        for row in rows:
+            if row in existing:
+                continue
+
+            output.write("{}\t{}\t{}\n".format(row[0], row[1], row[2]))
+            wrote += 1
+
+    return wrote
+
+
+def workflow_run_for_job_id(job_id):
+    value = str(job_id).strip()
+
+    if not value:
+        return ""
+
+    for path in Path(".").glob("*_syn.tsv"):
+        run = path.name[:-8]
+
+        try:
+            lines = path.read_text(errors="replace").splitlines()
+        except Exception:
+            continue
+
+        if not lines:
+            continue
+
+        header = lines[0].split("\t")
+
+        if "job_id" not in header:
+            continue
+
+        job_index = header.index("job_id")
+
+        for line in lines[1:]:
+            parts = line.split("\t")
+
+            if len(parts) > job_index and parts[job_index].strip() == value:
+                return run
+
+    for path in Path(".").glob("*_jobs.tsv"):
+        run = path.name[:-9]
+
+        try:
+            lines = path.read_text(errors="replace").splitlines()
+        except Exception:
+            continue
+
+        for line in lines:
+            if value in [part.strip() for part in line.split("\t")]:
+                return run
+
+    return ""
+
+
+def workflow_job_rows(run):
+    run = safe_workflow_name(run)
+    rows = []
+    seen = set()
+
+    for source_path in [
+        Path(run + "_syn.tsv"),
+        Path(run + "_jobs.tsv"),
+    ]:
+        if not source_path.exists():
+            continue
+
+        lines = source_path.read_text(errors="replace").splitlines()
+        if not lines:
+            continue
+
+        header = lines[0].split("\t")
+        if "job_id" not in header:
+            continue
+
+        job_index = header.index("job_id")
+        input_index = header.index("input_id") if "input_id" in header else -1
+        smiles_index = header.index("original_smiles") if "original_smiles" in header else -1
+
+        for line in lines[1:]:
+            parts = line.split("\t")
+            if len(parts) <= job_index:
+                continue
+
+            job_id = parts[job_index].strip()
+            input_id = parts[input_index].strip() if input_index >= 0 and len(parts) > input_index else ""
+            original_smiles = parts[smiles_index].strip() if smiles_index >= 0 and len(parts) > smiles_index else ""
+
+            if not job_id:
+                continue
+
+            key = (job_id, input_id)
+            if key in seen:
+                continue
+
+            seen.add(key)
+            rows.append({
+                "job_id": job_id,
+                "input_id": input_id,
+                "original_smiles": original_smiles,
+                "synthons_url": "/synthons/{}".format(job_id),
+                "past_job_url": "/api/past-job/{}".format(job_id),
+            })
+
+    return rows
+
+
+def workflow_output_paths(run):
+    run = safe_workflow_name(run)
+
+    return [
+        {"key": "input", "label": "Input TSV", "type": "file", "path": run + ".tsv"},
+        {"key": "synthons", "label": "Synthons TSV", "type": "file", "path": run + "_syn.tsv"},
+        {"key": "jobs", "label": "Job IDs", "type": "file", "path": run + "_jobs.tsv"},
+        {"key": "summary", "label": "Retro Summary", "type": "file", "path": run + "_summary.tsv"},
+        {"key": "retro", "label": "Retro Outputs", "type": "folder", "path": run + "_ret"},
+        {"key": "bb", "label": "Building-Block Matches", "type": "folder", "path": run + "_bb"},
+        {"key": "enum", "label": "Enumerated Products", "type": "folder", "path": run + "_enum"},
+        {"key": "all", "label": "Combined Products", "type": "file", "path": run + "_all.tsv"},
+        {"key": "rank", "label": "Ranked Analogs", "type": "file", "path": run + "_rank.tsv"},
+        {"key": "rank_tc06_all", "label": "Ranked Analogs Tc 0.6 All", "type": "file", "path": run + "_rank_tc06_all.tsv"},
+        {"key": "rank_tc04_connected", "label": "Ranked Analogs Tc 0.4 Connected", "type": "file", "path": run + "_rank_tc04_connected.tsv"},
+        {"key": "ranked", "label": "Per-Molecule Results", "type": "folder", "path": run + "_ranked"},
+    ]
+
+
+
+WORKFLOW_JOB_DIR = Path("cache") / "workflow_jobs"
+WORKFLOW_JOB_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def write_workflow_status(job_id, status, message, progress=0, summary="", run=""):
+    WORKFLOW_JOB_DIR.mkdir(parents=True, exist_ok=True)
+    path = WORKFLOW_JOB_DIR / (job_id + ".json")
+    tmp_path = WORKFLOW_JOB_DIR / (job_id + ".json.tmp")
+
+    if not run and path.exists():
+        try:
+            existing = json.loads(path.read_text())
+            run = existing.get("run", "")
+        except Exception:
+            run = ""
+
+    data = {
+        "job_id": job_id,
+        "run": run,
+        "status": status,
+        "message": message,
+        "progress": progress,
+        "summary": summary,
+    }
+
+    tmp_path.write_text(json.dumps(data, indent=2))
+    tmp_path.replace(path)
+
+
+def run_workflow_command(job_id, cmd, message, progress, summary):
+    write_workflow_status(job_id, "running", message, progress, summary)
+
+    log_path = WORKFLOW_JOB_DIR / (job_id + ".log")
+    with log_path.open("a") as log:
+        log.write("\\n\\n$ {}\\n".format(" ".join(cmd)))
+        log.flush()
+
+        process = subprocess.Popen(cmd, stdout=log, stderr=log)
+        return_code = process.wait()
+
+    if return_code != 0:
+        write_workflow_status(job_id, "error", "Failed: " + message, progress, "See workflow log: {}".format(log_path))
+        return False
+
+    return True
+
+
+def normalize_retro_outputs(run):
+    run = safe_workflow_name(run)
+
+    copies = [
+        (Path("job_ids.tsv"), Path(run + "_jobs.tsv")),
+        (Path("job_summary.txt"), Path(run + "_summary.tsv")),
+    ]
+
+    for source, target in copies:
+        if source.exists() and not target.exists():
+            shutil.copyfile(str(source), str(target))
+
+
+def run_workflow_background(job_id, step, run, db):
+    try:
+        commands = []
+
+        if step == "retro":
+            commands = [([sys.executable, "retro.py", run], "Running retrosynthesis...", 30, "Finding routes and disconnected synthons.")]
+        elif step == "bbs":
+            commands = [([sys.executable, "bbs.py", "-db", db, run], "Finding matched building blocks...", 55, "Searching building-block matches for each synthon.")]
+        elif step == "make":
+            commands = [([sys.executable, "make.py", run], "Generating analogs...", 78, "Enumerating analog products.")]
+        elif step == "rank":
+            commands = [([sys.executable, "rank.py", run], "Ranking analogs...", 95, "Ranking products by similarity.")]
+        elif step == "full":
+            commands = [
+                ([sys.executable, "retro.py", run], "Running retrosynthesis...", 25, "Finding routes and disconnected synthons."),
+                ([sys.executable, "bbs.py", "-db", db, run], "Finding matched building blocks...", 50, "Searching building-block matches for each synthon."),
+                ([sys.executable, "make.py", run], "Generating analogs...", 75, "Enumerating analog products."),
+                ([sys.executable, "rank.py", run], "Ranking analogs...", 95, "Ranking products by similarity."),
+            ]
+        else:
+            write_workflow_status(job_id, "error", "Unknown workflow step: {}".format(step), 0, "")
+            return
+
+        for cmd, message, progress, summary in commands:
+            if not run_workflow_command(job_id, cmd, message, progress, summary):
+                return
+
+            if len(cmd) >= 2 and cmd[1] == "retro.py":
+                normalize_retro_outputs(run)
+
+        write_workflow_status(job_id, "done", "{} finished.".format(step), 100, "Outputs are ready to view or download.")
+
+    except Exception as error:
+        write_workflow_status(job_id, "error", str(error), 0, "Workflow crashed before finishing.")
+
+
+@app.post("/api/workflow/start/{step}")
+def start_workflow_step(step: str, data: dict):
+    run = safe_workflow_name(data.get("run", "mol1"))
+    db = data.get("db", "dball")
+    job_id = uuid.uuid4().hex[:12]
+
+    write_workflow_status(job_id, "running", "Queued {}...".format(step), 1, "Preparing workflow command.", run=run)
+
+    thread = threading.Thread(target=run_workflow_background, args=(job_id, step, run, db))
+    thread.daemon = True
+    thread.start()
+
+    return {"job_id": job_id, "step": step, "run": run, "status": "running"}
+
+
+@app.get("/api/workflow/status/{job_id}")
+def workflow_status(job_id: str):
+    job_id = safe_workflow_name(job_id)
+    path = WORKFLOW_JOB_DIR / (job_id + ".json")
+
+    if not path.exists():
+        return {
+            "job_id": job_id,
+            "status": "running",
+            "message": "Waiting for workflow job to start...",
+            "progress": 1,
+            "summary": "The job has been queued.",
+            "done": False,
+        }
+
+    try:
+        raw_text = path.read_text().strip()
+        data = json.loads(raw_text) if raw_text else {}
+    except Exception:
+        return {
+            "job_id": job_id,
+            "status": "running",
+            "message": "Workflow is updating status...",
+            "progress": 1,
+            "summary": "",
+            "done": False,
+        }
+
+    status = data.get("status", "running")
+    data["done"] = status in ["done", "finished", "completed", "success", "error"]
+    return data
+
+
+@app.get("/api/workflow/outputs/{run}")
+def workflow_outputs(run: str):
+    append_workflow_job_index(run)
+    outputs = []
+
+    for item in workflow_output_paths(run):
+        path = Path(item["path"])
+        zip_path = Path("cache") / (item["path"] + ".zip")
+        exists = path.exists()
+        zip_exists = zip_path.exists()
+
+        row = dict(item)
+        row["exists"] = exists or zip_exists
+        row["available"] = exists or zip_exists
+        row["size"] = path.stat().st_size if exists and path.is_file() else (zip_path.stat().st_size if zip_exists else None)
+
+        if zip_exists and not exists:
+            row["cached_zip"] = str(zip_path)
+
+        outputs.append(row)
+
+    return {
+        "run": safe_workflow_name(run),
+        "outputs": outputs,
+        "jobs": workflow_job_rows(run),
+    }
+
+
+def safe_workflow_path(value):
+    name = str(value).strip()
+
+    if not name or name.startswith("/") or "\x00" in name:
+        raise HTTPException(status_code=400, detail="invalid path")
+
+    path = Path(name)
+
+    if ".." in path.parts:
+        raise HTTPException(status_code=400, detail="invalid path")
+
+    return path
+
+
+def is_product_output_preview(path):
+    name = path.name
+
+    return (
+        name.endswith("_all.tsv")
+        or name.endswith("_rank.tsv")
+        or name.endswith("_rank_tc06_all.tsv")
+        or name.endswith("_rank_tc04_connected.tsv")
+        or name.endswith("enumerated_products.tsv")
+    )
+
+
+def workflow_page(title, body):
+    safe_title = html_escape(str(title))
+
+    return """
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{title}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <h1>{title}</h1>
+        <p>Workflow preview</p>
+      </header>
+
+      <section class="panel">
+        {body}
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+""".format(title=safe_title, body=body)
+
+
+def render_tsv_preview(path, max_rows=200):
+    import csv
+    from urllib.parse import quote
+
+    rows = []
+
+    with path.open("r", errors="replace") as handle:
+        reader = csv.reader(handle, delimiter="\t" if path.suffix.lower() != ".csv" else ",")
+
+        for index, row in enumerate(reader):
+            rows.append(row)
+
+            if index >= max_rows:
+                break
+
+    if not rows:
+        return workflow_page(path.name, "<p>No rows found.</p>")
+
+    header = rows[0]
+    existing_svg_for = set()
+
+    for column in header:
+        if column.endswith("_svg"):
+            existing_svg_for.add(column[:-4])
+
+    preview_header = []
+
+    for column in header:
+        base_name = column[:-7] if column.endswith("_smiles") else column
+
+        if (column == "smiles" or column.endswith("_smiles")) and base_name not in existing_svg_for:
+            preview_header.append(base_name + "_svg")
+
+        preview_header.append(column)
+
+    table_rows = []
+    table_rows.append(
+        "<tr>{}</tr>".format(
+            "".join("<th>{}</th>".format(html_escape(str(value))) for value in preview_header)
+        )
+    )
+
+    for row in rows[1:]:
+        rendered_cells = []
+
+        for column_index, column in enumerate(header):
+            raw_value = row[column_index] if column_index < len(row) else ""
+            safe_value = html_escape(str(raw_value))
+            base_name = column[:-7] if column.endswith("_smiles") else column
+
+            if column.endswith("_svg"):
+                if raw_value:
+                    rendered_cells.append(
+                        "<td class='workflow-svg-cell'><img class='workflow-preview-mol' src='/{}' alt='Molecule structure'></td>".format(
+                            quote(str(raw_value).lstrip("/"))
+                        )
+                    )
+                else:
+                    rendered_cells.append("<td></td>")
+                continue
+
+            if column == "smiles" or column.endswith("_smiles"):
+                if base_name not in existing_svg_for:
+                    if raw_value:
+                        rendered_cells.append(
+                            "<td class='workflow-svg-cell'><img class='workflow-preview-mol' src='/draw?smiles={}' alt='Molecule structure'></td>".format(
+                                quote(str(raw_value))
+                            )
+                        )
+                    else:
+                        rendered_cells.append("<td></td>")
+
+                rendered_cells.append("<td class='smiles-text'>{}</td>".format(safe_value))
+                continue
+
+            rendered_cells.append("<td>{}</td>".format(safe_value))
+
+        table_rows.append("<tr>{}</tr>".format("".join(rendered_cells)))
+
+    body = """
+<div class="rb2-table-scroll">
+  <table class="preview-table preview-table-wide">{}</table>
+</div>
+""".format("".join(table_rows))
+
+    return workflow_page(path.name, body)
+
+
+def render_json_preview(path):
+    data = json.loads(path.read_text())
+
+    body = "<pre class='smiles-text'>{}</pre>".format(
+        html_escape(json.dumps(data, indent=2, sort_keys=True))
+    )
+
+    return workflow_page(path.name, body)
+
+
+def render_product_tsv_preview(path):
+    return render_tsv_preview(path)
+
+
+def render_product_json_preview(path):
+    return render_json_preview(path)
+
+
+@app.get("/workflow-view-file/{filename:path}", response_class=HTMLResponse)
+def workflow_view_file(filename: str):
+    path = safe_workflow_path(filename)
+
+    if not path.exists() or not path.is_file():
+        return HTMLResponse("file not found", status_code=404)
+
+    suffix = path.suffix.lower()
+
+    if suffix == ".svg":
+        return FileResponse(path, media_type="image/svg+xml")
+
+    if suffix == ".png":
+        return FileResponse(path, media_type="image/png")
+
+    if suffix in [".tsv", ".csv", ".txt"]:
+        if is_product_output_preview(path):
+            return HTMLResponse(render_product_tsv_preview(path))
+        return HTMLResponse(render_tsv_preview(path))
+
+    if suffix == ".json":
+        if is_product_output_preview(path):
+            return HTMLResponse(render_product_json_preview(path))
+        return HTMLResponse(render_json_preview(path))
+
+    return FileResponse(path)
+
+
+@app.get("/workflow-view-folder/{folder:path}", response_class=HTMLResponse)
+def workflow_view_folder(folder: str):
+    path = safe_workflow_path(folder)
+
+    if not path.exists() or not path.is_dir():
+        return HTMLResponse("folder not found", status_code=404)
+
+    rows = ["<tr><th>name</th><th>type</th><th>actions</th></tr>"]
+
+    for child in sorted(path.iterdir()):
+        full = str(child)
+        if child.is_dir():
+            actions = "<a class='button-link preview-mini-link' href='/workflow-view-folder/{}'>Open</a>".format(quote(full))
+            kind = "folder"
+        else:
+            actions = "<a class='button-link preview-mini-link' href='/workflow-view-file/{}' target='_blank'>View</a> <a class='button-link preview-mini-link' href='/workflow-artifact/{}'>Download</a>".format(
+                quote(full),
+                quote(full),
+            )
+            kind = "file"
+
+        rows.append("<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(html_escape(child.name), kind, actions))
+
+    body = """
+<div class="rb2-table-scroll">
+  <table class="preview-table preview-table-wide">{}</table>
+</div>
+""".format("".join(rows))
+
+    return workflow_page(str(path), body)
+
+
+@app.get("/workflow-artifact/{artifact_path:path}")
+def workflow_artifact(artifact_path: str):
+    path = Path(artifact_path)
+
+    if not path.exists() or not path.is_file():
+        raise HTTPException(status_code=404, detail="artifact not found")
+
+    if path.suffix == ".svg":
+        return FileResponse(path, media_type="image/svg+xml")
+
+    if path.suffix == ".png":
+        return FileResponse(path, media_type="image/png")
+
+    return FileResponse(path)
+
+# Background workflow jobs for long-running web steps.
+
+import threading
+import time
+
+
+
+

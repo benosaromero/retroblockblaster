@@ -1,0 +1,29 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-4.4",
+  "reaction_name": "AmideCo-S-Boc",
+  "pair_id": "5efaa77e-b435-47ec-ab69-a5b93be54d21",
+  "reagent_count": "2",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "3",
+      "reference_smiles": "O=C(O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-4.4_5efaa77e-b435-47ec-ab69-a5b93be54d21/bb1_synthon_3_matches.tsv",
+      "message": "1 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "156",
+      "reference_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)OC(C)(C)C",
+      "match_count": 16,
+      "matches_file": "mol1_bb/podirthj/CC-4.4_5efaa77e-b435-47ec-ab69-a5b93be54d21/bb2_synthon_156_matches.tsv",
+      "message": "16 building blocks passed Tc cutoff 0.4."
+    }
+  ]
+}

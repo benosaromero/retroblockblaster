@@ -1,0 +1,5 @@
+product_code	product_smiles	tranche	building_blocks
+CC-1.22_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2	CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1	H34P500	O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl|CBr
+CC-1.22_web_DISCONNECTED_BB1_web_CSSB00009813324	CC(C)(Br)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1	H37P600	O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl|CC(C)(Br)Br
+CC-1.22_web_CSSB00000261570_web_DISCONNECTED_BB2	CN(CC(=O)O)C(=O)CNC(=O)c1ccccc1	H18P000	O=C(O)CNC(=O)CNC(=O)c1ccccc1|CBr
+CC-1.22_web_CSSB00000261570_web_CSSB00009813324	CC(C)(Br)N(CC(=O)O)C(=O)CNC(=O)c1ccccc1	H21P140	O=C(O)CNC(=O)CNC(=O)c1ccccc1|CC(C)(Br)Br

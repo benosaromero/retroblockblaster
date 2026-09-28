@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retro-Blockblaster 2.0</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="page rb2-page">
+    <div class="container rb2-container">
+      <header class="header rb2-header">
+        <h1>Retro-Blockblaster 2.0</h1>
+        <p>Guided analog generation from SMILES input to ranked enumerated products.</p>
+      </header>
+
+      <main class="rb2-grid">
+        <section class="panel rb2-input-panel">
+          <h2>Input Molecules</h2>
+
+          <label for="workflow-run">Run Name</label>
+          <input id="workflow-run" value="mol1">
+          <div class="workflow-keep-id">
+            Workflow Job ID to keep: <code id="workflow-keep-id-value">mol1</code>
+          </div>
+
+
+          <label for="workflow-db">Building-Block Database</label>
+          <select id="workflow-db" class="rb2-select">
+            <option value="dball" selected>dball - full search</option>
+            <option value="db050">db050 - fast test</option>
+            <option value="db100">db100</option>
+            <option value="db250">db250</option>
+            <option value="db500">db500</option>
+            <option value="db999">db999</option>
+            <option value="bbAFAS">FAST make-on-demand</option>
+            <option value="incrMADE">MADE incremental</option>
+          </select>
+
+          <div class="rb2-input-table">
+            <div>
+              <label for="workflow-ids">Compound IDs</label>
+              <textarea id="workflow-ids" class="rb2-tsv rb2-id-box" placeholder="99448&#10;TestMol_002"></textarea>
+            </div>
+
+            <div>
+              <label for="workflow-smiles">SMILES</label>
+              <textarea id="workflow-smiles" class="rb2-tsv rb2-smiles-box" placeholder="CN(CC1=NC=CS1)C=2N=C3C=CC=CC3=NC2N4CCOCC4&#10;CN(C)C(=O)NC1=CC=CC=C1"></textarea>
+            </div>
+          </div>
+
+          <div class="rb2-input-or">
+            <span></span>
+            <strong>or upload a file</strong>
+            <span></span>
+          </div>
+
+          <label for="workflow-upload">Input File</label>
+          <input id="workflow-upload" type="file" accept=".xlsx,.xls,.tsv,.csv,.txt" onchange="uploadWorkflowInputFile(this)">
+
+          <button type="button" class="rb2-main-button" data-step="input" onclick="saveWorkflowInput()">
+            Save Input File
+          </button>
+        </section>
+
+        <div class="rb2-workflow-stack">
+          <section class="panel rb2-steps-panel">
+            <h2>Workflow</h2>
+
+            <div class="rb2-step">
+              <div class="rb2-step-number">1</div>
+              <div>
+                <h3>Retrosynthetic Route Search</h3>
+                <p>Find reaction routes and disconnected synthons.</p>
+              </div>
+              <button type="button" data-step="retro" onclick="runWorkflowStep('retro')">Run Retrosynthesis</button>
+            </div>
+
+            <div class="rb2-step">
+              <div class="rb2-step-number">2</div>
+              <div>
+                <h3>Building-Block Matching</h3>
+                <p>Find purchasable building blocks similar to each synthon.</p>
+              </div>
+              <button type="button" data-step="bbs" onclick="runWorkflowStep('bbs')">Find Building Blocks</button>
+            </div>
+
+            <div class="rb2-step">
+              <div class="rb2-step-number">3</div>
+              <div>
+                <h3>Analog Generation</h3>
+                <p>Enumerate analogs from matched building blocks.</p>
+              </div>
+              <button type="button" data-step="make" onclick="runWorkflowStep('make')">Generate Analogs</button>
+            </div>
+
+            <div class="rb2-step">
+              <div class="rb2-step-number">4</div>
+              <div>
+                <h3>Similarity Ranking</h3>
+                <p>Rank generated analogs against the input molecules.</p>
+              </div>
+              <button type="button" data-step="rank" onclick="runWorkflowStep('rank')">Rank Analogs</button>
+            </div>
+
+            <div class="rb2-or-divider">
+              <span></span>
+              <strong>or</strong>
+              <span></span>
+            </div>
+
+            <div class="rb2-full-run-box">
+              <h3>Run Everything At Once</h3>
+              <p>Save time by running retrosynthesis, building-block matching, analog generation, and ranking in one click.</p>
+              <button type="button" class="rb2-complete-button" data-step="full" onclick="runWorkflowStep('full')">
+                Run Complete Workflow
+              </button>
+            </div>
+          </section>
+
+          <section class="panel past-job-section">
+            <div class="rb2-card past-job-panel">
+              <h2>Open a Past Workflow Job</h2>
+              <div class="past-job-form-row">
+                <div>
+                  <label for="past-job-id">Workflow Job ID</label>
+                  <input id="past-job-id" type="text" placeholder="Paste a previous workflow job ID">
+                </div>
+                <button type="button" onclick="openPastWorkflowJob()">Open Workflow Job</button>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+      </main>
+      <section class="panel rb2-status-panel">
+        <h2>Status</h2>
+        <pre id="workflow-status">Ready.</pre>
+
+        <div class="rb2-progress">
+          <div id="workflow-progress-bar"></div>
+        </div>
+
+        <div id="workflow-progress-label">0% complete</div>
+        <div id="workflow-summary"></div>
+      </section>
+
+      <section class="panel rb2-download-panel">
+        <h2>Downloads</h2>
+        <div id="workflow-downloads"></div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    async function openPastWorkflowJob() {
+      const input = document.getElementById("past-job-id");
+      const jobId = input.value.trim();
+
+      if (!jobId) {
+        input.focus();
+        return;
+      }
+
+      const response = await fetch("/api/past-job/" + encodeURIComponent(jobId) + "?t=" + Date.now());
+      const data = await response.json();
+
+      if (data.url) {
+        window.open(data.url, "_blank");
+        return;
+      }
+
+      alert(data.error || "No workflow job found.");
+    }
+
+
+    function workflowRun() {
+      return document.getElementById("workflow-run").value.trim();
+    }
+
+    function updateWorkflowKeepId() {
+      const value = workflowRun() || "mol1";
+      const target = document.getElementById("workflow-keep-id-value");
+      if (target) {
+        target.textContent = value;
+      }
+    }
+
+    function workflowDb() {
+      return document.getElementById("workflow-db").value;
+    }
+
+    function setWorkflowStatus(text) {
+      document.getElementById("workflow-status").textContent = text || "Finished.";
+    }
+
+    function setWorkflowProgress(percent, label) {
+      const bar = document.getElementById("workflow-progress-bar");
+      const progressLabel = document.getElementById("workflow-progress-label");
+
+      const cleanPercent = Math.max(0, Math.min(100, Number(percent) || 0));
+      bar.style.width = cleanPercent + "%";
+      progressLabel.textContent = label || (cleanPercent + "% complete");
+    }
+
+    function setWorkflowSummary(text) {
+      document.getElementById("workflow-summary").textContent = text || "";
+    }
+
+    function progressForStep(step) {
+      if (step === "input") return 10;
+      if (step === "retro") return 30;
+      if (step === "bbs") return 55;
+      if (step === "make") return 78;
+      if (step === "rank") return 100;
+      if (step === "full") return 15;
+      return 0;
+    }
+
+    async function workflowPost(url, payload) {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || data.detail || data.error) {
+        throw new Error(data.detail || data.error || "Request failed");
+      }
+
+      return data;
+    }
+
+    async function renderWorkflowDownloads() {
+      const run = workflowRun();
+
+      if (!run) {
+        document.getElementById("workflow-downloads").innerHTML = "";
+        return;
+      }
+
+      const response = await fetch("/api/workflow/outputs/" + encodeURIComponent(run) + "?t=" + Date.now(), {
+        cache: "no-store",
+      });
+      const data = await response.json();
+
+      const html = data.outputs.map((item) => {
+        const available = item.exists === true || item.available === true;
+        const disabledClass = available ? "" : " is-disabled";
+        const kind = item.kind || item.type;
+
+        const viewHref = kind === "folder"
+          ? "/workflow-view-folder/" + encodeURIComponent(item.path)
+          : "/workflow-view-file/" + encodeURIComponent(item.path);
+
+        const downloadHref = kind === "folder"
+          ? "/workflow-folder/" + encodeURIComponent(item.path)
+          : "/workflow-file/" + encodeURIComponent(item.path);
+
+        const actions = available
+          ? `
+              <a class="button-link" href="${viewHref}" target="_blank">View</a>
+              <a class="button-link" href="${downloadHref}">Download</a>
+            `
+          : `
+              <span class="rb2-locked">Locked until this step is done</span>
+            `;
+
+        return `
+          <div class="rb2-download-card${disabledClass}">
+            <strong>${item.label}</strong>
+            <span>${available ? item.path : ""}</span>
+            <div class="rb2-download-actions">
+              ${actions}
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      document.getElementById("workflow-downloads").innerHTML = html;
+    }
+
+    function markWorkflowButton(step) {
+      const button = document.querySelector('[data-step="' + step + '"]');
+      if (button) {
+        button.classList.add("is-complete");
+      }
+    }
+
+    async function uploadWorkflowInputFile(input) {
+      const file = input.files && input.files[0];
+
+      if (!file) {
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("file", file);
+
+      setWorkflowStatus("Reading uploaded input file...");
+
+      try {
+        const response = await fetch("/api/workflow/upload-input", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (!response.ok || data.error) {
+          throw new Error(data.error || "Could not upload input file.");
+        }
+
+        document.getElementById("workflow-ids").value = data.rows.map((row) => row.id).join("\n");
+        document.getElementById("workflow-smiles").value = data.rows.map((row) => row.smiles).join("\n");
+
+        setWorkflowStatus("Loaded " + data.count + " molecules from " + data.filename + ". Press Save Input next.");
+      } catch (error) {
+        setWorkflowStatus(error.message);
+      }
+    }
+
+    async function saveWorkflowInput() {
+      const run = workflowRun();
+      const ids = document.getElementById("workflow-ids").value.trim().split(/\n+/);
+      const smiles = document.getElementById("workflow-smiles").value.trim().split(/\n+/);
+
+      if (!ids.length || !ids[0] || !smiles.length || !smiles[0]) {
+        setWorkflowStatus("Enter at least one compound ID and one SMILES.");
+        return;
+      }
+
+      if (ids.length !== smiles.length) {
+        setWorkflowStatus("Compound ID and SMILES boxes must have the same number of lines.");
+        return;
+      }
+
+      const rows = ["id\tsmiles"];
+
+      for (let i = 0; i < ids.length; i += 1) {
+        rows.push(ids[i].trim() + "\t" + smiles[i].trim());
+      }
+
+      setWorkflowStatus("Saving input file...");
+
+      try {
+        const data = await workflowPost("/api/workflow/input", {
+          run: run,
+          db: workflowDb(),
+          input_tsv: rows.join("\n") + "\n",
+        });
+
+        markWorkflowButton("input");
+        await renderWorkflowDownloads();
+        setWorkflowProgress(10, "Input saved");
+        setWorkflowSummary("Input TSV is ready. Next: run retrosynthesis.");
+        setWorkflowStatus(data.message || "Input saved.");
+      } catch (error) {
+        setWorkflowStatus(error.message);
+      }
+    }
+
+    async function pollWorkflowJob(jobId, step) {
+      for (;;) {
+        const response = await fetch("/api/workflow/status/" + encodeURIComponent(jobId) + "?t=" + Date.now(), {
+          cache: "no-store",
+        });
+        const data = await response.json();
+
+        if (data.status === "done" || data.status === "finished" || data.status === "completed" || data.status === "success" || data.done === true) {
+          return data;
+        }
+
+        if (data.status === "error" || data.error) {
+          throw new Error(data.error || "Workflow step failed.");
+        }
+
+        if (data.progress !== undefined) {
+          setWorkflowProgress(data.progress, data.message || ("Running " + step + "..."));
+        } else if (step === "full") {
+          setWorkflowProgress(progressForStep(step), data.message || "Running complete workflow...");
+        } else {
+          setWorkflowProgress(progressForStep(step), data.message || ("Running " + step + "..."));
+        }
+
+        if (data.summary) {
+          setWorkflowSummary(data.summary);
+        }
+
+        setWorkflowStatus(data.message || ("Running " + step + "..."));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+      }
+    }
+
+    async function runWorkflowStep(step) {
+      const run = workflowRun();
+
+      setWorkflowStatus("Starting " + step + "...");
+      setWorkflowProgress(progressForStep(step), "Starting " + step + "...");
+      setWorkflowSummary("");
+
+      try {
+        const data = await workflowPost("/api/workflow/start/" + step, {
+          run: run,
+          db: workflowDb(),
+        });
+
+        await pollWorkflowJob(data.job_id, step);
+        markWorkflowButton(step);
+        await renderWorkflowDownloads();
+        if (step === "full") {
+          setWorkflowProgress(100, "Complete workflow finished");
+          setWorkflowSummary("All workflow outputs are ready to view or download.");
+        } else if (step === "retro") {
+          setWorkflowProgress(30, "Retrosynthesis finished");
+          setWorkflowSummary("Synthons, job IDs, retro summary, and retro output folders are ready.");
+        } else if (step === "bbs") {
+          setWorkflowProgress(55, "Building-block matching finished");
+          setWorkflowSummary("Matched reagent files are ready for review.");
+        } else if (step === "make") {
+          setWorkflowProgress(78, "Analog generation finished");
+          setWorkflowSummary("Enumerated products and combined products are ready.");
+        } else if (step === "rank") {
+          setWorkflowProgress(100, "Ranking finished");
+          setWorkflowSummary("Ranked analogs and per-molecule result files are ready.");
+        }
+
+        setWorkflowStatus(step + " finished.");
+      } catch (error) {
+        setWorkflowStatus(error.message);
+      }
+    }
+
+    renderWorkflowDownloads();
+    // Auto-load existing workflow outputs when opening /workflow/{run}.
+    window.addEventListener("DOMContentLoaded", () => {
+      updateWorkflowKeepId();
+      renderWorkflowDownloads();
+
+      const runInput = document.getElementById("workflow-run");
+      if (runInput) {
+        runInput.addEventListener("input", updateWorkflowKeepId);
+      }
+    });
+
+  </script>
+</body>
+</html>

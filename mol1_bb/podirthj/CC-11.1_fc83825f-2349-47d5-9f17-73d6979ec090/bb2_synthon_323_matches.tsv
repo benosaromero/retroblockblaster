@@ -1,0 +1,8 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	O=C(CCl)NCc1c(Cl)cccc1Cl	323	AlkylChloride-Dialkylation	retrosynthesis
+1	0.472	CSSB00000742885	O=C(CCl)Cc1c(F)cccc1Cl	323	AlkylChloride-Dialkylation	dball
+2	0.424	Molport-014-219-513	O=C(CCl)c1ccccc1Cl	323	AlkylChloride-Dialkylation	dball
+3	0.421	CSSB00011094859	COc1c(Cl)cccc1C(=O)CCl	323	AlkylChloride-Dialkylation	dball
+4	0.417	CSSB00011245711	O=C(Cl)Cc1c(F)cccc1Cl	323	AlkylChloride-Dialkylation	dball
+5	0.415	Molport-000-679-676	CN(Cc1c(F)cccc1Cl)C(=O)CCl	323	AlkylChloride-Dialkylation	dball
+6	0.4	Molport-008-155-100	O=C(CCl)Cc1ccccc1Cl	323	AlkylChloride-Dialkylation	dball

@@ -1,0 +1,2496 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-11.1",
+  "pair_id": "fc83825f-2349-47d5-9f17-73d6979ec090_selected",
+  "total_combos": 245,
+  "products": [
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl)NCc1c(Cl)cccc1Cl",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H33P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H33P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1c(F)cccc1Cl)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)c1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)c1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl)c1ccccc1Cl",
+      "tranche": "H34P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H33P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H33P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(C)(C)C",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(C)(C)Cl",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H36P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1c(F)cccc1Cl)N(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(C)(C)C",
+      "tranche": "H38P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(C)(C)Cl",
+      "tranche": "H38P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H38P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1ccccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_DISCONNECTED_BB1_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1ccccc1Cl)CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H35P600",
+      "building_blocks": [
+        "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P310",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P310",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H32P430",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H32P440",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)NCc2c(Cl)cccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H32P480",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P310",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P310",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P420",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P440",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)Cc2c(F)cccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H31P480",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H26P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H26P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)c1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P420",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)c1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P440",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)c2ccccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H29P470",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)C",
+      "tranche": "H31P420",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)Cl",
+      "tranche": "H31P440",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(Cl)(Cl)Cl",
+      "tranche": "H31P470",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P300",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P420",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(C(=O)Cc1c(F)cccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P440",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(C(=O)Cc2c(F)cccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H30P470",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P290",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P290",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)C",
+      "tranche": "H33P410",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)Cl",
+      "tranche": "H33P430",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1cnn(-c2ccccc2)c1N)C(Cl)(Cl)Cl",
+      "tranche": "H33P460",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P290",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P290",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P410",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1ccccc1Cl)C(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P430",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-225-264_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)Cc2ccccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H30P460",
+      "building_blocks": [
+        "NC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H29P250",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H29P250",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H32P370",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H32P380",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)NCc2c(Cl)cccc2Cl)C(Cl)(Cl)Cl)nnn1-c1ccccc1",
+      "tranche": "H32P420",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H28P250",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H28P250",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H31P360",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H31P380",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)Cc2c(F)cccc2Cl)C(Cl)(Cl)Cl)nnn1-c1ccccc1",
+      "tranche": "H31P420",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H26P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H26P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)c1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H29P360",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)c1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H29P380",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)c2ccccc2Cl)C(Cl)(Cl)Cl)nnn1-c1ccccc1",
+      "tranche": "H29P410",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H28P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H28P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(C)(C)C",
+      "tranche": "H31P360",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(C)(C)Cl",
+      "tranche": "H31P380",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(Cl)(Cl)Cl",
+      "tranche": "H31P410",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H27P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H27P240",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(C(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P360",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(C(=O)Cc1c(F)cccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P380",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(C(=O)Cc2c(F)cccc2Cl)C(Cl)(Cl)Cl)nnn1-c1ccccc1",
+      "tranche": "H30P410",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P230",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P230",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(C)(C)C",
+      "tranche": "H33P350",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(C)(C)Cl",
+      "tranche": "H33P370",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C(=O)c1nnn(-c2ccccc2)c1N)C(Cl)(Cl)Cl",
+      "tranche": "H33P400",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H27P230",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H27P230",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P350",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1ccccc1Cl)C(=O)c1nnn(-c2ccccc2)c1N",
+      "tranche": "H30P370",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-001-817-928_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)N(CC(=O)Cc2ccccc2Cl)C(Cl)(Cl)Cl)nnn1-c1ccccc1",
+      "tranche": "H30P400",
+      "building_blocks": [
+        "NC(=O)c1nnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H27P360",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H27P360",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H30P480",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H30P490",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl)NCc1c(Cl)cccc1Cl",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H26P360",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H26P360",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H29P470",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H29P490",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1c(F)cccc1Cl)CN(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H24P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H24P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)c1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H27P470",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)c1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H27P480",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl)c1ccccc1Cl",
+      "tranche": "H27P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H26P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H26P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(C)(C)C",
+      "tranche": "H29P470",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(C)(C)Cl",
+      "tranche": "H29P490",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H25P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H25P350",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(C(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P470",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(C(=O)Cc1c(F)cccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P490",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1c(F)cccc1Cl)N(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P340",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P340",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(C)(C)C",
+      "tranche": "H31P460",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(C)(C)Cl",
+      "tranche": "H31P480",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H25P340",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H25P340",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P460",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1ccccc1Cl)c1cc(O)n(-c2ccccc2)n1",
+      "tranche": "H28P480",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00020629231_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1ccccc1Cl)CN(c1cc(O)n(-c2ccccc2)n1)C(Cl)(Cl)Cl",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Nc1cc(O)n(-c2ccccc2)n1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H27P410",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H27P410",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)NCc1c(Cl)cccc1Cl)C(C)(C)C",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)NCc1c(Cl)cccc1Cl)C(C)(C)Cl",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)NCc1c(Cl)cccc1Cl)C(Cl)(Cl)Cl",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H26P410",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H26P410",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1c(F)cccc1Cl)C(C)(C)C",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1c(F)cccc1Cl)C(C)(C)Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1c(F)cccc1Cl)C(Cl)(Cl)Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H24P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H24P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)c1ccccc1Cl)C(C)(C)C",
+      "tranche": "H27P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)c1ccccc1Cl)C(C)(C)Cl",
+      "tranche": "H27P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)c1ccccc1Cl)C(Cl)(Cl)Cl",
+      "tranche": "H27P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H26P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H26P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1cc(-c2ccccc2)nn1C)C(C)(C)C",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1cc(-c2ccccc2)nn1C)C(C)(C)Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1cc(-c2ccccc2)nn1C)C(Cl)(Cl)Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H25P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H25P400",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(C(=O)Cc1c(F)cccc1Cl)C(C)(C)C",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(C(=O)Cc1c(F)cccc1Cl)C(C)(C)Cl",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(C(=O)Cc1c(F)cccc1Cl)C(Cl)(Cl)Cl",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H28P390",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H28P390",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1cc(-c2ccccc2)nn1C)C(C)(C)C",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1cc(-c2ccccc2)nn1C)C(C)(C)Cl",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1cc(-c2ccccc2)nn1C)C(Cl)(Cl)Cl",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H25P390",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1cc(-c2ccccc2)nn1C",
+      "tranche": "H25P390",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1ccccc1Cl)C(C)(C)C",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1ccccc1Cl)C(C)(C)Cl",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-000-144-535_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "Cn1nc(-c2ccccc2)cc1N(CC(=O)Cc1ccccc1Cl)C(Cl)(Cl)Cl",
+      "tranche": "H28P500",
+      "building_blocks": [
+        "Cn1nc(-c2ccccc2)cc1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H29P360",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H29P360",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H32P470",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H32P490",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(c1c(C(=O)O)cnn1-c1ccccc1)C(Cl)(Cl)Cl)NCc1c(Cl)cccc1Cl",
+      "tranche": "H32P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H28P360",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H28P360",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H31P470",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H31P490",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1c(F)cccc1Cl)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H26P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H26P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)c1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H29P470",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)c1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H29P480",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(c1c(C(=O)O)cnn1-c1ccccc1)C(Cl)(Cl)Cl)c1ccccc1Cl",
+      "tranche": "H29P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H28P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H28P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(C)(C)C",
+      "tranche": "H31P470",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(C)(C)Cl",
+      "tranche": "H31P480",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H31P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H27P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(C(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H27P350",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(C(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P470",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(C(=O)Cc1c(F)cccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P490",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "O=C(O)c1cnn(-c2ccccc2)c1N(C(=O)Cc1c(F)cccc1Cl)C(Cl)(Cl)Cl",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P340",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(C)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P340",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(C)(C)C",
+      "tranche": "H33P460",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(C)(C)Cl",
+      "tranche": "H33P480",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H33P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H27P340",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H27P340",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P460",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1ccccc1Cl)c1c(C(=O)O)cnn1-c1ccccc1",
+      "tranche": "H30P480",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_CSSB00011356483_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "O=C(Cc1ccccc1Cl)CN(c1c(C(=O)O)cnn1-c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H30P500",
+      "building_blocks": [
+        "Nc1c(C(=O)O)cnn1-c1ccccc1",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P260",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P260",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H33P380",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H33P390",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_DISCONNECTED_BB2_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)NN(CC(=O)NCc2c(Cl)cccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H33P430",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00000742885_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P260",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00000742885_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1c(F)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P260",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00000742885_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1c(F)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H32P380",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00000742885_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1c(F)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H32P390",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00000742885_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)NN(CC(=O)Cc2c(F)cccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H32P430",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-014-219-513_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-014-219-513_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)c1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H27P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-014-219-513_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)c1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P370",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-014-219-513_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)c1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H30P390",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-014-219-513_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)NN(CC(=O)c2ccccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H30P420",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)c1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011094859_web_DISCONNECTED_BB3",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011094859_web_Molport-001-759-971",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(C)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H29P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011094859_web_CSSB00011206107",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)C",
+      "tranche": "H32P370",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011094859_web_CSSB00000037974",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)Cl",
+      "tranche": "H32P390",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011094859_web_CSSB02125607993",
+      "product_smiles": "COc1c(Cl)cccc1C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(Cl)(Cl)Cl",
+      "tranche": "H32P420",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "COc1c(Cl)cccc1C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011245711_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(=O)Cc1c(F)cccc1Cl",
+      "tranche": "H28P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011245711_web_Molport-001-759-971",
+      "product_smiles": "CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(=O)Cc1c(F)cccc1Cl",
+      "tranche": "H28P250",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011245711_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(NC(=O)c1cnn(-c2ccccc2)c1N)C(=O)Cc1c(F)cccc1Cl",
+      "tranche": "H31P370",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011245711_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(NC(=O)c1cnn(-c2ccccc2)c1N)C(=O)Cc1c(F)cccc1Cl",
+      "tranche": "H31P390",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_CSSB00011245711_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)NN(C(=O)Cc2c(F)cccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H31P420",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(Cl)Cc1c(F)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-000-679-676_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)N(C)Cc1c(F)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P240",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-000-679-676_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)N(C)Cc1c(F)cccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P240",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-000-679-676_web_CSSB00011206107",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)C",
+      "tranche": "H34P360",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-000-679-676_web_CSSB00000037974",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(C)(C)Cl",
+      "tranche": "H34P380",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-000-679-676_web_CSSB02125607993",
+      "product_smiles": "CN(Cc1c(F)cccc1Cl)C(=O)CN(NC(=O)c1cnn(-c2ccccc2)c1N)C(Cl)(Cl)Cl",
+      "tranche": "H34P410",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "CN(Cc1c(F)cccc1Cl)C(=O)CCl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-008-155-100_web_DISCONNECTED_BB3",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P240",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-008-155-100_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)Cc1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H28P240",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-008-155-100_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)Cc1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P360",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-008-155-100_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)Cc1ccccc1Cl)NC(=O)c1cnn(-c2ccccc2)c1N",
+      "tranche": "H31P380",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-11.1_web_Molport-002-344-202_web_Molport-008-155-100_web_CSSB02125607993",
+      "product_smiles": "Nc1c(C(=O)NN(CC(=O)Cc2ccccc2Cl)C(Cl)(Cl)Cl)cnn1-c1ccccc1",
+      "tranche": "H31P410",
+      "building_blocks": [
+        "NNC(=O)c1cnn(-c2ccccc2)c1N",
+        "O=C(CCl)Cc1ccccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-11.1",
+    "reaction_name": "Dialkylation-Cl",
+    "pair_id": "fc83825f-2349-47d5-9f17-73d6979ec090",
+    "reagent_count": "3",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "227",
+        "reference_smiles": "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "match_count": 6,
+        "matches_file": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090/bb1_synthon_227_matches.tsv",
+        "message": "6 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "323",
+        "reference_smiles": "O=C(CCl)NCc1c(Cl)cccc1Cl",
+        "match_count": 6,
+        "matches_file": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090/bb2_synthon_323_matches.tsv",
+        "message": "6 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb3",
+        "synthon_id": "324",
+        "reference_smiles": "CCl",
+        "match_count": 4,
+        "matches_file": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090/bb3_synthon_324_matches.tsv",
+        "message": "4 building blocks passed Tc cutoff 0.4."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090"
+}

@@ -1,0 +1,56 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-4.3",
+  "pair_id": "cdb1a707-095c-4182-8fed-157a039f0b21_selected",
+  "total_combos": 2,
+  "products": [
+    {
+      "product_code": "CC-4.3_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "O=C(O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "CNCC(=O)NCc1c(Cl)cccc1Cl"
+      ]
+    },
+    {
+      "product_code": "CC-4.3_web_Molport-002-006-562_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)Cn1nc(-c2ccccc2)ccc1=O",
+      "tranche": "H31P290",
+      "building_blocks": [
+        "O=C(O)Cn1nc(-c2ccccc2)ccc1=O",
+        "CNCC(=O)NCc1c(Cl)cccc1Cl"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-4.3",
+    "reaction_name": "AmideCo-P-Boc",
+    "pair_id": "cdb1a707-095c-4182-8fed-157a039f0b21",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "3",
+        "reference_smiles": "O=C(O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-4.3_cdb1a707-095c-4182-8fed-157a039f0b21/bb1_synthon_3_matches.tsv",
+        "message": "1 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "155",
+        "reference_smiles": "CNCC(=O)NCc1c(Cl)cccc1Cl",
+        "match_count": 0,
+        "matches_file": "mol1_bb/podirthj/CC-4.3_cdb1a707-095c-4182-8fed-157a039f0b21/bb2_synthon_155_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-4.3_cdb1a707-095c-4182-8fed-157a039f0b21"
+}

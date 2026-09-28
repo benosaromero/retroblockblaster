@@ -1,0 +1,37 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-11.1",
+  "reaction_name": "Dialkylation-Cl",
+  "pair_id": "fc83825f-2349-47d5-9f17-73d6979ec090",
+  "reagent_count": "3",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "227",
+      "reference_smiles": "NC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "match_count": 6,
+      "matches_file": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090/bb1_synthon_227_matches.tsv",
+      "message": "6 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "323",
+      "reference_smiles": "O=C(CCl)NCc1c(Cl)cccc1Cl",
+      "match_count": 6,
+      "matches_file": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090/bb2_synthon_323_matches.tsv",
+      "message": "6 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb3",
+      "synthon_id": "324",
+      "reference_smiles": "CCl",
+      "match_count": 4,
+      "matches_file": "mol1_bb/podirthj/CC-11.1_fc83825f-2349-47d5-9f17-73d6979ec090/bb3_synthon_324_matches.tsv",
+      "message": "4 building blocks passed Tc cutoff 0.4."
+    }
+  ]
+}

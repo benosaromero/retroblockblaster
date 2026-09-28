@@ -1,0 +1,35 @@
+{
+  "error": "beta endpoint returned HTTP 500",
+  "beta_path": "/enumerate-all",
+  "beta_body": "{\"error\": \"enumerate all failed: Command '['/nfs/exj/Fe/scripts/common_db/arthor-env/bin/python', 'backend/enumerator_web.py', '-i', 'jobs/a5e00e8a-f79b-4022-b476-e86e2923b191_selected/enumerate_all/web_synthon_62.2_Boronics-Aromatic-Trifluoro-boronates2', 'jobs/a5e00e8a-f79b-4022-b476-e86e2923b191_selected/enumerate_all/web_synthon_149_ArylHalide-Aryl-Bromides', '-r', 'CC-2.22', '-o', 'jobs/a5e00e8a-f79b-4022-b476-e86e2923b191_selected/enumerate_all/enum_output', '-j', '/nfs/exj/Fe/scripts/common_db/export/Synthons.json', '-e', '/nfs/exj/Fe/scripts/testreactions2/EXAMPLE_Library_Enumeration_File_hg2_noProtected_logP350_HAC35_RotB7_V3_A-AK1.json', '-a', '/nfs/exj/Fe/scripts/common_db/export/Reactions.json', '-p', '1']' returned non-zero exit status 1.\"}",
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-2.22",
+    "reaction_name": "Suzuki-Br-2",
+    "pair_id": "a5e00e8a-f79b-4022-b476-e86e2923b191",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "62.2",
+        "reference_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(B(F)(F)F)nn1-c1ccccc1",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-2.22_a5e00e8a-f79b-4022-b476-e86e2923b191/bb1_synthon_62.2_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "149",
+        "reference_smiles": "Brc1ccccc1",
+        "match_count": 12,
+        "matches_file": "mol1_bb/podirthj/CC-2.22_a5e00e8a-f79b-4022-b476-e86e2923b191/bb2_synthon_149_matches.tsv",
+        "message": "12 building blocks passed Tc cutoff 0.4."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-2.22_a5e00e8a-f79b-4022-b476-e86e2923b191"
+}

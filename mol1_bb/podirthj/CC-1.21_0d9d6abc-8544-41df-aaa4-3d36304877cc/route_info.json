@@ -1,0 +1,29 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-1.21",
+  "reaction_name": "Alkylation-Cl-S",
+  "pair_id": "0d9d6abc-8544-41df-aaa4-3d36304877cc",
+  "reagent_count": "2",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "219",
+      "reference_smiles": "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-1.21_0d9d6abc-8544-41df-aaa4-3d36304877cc/bb1_synthon_219_matches.tsv",
+      "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "226",
+      "reference_smiles": "CCl",
+      "match_count": 4,
+      "matches_file": "mol1_bb/podirthj/CC-1.21_0d9d6abc-8544-41df-aaa4-3d36304877cc/bb2_synthon_226_matches.tsv",
+      "message": "4 building blocks passed Tc cutoff 0.4."
+    }
+  ]
+}

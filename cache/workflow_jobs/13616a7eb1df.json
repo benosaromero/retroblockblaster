@@ -1,0 +1,7 @@
+{
+  "job_id": "13616a7eb1df",
+  "status": "error",
+  "message": "Failed: Ranking analogs...",
+  "progress": 95,
+  "summary": "See workflow log: cache/workflow_jobs/13616a7eb1df.log"
+}

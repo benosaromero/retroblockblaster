@@ -1,0 +1,7 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	CNCC(=O)NCc1c(Cl)cccc1Cl	113	SecondaryAmines-secAliphatic	retrosynthesis
+1	0.567	CSSB00000186903	CNCc1c(Cl)cccc1Cl	113	SecondaryAmines-secAliphatic	dball
+2	0.472	CSSB00000683369	CNCc1c(F)cccc1Cl	113	SecondaryAmines-secAliphatic	dball
+3	0.417	CSSB00000184510	CNCc1cccc(Cl)c1Cl	113	SecondaryAmines-secAliphatic	dball
+4	0.41	CSSB06256046243	CNCc1cccc(Cl)c1OC	113	SecondaryAmines-secAliphatic	dball
+5	0.4	Molport-000-145-046	CNCc1ccccc1Cl	113	SecondaryAmines-secAliphatic	dball

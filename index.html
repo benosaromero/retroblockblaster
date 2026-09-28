@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+  Created by Benjamin "Ben" Romero (Undergrad Northwestern University '29), Summer 2026.
+  Developed in the Irwin Lab at UCSF.
+  Released as part of an open-source UCSF research tool; please credit the creator and lab when using or adapting this work.
+-->
+<html>
+<head>
+  <title>Retro-Blockblaster</title>
+  <link rel="stylesheet" href="/static/styles.css?v=made1">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header class="header">
+        <h1>Retro-Blockblaster</h1>
+        <p>UCSF Irwin Lab | Department of Pharmaceutical Chemistry</p>
+      </header>
+
+      <section class="panel">
+        <h2>Instructions</h2>
+
+        <p>
+          Enter one compound in SMILES format and provide the email address where you would like to receive the results. Retro-Blockblaster analyzes the submitted structure against UCSF Chemistry Commons reaction data and returns possible retrosynthetic reaction routes, associated synthons, and building-block candidates.
+        </p>
+
+        <p>
+          After submitting, please wait while the job runs. When complete, results will appear on the page and a downloadable ZIP file will be emailed to you.
+        </p>
+
+        <p>
+          Use "Find more info" under a synthon to view matching building blocks from the database. The Tc score shows the Tanimoto similarity between each candidate building block and the original building-block fragment from the submitted molecule; higher scores indicate greater structural similarity.
+        </p>
+
+        <p>
+          Enumeration lets you test whether selected building blocks can be combined through a predicted reaction route to generate a possible product. To manually enumerate, choose one building block from each required synthon column. Once all required building blocks are selected, the tool will automatically attempt to generate the enumerated product and display the result.
+        </p>
+
+        <p>
+          Use "Enumerate All Shown Blocks" to automatically test every possible combination among the building blocks currently displayed for that reaction route. For example, if 10 building blocks are shown for Synthon 1 and 10 are shown for Synthon 2, the tool will test 100 possible combinations.
+        </p>
+
+        <p>
+          For best results, submit one valid SMILES string at a time. Large enumeration jobs may take longer depending on the number of building-block combinations.
+        </p>
+        <div class="external-links">
+          <a href="http://arthorbb.docking.org/" target="_blank" rel="noopener">
+            Open ArthorBB
+          </a>
+          <a href="http://tldr.docking.org/" target="_blank" rel="noopener">
+            Open TLDR / bbfilter
+          </a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Submit a Job</h2>
+
+        <form id="job-form">
+          <label for="user-input">Input</label>
+          <textarea
+            id="user-input"
+            required
+            placeholder='Paste or type the desired compound in "SMILES" (Simplified Molecular Input Line Entry System) format'
+          ></textarea>
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            required
+            placeholder="you@example.com"
+          >
+
+          <div class="job-settings-row">
+            <div class="job-setting-box">
+              <label for="availability-source">Availability Source</label>
+              <select id="availability-source">
+                <option value="db050">$50</option>
+                <option value="db100">$100</option>
+                <option value="db250">$250</option>
+                <option value="db500">$500</option>
+                <option value="db999">$999</option>
+                <option value="bbAFAS">FAST</option>
+                <option value="dball">All On-Demand</option>
+                <option value="incrMADE">MADE Additional</option>
+              </select>
+            </div>
+
+            <div class="job-setting-box">
+              <label for="tc-cutoff">Minimum Tc</label>
+              <input
+                id="tc-cutoff"
+                type="number"
+                min="0"
+                max="1"
+                step="0.05"
+                value="0.60"
+              >
+            </div>
+
+            <div class="job-setting-box">
+              <label for="sort-mode">Ranking</label>
+              <select id="sort-mode">
+                <option value="balanced">Balanced</option>
+                <option value="tc_first">Similarity first</option>
+                <option value="availability_first">Availability first</option>
+              </select>
+            </div>
+          </div>
+          <button id="submit-button" type="submit">Submit Job</button>
+        </form>
+      </section>
+      <section class="panel made-workflow-panel">
+        <h2>MADE Retrosynthesis Workflow</h2>
+
+        <p>
+          Retro-decompose a compound, find close MADE building-block
+          analogs for each validated synthon, enumerate the filtered
+          subsets, and match products to the input by InChIKey.
+        </p>
+
+        <form id="made-job-form">
+          <label for="made-smiles">Input SMILES</label>
+          <textarea
+            id="made-smiles"
+            required
+            placeholder="Enter one compound as a SMILES string"
+          ></textarea>
+
+          <div class="job-settings-row">
+            <div class="job-setting-box">
+              <label for="made-filter-mode">CLOSE Filter</label>
+              <select id="made-filter-mode">
+                <option value="one_step">One-step</option>
+                <option value="two_step">Two-step</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="made-warning">
+            Warning: underlying raw MADE building-block files may
+            contain millions of rows. Generated filtered and product
+            files may also be large.
+          </p>
+
+          <button id="made-submit-button" type="submit">
+            Run MADE Workflow
+          </button>
+        </form>
+
+        <div id="made-result" class="made-result">
+          No MADE workflow submitted yet.
+        </div>
+      </section>
+
+      <section class="panel past-job-panel">
+        <h2>Open a Past Workflow Job</h2>
+
+        <form id="past-job-form" class="past-job-form">
+          <label for="past-job-id">Workflow Job ID</label>
+          <input
+            id="past-job-id"
+            type="text"
+            placeholder="Paste a previous workflow job ID"
+          >
+
+          <button type="submit">Open Workflow Job</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Result</h2>
+        <p id="result">No job submitted yet.</p>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Irwin Lab, UCSF | By Benjamin O. Romero | Last updated: V 1.01 July 27, 2026
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/static/app.js?v=made1"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-29.1",
+  "pair_id": "4a921999-8d0e-4065-ab16-3492ee8f9e9b_selected",
+  "total_combos": 8,
+  "products": [
+    {
+      "product_code": "CC-29.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_Molport-002-146-594",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1ccc(=O)n(-c2ccccc2)n1",
+      "tranche": "H28P320",
+      "building_blocks": [
+        "CN",
+        "O=CC(=O)NCc1c(Cl)cccc1Cl",
+        "O=c1ccc(Cl)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-29.1_web_DISCONNECTED_BB1_web_Molport-020-815-390_web_Molport-002-146-594",
+      "product_smiles": "CN(CCc1c(F)cccc1F)c1ccc(=O)n(-c2ccccc2)n1",
+      "tranche": "H25P310",
+      "building_blocks": [
+        "CN",
+        "O=CCc1c(F)cccc1F",
+        "O=c1ccc(Cl)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-29.1_web_CSSB00020642914_web_DISCONNECTED_BB2_web_Molport-002-146-594",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)c1ccc(=O)n(-c2ccccc2)n1",
+      "tranche": "H28P320",
+      "building_blocks": [
+        "CN",
+        "O=CC(=O)NCc1c(Cl)cccc1Cl",
+        "O=c1ccc(Cl)nn1-c1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-29.1_web_CSSB00020642914_web_Molport-020-815-390_web_Molport-002-146-594",
+      "product_smiles": "CN(CCc1c(F)cccc1F)c1ccc(=O)n(-c2ccccc2)n1",
+      "tranche": "H25P310",
+      "building_blocks": [
+        "CN",
+        "O=CCc1c(F)cccc1F",
+        "O=c1ccc(Cl)nn1-c1ccccc1"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-29.1",
+    "reaction_name": "Reductive Amination with Alkyl-Arylation",
+    "pair_id": "4a921999-8d0e-4065-ab16-3492ee8f9e9b",
+    "reagent_count": "3",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "204",
+        "reference_smiles": "CN",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-29.1_4a921999-8d0e-4065-ab16-3492ee8f9e9b/bb1_synthon_204_matches.tsv",
+        "message": "1 building blocks passed Tc cutoff 0.4."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "205",
+        "reference_smiles": "O=CC(=O)NCc1c(Cl)cccc1Cl",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-29.1_4a921999-8d0e-4065-ab16-3492ee8f9e9b/bb2_synthon_205_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      },
+      {
+        "slot": "bb3",
+        "synthon_id": "206",
+        "reference_smiles": "*C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-29.1_4a921999-8d0e-4065-ab16-3492ee8f9e9b/bb3_synthon_206_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-29.1_4a921999-8d0e-4065-ab16-3492ee8f9e9b"
+}

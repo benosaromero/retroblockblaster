@@ -1,0 +1,164 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-2.32",
+  "pair_id": "6cca426f-2318-43c8-909f-a7c6930ab023_selected",
+  "total_combos": 28,
+  "products": [
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_DISCONNECTED_BB2",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1ccccc1",
+      "tranche": "H17P360",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Ic1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000210278",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1ccccc1",
+      "tranche": "H17P360",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Ic1ccccc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000035832",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1ccncc1",
+      "tranche": "H17P300",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Ic1ccncc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000186775",
+      "product_smiles": "Cc1ccc(-c2cccc(Cl)c2CC(=O)O)cc1",
+      "tranche": "H18P390",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Cc1ccc(I)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000755918",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1ccc(Cl)cc1",
+      "tranche": "H18P420",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Clc1ccc(I)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000212066",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1ccc(O)cc1",
+      "tranche": "H18P330",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Oc1ccc(I)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000185761",
+      "product_smiles": "Nc1ccc(-c2cccc(Cl)c2CC(=O)O)cc1",
+      "tranche": "H18P320",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Nc1ccc(I)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000744870",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1ccc(F)cc1",
+      "tranche": "H18P370",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Fc1ccc(I)cc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000211634",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1cccc(O)c1",
+      "tranche": "H18P330",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Oc1cccc(I)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00011215228",
+      "product_smiles": "Cc1cccc(-c2cccc(Cl)c2CC(=O)O)c1",
+      "tranche": "H18P390",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Cc1cccc(I)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000685547",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1cccc(F)c1",
+      "tranche": "H18P370",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Fc1cccc(I)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000699651",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1cccc(Cl)c1",
+      "tranche": "H18P420",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Clc1cccc(I)c1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000752921",
+      "product_smiles": "O=C(O)Cc1c(Cl)cccc1-c1cccnc1",
+      "tranche": "H17P300",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Ic1cccnc1"
+      ]
+    },
+    {
+      "product_code": "CC-2.32_web_BBV-302788695_web_CSSB00000211102",
+      "product_smiles": "Nc1cccc(-c2cccc(Cl)c2CC(=O)O)c1",
+      "tranche": "H18P320",
+      "building_blocks": [
+        "O=C(O)Cc1c(Cl)cccc1[B-](F)(F)F",
+        "Nc1cccc(I)c1"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-2.32",
+    "reaction_name": "Suzuki-I-2",
+    "pair_id": "6cca426f-2318-43c8-909f-a7c6930ab023",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "62.2",
+        "reference_smiles": "*B(*)c1cc(C(=O)N(C)CC(=O)NCc2c(Cl)cccc2Cl)n(-c2ccccc2)n1",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-2.32_6cca426f-2318-43c8-909f-a7c6930ab023/bb1_synthon_62.2_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "30",
+        "reference_smiles": "Ic1ccccc1",
+        "match_count": 13,
+        "matches_file": "mol1_bb/podirthj/CC-2.32_6cca426f-2318-43c8-909f-a7c6930ab023/bb2_synthon_30_matches.tsv",
+        "message": "13 building blocks passed Tc cutoff 0.4."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-2.32_6cca426f-2318-43c8-909f-a7c6930ab023"
+}

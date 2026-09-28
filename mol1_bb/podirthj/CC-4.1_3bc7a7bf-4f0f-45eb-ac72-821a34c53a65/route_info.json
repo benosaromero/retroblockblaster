@@ -1,0 +1,29 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-4.1",
+  "reaction_name": "AmideCo-P",
+  "pair_id": "3bc7a7bf-4f0f-45eb-ac72-821a34c53a65",
+  "reagent_count": "2",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "316",
+      "reference_smiles": "CN(CC(=O)O)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-4.1_3bc7a7bf-4f0f-45eb-ac72-821a34c53a65/bb1_synthon_316_matches.tsv",
+      "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "317",
+      "reference_smiles": "NCc1c(Cl)cccc1Cl",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-4.1_3bc7a7bf-4f0f-45eb-ac72-821a34c53a65/bb2_synthon_317_matches.tsv",
+      "message": "1 building blocks passed Tc cutoff 0.4."
+    }
+  ]
+}

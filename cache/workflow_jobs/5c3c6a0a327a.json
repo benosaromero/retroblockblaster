@@ -1,0 +1,7 @@
+{
+  "job_id": "5c3c6a0a327a",
+  "status": "error",
+  "message": "name 'sys' is not defined",
+  "progress": 0,
+  "summary": "Workflow crashed before finishing."
+}

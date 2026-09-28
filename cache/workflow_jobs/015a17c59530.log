@@ -1,0 +1,23 @@
+\n\n$ /usr/bin/python3 retro.py mol1\n[11:38:10] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[11:38:10] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[11:38:10] product atom-mapping number 4 not found in reactants.
+[11:38:10] product atom-mapping number 1 found multiple times.
+[11:38:10] product atom-mapping number 2 found multiple times.
+[11:38:10] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[11:38:13] Explicit valence for atom # 3 C, 5, is greater than permitted
+[11:38:21] Explicit valence for atom # 3 C, 5, is greater than permitted
+[11:38:23] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 99448
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol1_syn.tsv
+Done.
+Wrote mol1_syn.tsv
+Wrote mol1_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol1\nDone. Intermediate files saved in mol1_bb
+Wrote mol1_bb
+\n\n$ /usr/bin/python3 make.py mol1\nFound route folders: 0
+Done. Selected enumerations saved in mol1_enum
+Wrote mol1_enum
+\n\n$ /usr/bin/python3 rank.py mol1\nNo enumerated product files found in mol1_enum

@@ -1,0 +1,45 @@
+\n\n$ /usr/bin/python3 retro.py diag002\n[16:30:54] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[16:30:54] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[16:30:54] product atom-mapping number 4 not found in reactants.
+[16:30:54] product atom-mapping number 1 found multiple times.
+[16:30:54] product atom-mapping number 2 found multiple times.
+[16:30:54] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[16:30:55] Explicit valence for atom # 1 N, 4, is greater than permitted
+Running 1 of 1 DIAG002
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote diag002_syn.tsv
+Done.
+Wrote diag002_syn.tsv
+Wrote diag002_ret
+\n\n$ /usr/bin/python3 bbs.py -db db050 diag002\nSaving matches DIAG002 CC-29.1 21eea126-d59d-4074-8f2d-2bf42a800be4
+Saving matches DIAG002 CC-11.2 a03e5bde-95c2-4fe9-b108-81b0f9d89575
+Saving matches DIAG002 CC-11.1 3bb0dffd-8d07-4d47-bdb4-5a5c55275857
+Saving matches DIAG002 CC-1.22 f9f6a187-98e8-46a9-8e92-09378ed0e7a4
+Saving matches DIAG002 CC-1.21 80c3ce27-134a-4774-8ae5-ac02eabc666d
+Saving matches DIAG002 CC-10.31 dfd99375-bc41-4706-be4b-5e59c65a6c1a
+Saving matches DIAG002 CC-3.2 a612e9d0-6f12-4020-82b0-8f3989705b49
+Saving matches DIAG002 CC-3.3 3538f06f-829d-44a9-95c5-be8f4f302671
+Saving matches DIAG002 CC-3.1 016b7fb8-84e3-4e84-81ea-9ded90f74f7f
+Saving matches DIAG002 CC-10.41 4a824ff5-783b-4744-a374-3f71bfec88a3
+Done. Intermediate files saved in diag002_bb
+Wrote diag002_bb
+\n\n$ /usr/bin/python3 make.py diag002\nFound route folders: 10
+Enumerating 1 DIAG002_CC-1.21_80c3ce27-134a-4774-8ae5-ac02eabc666d CC-1.21 synthon lists: 2
+Enumerating 2 DIAG002_CC-1.22_f9f6a187-98e8-46a9-8e92-09378ed0e7a4 CC-1.22 synthon lists: 2
+Enumerating 3 DIAG002_CC-10.31_dfd99375-bc41-4706-be4b-5e59c65a6c1a CC-10.31 synthon lists: 2
+Enumerating 4 DIAG002_CC-10.41_4a824ff5-783b-4744-a374-3f71bfec88a3 CC-10.41 synthon lists: 2
+Enumerating 5 DIAG002_CC-11.1_3bb0dffd-8d07-4d47-bdb4-5a5c55275857 CC-11.1 synthon lists: 3
+Enumerating 6 DIAG002_CC-11.2_a03e5bde-95c2-4fe9-b108-81b0f9d89575 CC-11.2 synthon lists: 3
+Enumerating 7 DIAG002_CC-29.1_21eea126-d59d-4074-8f2d-2bf42a800be4 CC-29.1 synthon lists: 3
+Enumerating 8 DIAG002_CC-3.1_016b7fb8-84e3-4e84-81ea-9ded90f74f7f CC-3.1 synthon lists: 2
+Enumerating 9 DIAG002_CC-3.2_a612e9d0-6f12-4020-82b0-8f3989705b49 CC-3.2 synthon lists: 2
+Enumerating 10 DIAG002_CC-3.3_3538f06f-829d-44a9-95c5-be8f4f302671 CC-3.3 synthon lists: 2
+Done. Selected enumerations saved in diag002_enum
+Wrote diag002_enum
+\n\n$ /usr/bin/python3 rank.py diag002\nWrote diag002_rank.tsv
+Wrote per-query files in diag002_ranked
+Wrote diag002_all.tsv from 10 route files
+Wrote diag002_rank.tsv
+Wrote diag002_ranked

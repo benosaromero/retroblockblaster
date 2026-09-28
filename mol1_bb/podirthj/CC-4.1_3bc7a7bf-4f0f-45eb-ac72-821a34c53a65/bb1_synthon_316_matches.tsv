@@ -1,0 +1,3 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB1	CN(CC(=O)O)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1	316	PrimaryAmine-AC	retrosynthesis
+1	0.34	CSSB00000068580	Cn1nc(-c2ccccc2)cc1CN	316	PrimaryAmine-AC	dball

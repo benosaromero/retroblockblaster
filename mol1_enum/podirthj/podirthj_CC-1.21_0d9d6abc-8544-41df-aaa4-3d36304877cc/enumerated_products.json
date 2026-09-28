@@ -1,0 +1,128 @@
+{
+  "message": "Enumerate all finished",
+  "reaction_id": "CC-1.21",
+  "pair_id": "0d9d6abc-8544-41df-aaa4-3d36304877cc_selected",
+  "total_combos": 10,
+  "products": [
+    {
+      "product_code": "CC-1.21_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_DISCONNECTED_BB1_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H34P500",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_DISCONNECTED_BB1_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_DISCONNECTED_BB1_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)NCc1c(Cl)cccc1Cl)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_DISCONNECTED_BB1_web_CSSB02125607993",
+      "product_smiles": "O=C(CN(C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)C(Cl)(Cl)Cl)NCc1c(Cl)cccc1Cl",
+      "tranche": "H37P600",
+      "building_blocks": [
+        "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_CSSB00000261570_web_DISCONNECTED_BB2",
+      "product_smiles": "CN(CC(=O)O)C(=O)CNC(=O)c1ccccc1",
+      "tranche": "H18P000",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_CSSB00000261570_web_Molport-001-759-971",
+      "product_smiles": "CN(CC(=O)O)C(=O)CNC(=O)c1ccccc1",
+      "tranche": "H18P000",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "CCl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_CSSB00000261570_web_CSSB00011206107",
+      "product_smiles": "CC(C)(C)N(CC(=O)O)C(=O)CNC(=O)c1ccccc1",
+      "tranche": "H21P110",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "CC(C)(C)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_CSSB00000261570_web_CSSB00000037974",
+      "product_smiles": "CC(C)(Cl)N(CC(=O)O)C(=O)CNC(=O)c1ccccc1",
+      "tranche": "H21P130",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "CC(C)(Cl)Cl"
+      ]
+    },
+    {
+      "product_code": "CC-1.21_web_CSSB00000261570_web_CSSB02125607993",
+      "product_smiles": "O=C(O)CN(C(=O)CNC(=O)c1ccccc1)C(Cl)(Cl)Cl",
+      "tranche": "H21P160",
+      "building_blocks": [
+        "O=C(O)CNC(=O)CNC(=O)c1ccccc1",
+        "ClC(Cl)(Cl)Cl"
+      ]
+    }
+  ],
+  "route_info": {
+    "input_id": "podirthj",
+    "job_id": "7ecad77f6935",
+    "reaction_id": "CC-1.21",
+    "reaction_name": "Alkylation-Cl-S",
+    "pair_id": "0d9d6abc-8544-41df-aaa4-3d36304877cc",
+    "reagent_count": "2",
+    "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+    "source": "dball",
+    "tc_cutoff": 0.4,
+    "synthons": [
+      {
+        "slot": "bb1",
+        "synthon_id": "219",
+        "reference_smiles": "O=C(CNC(=O)c1cc(-c2ccccc2)nn1-c1ccccc1)NCc1c(Cl)cccc1Cl",
+        "match_count": 1,
+        "matches_file": "mol1_bb/podirthj/CC-1.21_0d9d6abc-8544-41df-aaa4-3d36304877cc/bb1_synthon_219_matches.tsv",
+        "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+      },
+      {
+        "slot": "bb2",
+        "synthon_id": "226",
+        "reference_smiles": "CCl",
+        "match_count": 4,
+        "matches_file": "mol1_bb/podirthj/CC-1.21_0d9d6abc-8544-41df-aaa4-3d36304877cc/bb2_synthon_226_matches.tsv",
+        "message": "4 building blocks passed Tc cutoff 0.4."
+      }
+    ]
+  },
+  "source_intermediate_dir": "mol1_bb/podirthj/CC-1.21_0d9d6abc-8544-41df-aaa4-3d36304877cc"
+}

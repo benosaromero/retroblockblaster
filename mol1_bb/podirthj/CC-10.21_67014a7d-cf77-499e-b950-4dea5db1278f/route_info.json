@@ -1,0 +1,29 @@
+{
+  "input_id": "podirthj",
+  "job_id": "7ecad77f6935",
+  "reaction_id": "CC-10.21",
+  "reaction_name": "RedAm-Ket-Alk-P",
+  "pair_id": "67014a7d-cf77-499e-b950-4dea5db1278f",
+  "reagent_count": "2",
+  "original_smiles": "CN(CC(=O)NCC=1C(Cl)=CC=CC1Cl)C(=O)C2=CC(=NN2C=3C=CC=CC3)C=4C=CC=CC4",
+  "source": "dball",
+  "tc_cutoff": 0.4,
+  "synthons": [
+    {
+      "slot": "bb1",
+      "synthon_id": "254",
+      "reference_smiles": "NCc1c(Cl)cccc1Cl",
+      "match_count": 60,
+      "matches_file": "mol1_bb/podirthj/CC-10.21_67014a7d-cf77-499e-b950-4dea5db1278f/bb1_synthon_254_matches.tsv",
+      "message": "60 building blocks passed Tc cutoff 0.4."
+    },
+    {
+      "slot": "bb2",
+      "synthon_id": "255",
+      "reference_smiles": "CN(CC(=O)=O)C(=O)c1cc(-c2ccccc2)nn1-c1ccccc1",
+      "match_count": 1,
+      "matches_file": "mol1_bb/podirthj/CC-10.21_67014a7d-cf77-499e-b950-4dea5db1278f/bb2_synthon_255_matches.tsv",
+      "message": "No building blocks were over Tc cutoff 0.4. Showing highest Tc match."
+    }
+  ]
+}

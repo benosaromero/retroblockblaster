@@ -1,0 +1,8 @@
+{
+  "job_id": "115839a89d60",
+  "run": "testold",
+  "status": "error",
+  "message": "Failed: Running retrosynthesis...",
+  "progress": 30,
+  "summary": "See workflow log: cache/workflow_jobs/115839a89d60.log"
+}

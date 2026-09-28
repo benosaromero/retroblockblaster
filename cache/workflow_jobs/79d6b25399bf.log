@@ -1,0 +1,75 @@
+\n\n$ /usr/bin/python3 retro.py mol3\n[11:33:38] SMARTS Parse Error: syntax error while parsing: [*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]
+[11:33:38] SMARTS Parse Error: Failed parsing SMARTS '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]' for input: '[*:1]N1[C@@]([*:2])([C@H]([*:7])C2)C([*:3])=C([*:4])[C@]2([*:5])[C@@H]1[*:6]([*:7])C2)[*:2]'
+[11:33:38] product atom-mapping number 4 not found in reactants.
+[11:33:38] product atom-mapping number 1 found multiple times.
+[11:33:38] product atom-mapping number 2 found multiple times.
+[11:33:38] mapped atoms in the reactants were not mapped in the products.
+  unmapped numbers are: 4 5 
+[11:33:38] Explicit valence for atom # 3 C, 5, is greater than permitted
+[11:33:38] Explicit valence for atom # 3 C, 5, is greater than permitted
+[11:33:38] Explicit valence for atom # 20 B, 4, is greater than permitted
+Running 1 of 1 qwieurh
+Wrote job_ids.tsv
+Wrote job_summary.txt
+Wrote mol3_syn.tsv
+Done.
+Wrote mol3_syn.tsv
+Wrote mol3_ret
+\n\n$ /usr/bin/python3 bbs.py -db dball mol3\nSaving matches qwieurh CC-29.1 b4e0bbb1-f8cb-4f83-85a0-acdef04d4815
+Saving matches qwieurh CC-10.11 c0404aa3-cdf4-49b3-8da9-5b3054e9ccdd
+Saving matches qwieurh CC-11.2 d6fcd36f-1b1c-42e3-9473-a8578adb6d4b
+Saving matches qwieurh CC-11.1 48042db8-d380-42e8-a798-7a4abf985eb3
+Saving matches qwieurh CC-4.3 1ff6e28d-5d02-43ab-a085-a471ca2e5f52
+Saving matches qwieurh CC-4.4 5fb3c446-95ab-4572-8af1-d14d426748d0
+Saving matches qwieurh CC-1.12 774fddc4-80d6-4f69-96a0-838d5a477223
+Saving matches qwieurh CC-1.11 fac7ec95-957c-478a-95d5-b3f7b99549ab
+Saving matches qwieurh CC-4.1 9fdbfc2b-ded2-401f-a32a-b7b5ea426edc
+Saving matches qwieurh CC-1.22 01adf11b-4abf-4ae9-80f7-df60f617715c
+Saving matches qwieurh CC-1.21 97d715c3-2799-43bb-a1f9-075ae03c00b9
+Saving matches qwieurh CC-4.2 687070d4-3d78-4957-8b0c-ada48fbff5e7
+Saving matches qwieurh CC-10.21 aec08038-da2c-4226-b1b4-906852ba052f
+Saving matches qwieurh CC-10.31 7c51d509-a305-4eb8-b623-b56306c69650
+Saving matches qwieurh CC-2.22 890df0f0-8842-43ac-b6d0-8947a58831d4
+Saving matches qwieurh CC-2.21 c4a95d55-e528-4125-b855-603a4cd69ddb
+Saving matches qwieurh CC-2.11 6591c366-f841-4603-9d3d-eefd0680ce77
+Saving matches qwieurh CC-2.31 0bf9ff1c-7e34-445b-8b0d-84a215d648b0
+Saving matches qwieurh CC-2.12 4b9bc7d0-756c-4d7b-9f68-ce5b01c5d0bd
+Saving matches qwieurh CC-2.32 439205c0-3d04-4509-9484-f2f2a6b0a999
+Saving matches qwieurh CC-2.33 d5872611-82c4-4892-a67a-19c4f793943b
+Saving matches qwieurh CC-2.23 983052d9-dc54-4aeb-858d-8c90963caf8e
+Saving matches qwieurh CC-2.13 c5cebd4d-4485-40a5-9533-c0cb05a1d840
+Done. Intermediate files saved in mol3_bb
+Wrote mol3_bb
+\n\n$ /usr/bin/python3 make.py mol3\nFound route folders: 23
+Enumerating 1 qwieurh_CC-1.11_fac7ec95-957c-478a-95d5-b3f7b99549ab CC-1.11 synthon lists: 2
+Enumerating 2 qwieurh_CC-1.12_774fddc4-80d6-4f69-96a0-838d5a477223 CC-1.12 synthon lists: 2
+Enumerating 3 qwieurh_CC-1.21_97d715c3-2799-43bb-a1f9-075ae03c00b9 CC-1.21 synthon lists: 2
+Enumerating 4 qwieurh_CC-1.22_01adf11b-4abf-4ae9-80f7-df60f617715c CC-1.22 synthon lists: 2
+Enumerating 5 qwieurh_CC-10.11_c0404aa3-cdf4-49b3-8da9-5b3054e9ccdd CC-10.11 synthon lists: 2
+Enumerating 6 qwieurh_CC-10.21_aec08038-da2c-4226-b1b4-906852ba052f CC-10.21 synthon lists: 2
+Enumerating 7 qwieurh_CC-10.31_7c51d509-a305-4eb8-b623-b56306c69650 CC-10.31 synthon lists: 2
+Enumerating 8 qwieurh_CC-11.1_48042db8-d380-42e8-a798-7a4abf985eb3 CC-11.1 synthon lists: 3
+Enumerating 9 qwieurh_CC-11.2_d6fcd36f-1b1c-42e3-9473-a8578adb6d4b CC-11.2 synthon lists: 3
+Enumerating 10 qwieurh_CC-2.11_6591c366-f841-4603-9d3d-eefd0680ce77 CC-2.11 synthon lists: 2
+Enumerating 11 qwieurh_CC-2.12_4b9bc7d0-756c-4d7b-9f68-ce5b01c5d0bd CC-2.12 synthon lists: 2
+Enumerating 12 qwieurh_CC-2.13_c5cebd4d-4485-40a5-9533-c0cb05a1d840 CC-2.13 synthon lists: 2
+Enumerating 13 qwieurh_CC-2.21_c4a95d55-e528-4125-b855-603a4cd69ddb CC-2.21 synthon lists: 2
+Enumerating 14 qwieurh_CC-2.22_890df0f0-8842-43ac-b6d0-8947a58831d4 CC-2.22 synthon lists: 2
+Enumerating 15 qwieurh_CC-2.23_983052d9-dc54-4aeb-858d-8c90963caf8e CC-2.23 synthon lists: 2
+Enumerating 16 qwieurh_CC-2.31_0bf9ff1c-7e34-445b-8b0d-84a215d648b0 CC-2.31 synthon lists: 2
+Enumerating 17 qwieurh_CC-2.32_439205c0-3d04-4509-9484-f2f2a6b0a999 CC-2.32 synthon lists: 2
+Enumerating 18 qwieurh_CC-2.33_d5872611-82c4-4892-a67a-19c4f793943b CC-2.33 synthon lists: 2
+Enumerating 19 qwieurh_CC-29.1_b4e0bbb1-f8cb-4f83-85a0-acdef04d4815 CC-29.1 synthon lists: 3
+Enumerating 20 qwieurh_CC-4.1_9fdbfc2b-ded2-401f-a32a-b7b5ea426edc CC-4.1 synthon lists: 2
+Enumerating 21 qwieurh_CC-4.2_687070d4-3d78-4957-8b0c-ada48fbff5e7 CC-4.2 synthon lists: 2
+Enumerating 22 qwieurh_CC-4.3_1ff6e28d-5d02-43ab-a085-a471ca2e5f52 CC-4.3 synthon lists: 2
+Enumerating 23 qwieurh_CC-4.4_5fb3c446-95ab-4572-8af1-d14d426748d0 CC-4.4 synthon lists: 2
+Done. Selected enumerations saved in mol3_enum
+Wrote mol3_enum
+\n\n$ /usr/bin/python3 rank.py mol3\nWrote mol3_rank.tsv
+Wrote mol3_rank_tc06_all.tsv rows: 46
+Wrote mol3_rank_tc04_connected.tsv rows: 15
+Wrote per-query files in mol3_ranked
+Wrote mol3_all.tsv from 23 route files
+Wrote mol3_rank.tsv
+Wrote mol3_ranked

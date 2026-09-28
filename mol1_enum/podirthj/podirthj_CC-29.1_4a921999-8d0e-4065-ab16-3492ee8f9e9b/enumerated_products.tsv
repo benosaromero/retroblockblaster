@@ -1,0 +1,5 @@
+product_code	product_smiles	tranche	building_blocks
+CC-29.1_web_DISCONNECTED_BB1_web_DISCONNECTED_BB2_web_Molport-002-146-594	CN(CC(=O)NCc1c(Cl)cccc1Cl)c1ccc(=O)n(-c2ccccc2)n1	H28P320	CN|O=CC(=O)NCc1c(Cl)cccc1Cl|O=c1ccc(Cl)nn1-c1ccccc1
+CC-29.1_web_DISCONNECTED_BB1_web_Molport-020-815-390_web_Molport-002-146-594	CN(CCc1c(F)cccc1F)c1ccc(=O)n(-c2ccccc2)n1	H25P310	CN|O=CCc1c(F)cccc1F|O=c1ccc(Cl)nn1-c1ccccc1
+CC-29.1_web_CSSB00020642914_web_DISCONNECTED_BB2_web_Molport-002-146-594	CN(CC(=O)NCc1c(Cl)cccc1Cl)c1ccc(=O)n(-c2ccccc2)n1	H28P320	CN|O=CC(=O)NCc1c(Cl)cccc1Cl|O=c1ccc(Cl)nn1-c1ccccc1
+CC-29.1_web_CSSB00020642914_web_Molport-020-815-390_web_Molport-002-146-594	CN(CCc1c(F)cccc1F)c1ccc(=O)n(-c2ccccc2)n1	H25P310	CN|O=CCc1c(F)cccc1F|O=c1ccc(Cl)nn1-c1ccccc1

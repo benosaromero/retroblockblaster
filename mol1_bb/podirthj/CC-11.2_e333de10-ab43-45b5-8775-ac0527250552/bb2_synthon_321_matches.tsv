@@ -1,0 +1,5 @@
+rank	tc_score	bb_id	smiles	synthon_id	synthon_name	source
+0	1.0	DISCONNECTED_BB2	O=C(CBr)NCc1c(Cl)cccc1Cl	321	AlkylBromide-Dialkylation	retrosynthesis
+1	0.441	CSSB00000211432	O=C(CBr)c1ccccc1Cl	321	AlkylBromide-Dialkylation	dball
+2	0.417	CSSB00012361363	O=C(CBr)Cc1ccccc1Cl	321	AlkylBromide-Dialkylation	dball
+3	0.4	Molport-044-557-402	COc1cccc(Cl)c1C(=O)CBr	321	AlkylBromide-Dialkylation	dball
